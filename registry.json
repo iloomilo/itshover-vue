@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry.json",
+  "name": "itshover-vue",
+  "homepage": "https://itshover.com",
+  "items": [
+    {
+      "name": "test",
+      "type": "registry:ui",
+      "title": "Test UI",
+      "description": "A simple test",
+      "files": [
+        {
+          "path": "registry/icons/test.vue",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}
+
