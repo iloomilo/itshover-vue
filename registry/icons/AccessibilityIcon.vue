@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import { useAnimate } from 'motion-v';
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
 
-interface Props {
-  size?: number;
-  color?: string;
-  strokeWidth?: number;
-  className?: string;
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
@@ -35,11 +29,10 @@ const stop = () => {
   animate('.person', { y: 0 }, { duration: 0.2 });
 };
 
-// Expose für Parent-Components
 defineExpose({
   startAnimation: start,
   stopAnimation: stop,
-});
+} satisfies AnimatedIconHandle);
 </script>
 
 <template>
@@ -61,8 +54,7 @@ defineExpose({
     <circle class="person" cx="16" cy="4" r="1" />
     <path class="person" d="m18 19 1-7-6 1" />
     <path class="person" d="m5 8 3-3 5.5 3-2.36 3.5" />
-    
-    <g class="wheel" style="transform-origin: 8.5px 17.5px">
+    <g class="wheel" :style="{ transformOrigin: '8.5px 17.5px' }">
       <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
       <path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
     </g>
