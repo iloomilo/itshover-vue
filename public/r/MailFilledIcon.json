@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "MailFilledIcon",
+  "type": "registry:ui",
+  "title": "MailFilledIcon",
+  "description": "MailFilledIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/MailFilledIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.mail-open',\n    {\n      rotateX: -60,\n      transformOrigin: '50% 0%',\n    },\n    {\n      duration: 0.5,\n      ease: 'easeInOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.mail-open',\n    {\n      rotateX: 0,\n      transformOrigin: '50% 0%',\n    },\n    {\n      duration: 0.5,\n      ease: 'easeInOut',\n    }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"[className, 'cursor-pointer', 'perspective-distant']\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path d=\"M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z\" />\n    <path d=\"M3 7l9 6l9 -6\" class=\"mail-open\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

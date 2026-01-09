@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "CodeIcon",
+  "type": "registry:ui",
+  "title": "CodeIcon",
+  "description": "CodeIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/CodeIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate('.left-bracket', { x: -3 }, { duration: 0.3, ease: 'easeOut' });\n  animate('.right-bracket', { x: 3 }, { duration: 0.3, ease: 'easeOut' });\n};\n\nconst stop = () => {\n  animate('.left-bracket', { x: 0 }, { duration: 0.2, ease: 'easeInOut' });\n  animate('.right-bracket', { x: 0 }, { duration: 0.2, ease: 'easeInOut' });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path class=\"right-bracket\" d=\"m16 18 6-6-6-6\" />\n    <path class=\"left-bracket\" d=\"m8 6-6 6 6 6\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

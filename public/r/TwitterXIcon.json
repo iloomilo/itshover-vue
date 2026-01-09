@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "TwitterXIcon",
+  "type": "registry:ui",
+  "title": "TwitterXIcon",
+  "description": "TwitterXIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/TwitterXIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.x-icon',\n    { scale: [1, 1.1, 1], rotate: [0, -10, 10, 0] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.x-icon',\n    { scale: 1, rotate: 0 },\n    { duration: 0.2, ease: 'easeOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <g class=\"x-icon\" :style=\"{ transformOrigin: 'center' }\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n      <path d=\"M4 4l11.733 16h4.267l-11.733 -16z\" />\n      <path d=\"M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772\" />\n    </g>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

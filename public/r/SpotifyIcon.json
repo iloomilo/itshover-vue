@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "SpotifyIcon",
+  "type": "registry:ui",
+  "title": "SpotifyIcon",
+  "description": "SpotifyIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/SpotifyIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.circle',\n    { scale: [1, 1.05, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n  animate(\n    '.wave1',\n    { x: [-2, 2, -2], pathLength: [1, 0.8, 1] },\n    { duration: 0.8, ease: 'easeInOut', repeat: Infinity }\n  );\n  animate(\n    '.wave2',\n    { x: [-1, 1, -1], pathLength: [1, 0.9, 1] },\n    { duration: 0.7, ease: 'easeInOut', repeat: Infinity }\n  );\n  animate(\n    '.wave3',\n    { x: [-2, 2, -2], pathLength: [1, 0.85, 1] },\n    { duration: 0.9, ease: 'easeInOut', repeat: Infinity }\n  );\n};\n\nconst stop = () => {\n  animate('.circle', { scale: 1 }, { duration: 0.2 });\n  animate('.wave1', { x: 0, pathLength: 1 }, { duration: 0.2 });\n  animate('.wave2', { x: 0, pathLength: 1 }, { duration: 0.2 });\n  animate('.wave3', { x: 0, pathLength: 1 }, { duration: 0.2 });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path\n      class=\"circle\"\n      :style=\"{ transformOrigin: 'center' }\"\n      d=\"M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\"\n    />\n    <path\n      class=\"wave2\"\n      d=\"M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527\"\n    />\n    <path class=\"wave3\" d=\"M9 15c1.5 -1 4 -1 5 .5\" />\n    <path class=\"wave1\" d=\"M7 9c2 -1 6 -2 10 .5\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

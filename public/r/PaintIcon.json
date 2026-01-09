@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "PaintIcon",
+  "type": "registry:ui",
+  "title": "PaintIcon",
+  "description": "PaintIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/PaintIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.roller-symbol',\n    {\n      y: [0, 4],\n      rotate: [0, 12],\n    },\n    {\n      duration: 0.35,\n      ease: 'easeOut',\n    }\n  );\n\n  animate(\n    '.paint-stroke',\n    {\n      scaleX: [0, 1],\n      opacity: [0, 1],\n    },\n    {\n      duration: 0.35,\n      ease: 'easeOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.roller-symbol, .paint-stroke',\n    {\n      y: 0,\n      rotate: 0,\n      scaleX: 1,\n      opacity: 1,\n    },\n    {\n      duration: 0.3,\n      ease: 'easeInOut',\n    }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n\n    <rect\n      class=\"paint-stroke\"\n      x=\"4\"\n      y=\"9\"\n      width=\"16\"\n      height=\"3\"\n      rx=\"1.5\"\n      :fill=\"color\"\n      :style=\"{\n        transformOrigin: 'left center',\n        opacity: 0,\n      }\"\n    />\n\n    <g\n      class=\"roller-symbol\"\n      :style=\"{ transformOrigin: '50% 50%' }\"\n    >\n      <path d=\"M5 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z\" />\n      <path d=\"M19 6h1a2 2 0 0 1 2 2a5 5 0 0 1 -5 5l-5 0v2\" />\n      <path d=\"M10 15m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z\" />\n    </g>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

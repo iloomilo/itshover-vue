@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "AngryIcon",
+  "type": "registry:ui",
+  "title": "AngryIcon",
+  "description": "AngryIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/AngryIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.eyebrows',\n    { y: 1, scaleY: 1.2 },\n    { duration: 0.3, ease: 'easeOut' }\n  );\n  animate('.mouth', { scaleY: 1.2 }, { duration: 0.3, ease: 'easeOut' });\n  animate('.eyes', { scale: 0.8 }, { duration: 0.3, ease: 'easeOut' });\n};\n\nconst stop = () => {\n  animate(\n    '.eyebrows',\n    { y: 0, scaleY: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n  animate('.mouth', { scaleY: 1 }, { duration: 0.2, ease: 'easeInOut' });\n  animate('.eyes', { scale: 1 }, { duration: 0.2, ease: 'easeInOut' });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <circle cx=\"12\" cy=\"12\" r=\"10\" />\n    <path\n      class=\"mouth\"\n      :style=\"{ transformOrigin: '12px 16px' }\"\n      d=\"M16 16s-1.5-2-4-2-4 2-4 2\"\n    />\n    <g class=\"eyebrows\">\n      <path d=\"M7.5 8 10 9\" />\n      <path d=\"m14 9 2.5-1\" />\n    </g>\n    <g class=\"eyes\">\n      <path d=\"M9 10h.01\" />\n      <path d=\"M15 10h.01\" />\n    </g>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

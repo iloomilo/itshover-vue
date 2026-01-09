@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "PythonIcon",
+  "type": "registry:ui",
+  "title": "PythonIcon",
+  "description": "PythonIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/PythonIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.snake-top',\n    { x: [0, -1, 1, 0], y: [0, -1, 1, 0] },\n    { duration: 0.6, ease: 'easeInOut' }\n  );\n  animate(\n    '.snake-bottom',\n    { x: [0, 1, -1, 0], y: [0, 1, -1, 0] },\n    { duration: 0.6, ease: 'easeInOut' }\n  );\n  animate(\n    '.eyes',\n    { scale: [1, 1.5, 1] },\n    { duration: 0.4, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.snake-top, .snake-bottom, .eyes',\n    { x: 0, y: 0, scale: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path\n      class=\"snake-top\"\n      d=\"M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3\"\n    />\n    <path\n      class=\"snake-top\"\n      d=\"M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3\"\n    />\n    <path\n      class=\"snake-top\"\n      d=\"M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4\"\n    />\n    <path\n      class=\"eyes\"\n      :style=\"{ transformOrigin: '11 6' }\"\n      d=\"M11 6l0 .01\"\n    />\n    <path\n      class=\"eyes\"\n      :style=\"{ transformOrigin: '13 18' }\"\n      d=\"M13 18l0 .01\"\n    />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "CopyOffIcon",
+  "type": "registry:ui",
+  "title": "CopyOffIcon",
+  "description": "CopyOffIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/CopyOffIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.slash-line',\n    { pathLength: [0, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n  animate(\n    '.copy-elements',\n    { opacity: [1, 0.5, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.slash-line',\n    { pathLength: 1 },\n    { duration: 0.2, ease: 'easeOut' }\n  );\n  animate(\n    '.copy-elements',\n    { opacity: 1 },\n    { duration: 0.2, ease: 'easeOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    :class=\"['inline-flex', 'cursor-pointer', 'items-center', 'justify-center', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n      <g class=\"copy-elements\">\n        <path d=\"M19.414 19.415a2 2 0 0 1 -1.414 .585h-8a2 2 0 0 1 -2 -2v-8c0 -.554 .225 -1.055 .589 -1.417m3.411 -.583h6a2 2 0 0 1 2 2v6\" />\n        <path d=\"M16 8v-2a2 2 0 0 0 -2 -2h-6m-3.418 .59c-.36 .36 -.582 .86 -.582 1.41v8a2 2 0 0 0 2 2h2\" />\n      </g>\n      <path\n        class=\"slash-line\"\n        d=\"M3 3l18 18\"\n        :style=\"{ transformOrigin: 'center' }\"\n      />\n    </svg>\n  </div>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

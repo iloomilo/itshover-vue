@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "PlugConnectedIcon",
+  "type": "registry:ui",
+  "title": "PlugConnectedIcon",
+  "description": "PlugConnectedIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/PlugConnectedIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.plug-upper-part',\n    {\n      y: 2,\n      x: -2,\n    },\n    {\n      duration: 0.35,\n      ease: 'easeOut',\n    }\n  );\n\n  animate(\n    '.plug-lower-leg',\n    {\n      opacity: 0,\n    },\n    {\n      duration: 0.35,\n      ease: 'easeOut',\n    }\n  );\n\n  animate(\n    '.plug-lower-part',\n    {\n      y: -2,\n      x: 2,\n    },\n    {\n      duration: 0.35,\n      ease: 'easeOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.plug-upper-part, .plug-lower-leg, .plug-lower-part',\n    {\n      y: 0,\n      x: 0,\n      opacity: 1,\n    },\n    {\n      duration: 0.3,\n      ease: 'easeInOut',\n    }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path\n      d=\"M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z\"\n      class=\"plug-lower-part\"\n    />\n    <path\n      d=\"M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z\"\n      class=\"plug-upper-part\"\n    />\n    <path d=\"M3 21l2.5 -2.5\" class=\"plug-lower-part\" />\n    <path d=\"M18.5 5.5l2.5 -2.5\" class=\"plug-upper-part\" />\n    <path\n      d=\"M10 11l-2 2\"\n      class=\"plug-lower-part plug-lower-leg\"\n    />\n    <path\n      d=\"M13 14l-2 2\"\n      class=\"plug-lower-part plug-lower-leg\"\n    />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

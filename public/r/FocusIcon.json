@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "FocusIcon",
+  "type": "registry:ui",
+  "title": "FocusIcon",
+  "description": "FocusIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/FocusIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate('.center', { scale: 1.4 }, { duration: 0.25, ease: 'easeOut' });\n\n  animate('.corners', { scale: 0.85 }, { duration: 0.25, ease: 'easeOut' });\n};\n\nconst stop = () => {\n  animate(\n    '.center, .corners',\n    { scale: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <circle\n      class=\"center\"\n      cx=\"12\"\n      cy=\"12\"\n      r=\"3\"\n      :style=\"{ transformOrigin: '12px 12px' }\"\n    />\n    <path class=\"corners\" d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n    <path class=\"corners\" d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n    <path class=\"corners\" d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n    <path class=\"corners\" d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

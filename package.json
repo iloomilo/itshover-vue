@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "registry:build": "shadcn-vue build"
+    "registry:build": "node scripts/build-registry.ts && pnpm dlx shadcn-vue@latest build"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

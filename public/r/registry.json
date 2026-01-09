@@ -4,17 +4,3889 @@
   "homepage": "https://itshover.com",
   "items": [
     {
-      "name": "test",
+      "name": "AccessibilityIcon",
       "type": "registry:ui",
-      "title": "Test UI",
-      "description": "A simple test",
+      "title": "AccessibilityIcon",
+      "description": "AccessibilityIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
       "files": [
         {
-          "path": "registry/icons/test.vue",
+          "path": "registry/icons/AccessibilityIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AlarmClockPlusIcon",
+      "type": "registry:ui",
+      "title": "AlarmClockPlusIcon",
+      "description": "AlarmClockPlusIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AlarmClockPlusIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AlignCenterIcon",
+      "type": "registry:ui",
+      "title": "AlignCenterIcon",
+      "description": "AlignCenterIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AlignCenterIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AlignVerticalSpaceAroundIcon",
+      "type": "registry:ui",
+      "title": "AlignVerticalSpaceAroundIcon",
+      "description": "AlignVerticalSpaceAroundIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AlignVerticalSpaceAroundIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AmbulanceIcon",
+      "type": "registry:ui",
+      "title": "AmbulanceIcon",
+      "description": "AmbulanceIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AmbulanceIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AmpersandIcon",
+      "type": "registry:ui",
+      "title": "AmpersandIcon",
+      "description": "AmpersandIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AmpersandIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AngryIcon",
+      "type": "registry:ui",
+      "title": "AngryIcon",
+      "description": "AngryIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AngryIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AnnoyedIcon",
+      "type": "registry:ui",
+      "title": "AnnoyedIcon",
+      "description": "AnnoyedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AnnoyedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AppleBrandLogo",
+      "type": "registry:ui",
+      "title": "AppleBrandLogo",
+      "description": "AppleBrandLogo icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AppleBrandLogo.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBackIcon",
+      "type": "registry:ui",
+      "title": "ArrowBackIcon",
+      "description": "ArrowBackIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBackIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBackUpIcon",
+      "type": "registry:ui",
+      "title": "ArrowBackUpIcon",
+      "description": "ArrowBackUpIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBackUpIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigDownDashIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigDownDashIcon",
+      "description": "ArrowBigDownDashIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigDownDashIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigDownIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigDownIcon",
+      "description": "ArrowBigDownIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigDownIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigLeftDashIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigLeftDashIcon",
+      "description": "ArrowBigLeftDashIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigLeftDashIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigLeftIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigLeftIcon",
+      "description": "ArrowBigLeftIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigLeftIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigRightDashIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigRightDashIcon",
+      "description": "ArrowBigRightDashIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigRightDashIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigRightIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigRightIcon",
+      "description": "ArrowBigRightIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigRightIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigUpDashIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigUpDashIcon",
+      "description": "ArrowBigUpDashIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigUpDashIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowBigUpIcon",
+      "type": "registry:ui",
+      "title": "ArrowBigUpIcon",
+      "description": "ArrowBigUpIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowBigUpIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowDown01Icon",
+      "type": "registry:ui",
+      "title": "ArrowDown01Icon",
+      "description": "ArrowDown01Icon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowDown01Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowDown10Icon",
+      "type": "registry:ui",
+      "title": "ArrowDown10Icon",
+      "description": "ArrowDown10Icon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowDown10Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowDownAZIcon",
+      "type": "registry:ui",
+      "title": "ArrowDownAZIcon",
+      "description": "ArrowDownAZIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowDownAZIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowDownDashedIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowDownDashedIcon",
+      "description": "ArrowNarrowDownDashedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowDownDashedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowDownIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowDownIcon",
+      "description": "ArrowNarrowDownIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowDownIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowLeftDashedIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowLeftDashedIcon",
+      "description": "ArrowNarrowLeftDashedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowLeftDashedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowLeftIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowLeftIcon",
+      "description": "ArrowNarrowLeftIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowLeftIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowRightDashedIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowRightDashedIcon",
+      "description": "ArrowNarrowRightDashedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowRightDashedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowRightIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowRightIcon",
+      "description": "ArrowNarrowRightIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowRightIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowUpDashedIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowUpDashedIcon",
+      "description": "ArrowNarrowUpDashedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowUpDashedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ArrowNarrowUpIcon",
+      "type": "registry:ui",
+      "title": "ArrowNarrowUpIcon",
+      "description": "ArrowNarrowUpIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ArrowNarrowUpIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AtSignIcon",
+      "type": "registry:ui",
+      "title": "AtSignIcon",
+      "description": "AtSignIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/AtSignIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BananaIcon",
+      "type": "registry:ui",
+      "title": "BananaIcon",
+      "description": "BananaIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BananaIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BatteryChargingIcon",
+      "type": "registry:ui",
+      "title": "BatteryChargingIcon",
+      "description": "BatteryChargingIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BatteryChargingIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BatteryIcon",
+      "type": "registry:ui",
+      "title": "BatteryIcon",
+      "description": "BatteryIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BatteryIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BatteryPauseIcon",
+      "type": "registry:ui",
+      "title": "BatteryPauseIcon",
+      "description": "BatteryPauseIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BatteryPauseIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BellOffIcon",
+      "type": "registry:ui",
+      "title": "BellOffIcon",
+      "description": "BellOffIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BellOffIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BluetoothConnectedIcon",
+      "type": "registry:ui",
+      "title": "BluetoothConnectedIcon",
+      "description": "BluetoothConnectedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BluetoothConnectedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BookIcon",
+      "type": "registry:ui",
+      "title": "BookIcon",
+      "description": "BookIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BookIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BookmarkIcon",
+      "type": "registry:ui",
+      "title": "BookmarkIcon",
+      "description": "BookmarkIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BookmarkIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandGoogleIcon",
+      "type": "registry:ui",
+      "title": "BrandGoogleIcon",
+      "description": "BrandGoogleIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandGoogleIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandNextjsIcon",
+      "type": "registry:ui",
+      "title": "BrandNextjsIcon",
+      "description": "BrandNextjsIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandNextjsIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrightnessDownIcon",
+      "type": "registry:ui",
+      "title": "BrightnessDownIcon",
+      "description": "BrightnessDownIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrightnessDownIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BulbSvg",
+      "type": "registry:ui",
+      "title": "BulbSvg",
+      "description": "BulbSvg icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BulbSvg.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CameraIcon",
+      "type": "registry:ui",
+      "title": "CameraIcon",
+      "description": "CameraIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CameraIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CameraOffIcon",
+      "type": "registry:ui",
+      "title": "CameraOffIcon",
+      "description": "CameraOffIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CameraOffIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CandyCaneIcon",
+      "type": "registry:ui",
+      "title": "CandyCaneIcon",
+      "description": "CandyCaneIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CandyCaneIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CartIcon",
+      "type": "registry:ui",
+      "title": "CartIcon",
+      "description": "CartIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CartIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ChartBarIcon",
+      "type": "registry:ui",
+      "title": "ChartBarIcon",
+      "description": "ChartBarIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ChartBarIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ChartCovariateIcon",
+      "type": "registry:ui",
+      "title": "ChartCovariateIcon",
+      "description": "ChartCovariateIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ChartCovariateIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ChartHistogramIcon",
+      "type": "registry:ui",
+      "title": "ChartHistogramIcon",
+      "description": "ChartHistogramIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ChartHistogramIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ChartLineIcon",
+      "type": "registry:ui",
+      "title": "ChartLineIcon",
+      "description": "ChartLineIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ChartLineIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ChartPieIcon",
+      "type": "registry:ui",
+      "title": "ChartPieIcon",
+      "description": "ChartPieIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ChartPieIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CheckedIcon",
+      "type": "registry:ui",
+      "title": "CheckedIcon",
+      "description": "CheckedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CheckedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ClockIcon",
+      "type": "registry:ui",
+      "title": "ClockIcon",
+      "description": "ClockIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ClockIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CodeIcon",
+      "type": "registry:ui",
+      "title": "CodeIcon",
+      "description": "CodeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CodeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CodeXmlIcon",
+      "type": "registry:ui",
+      "title": "CodeXmlIcon",
+      "description": "CodeXmlIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CodeXmlIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CoffeeIcon",
+      "type": "registry:ui",
+      "title": "CoffeeIcon",
+      "description": "CoffeeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CoffeeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CoinBitcoinIcon",
+      "type": "registry:ui",
+      "title": "CoinBitcoinIcon",
+      "description": "CoinBitcoinIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CoinBitcoinIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CopyIcon",
+      "type": "registry:ui",
+      "title": "CopyIcon",
+      "description": "CopyIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CopyIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CopyOffIcon",
+      "type": "registry:ui",
+      "title": "CopyOffIcon",
+      "description": "CopyOffIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CopyOffIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CpuIcon",
+      "type": "registry:ui",
+      "title": "CpuIcon",
+      "description": "CpuIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CpuIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CreditCard",
+      "type": "registry:ui",
+      "title": "CreditCard",
+      "description": "CreditCard icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CreditCard.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CurrencyBitcoinIcon",
+      "type": "registry:ui",
+      "title": "CurrencyBitcoinIcon",
+      "description": "CurrencyBitcoinIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CurrencyBitcoinIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CurrencyDollarIcon",
+      "type": "registry:ui",
+      "title": "CurrencyDollarIcon",
+      "description": "CurrencyDollarIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CurrencyDollarIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CurrencyEthereumIcon",
+      "type": "registry:ui",
+      "title": "CurrencyEthereumIcon",
+      "description": "CurrencyEthereumIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CurrencyEthereumIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CurrencyEuroIcon",
+      "type": "registry:ui",
+      "title": "CurrencyEuroIcon",
+      "description": "CurrencyEuroIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CurrencyEuroIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CurrencyRupeeIcon",
+      "type": "registry:ui",
+      "title": "CurrencyRupeeIcon",
+      "description": "CurrencyRupeeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CurrencyRupeeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DeviceAirpodsIcon",
+      "type": "registry:ui",
+      "title": "DeviceAirpodsIcon",
+      "description": "DeviceAirpodsIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DeviceAirpodsIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DialpadIcon",
+      "type": "registry:ui",
+      "title": "DialpadIcon",
+      "description": "DialpadIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DialpadIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DiscordIcon",
+      "type": "registry:ui",
+      "title": "DiscordIcon",
+      "description": "DiscordIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DiscordIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DockerIcon",
+      "type": "registry:ui",
+      "title": "DockerIcon",
+      "description": "DockerIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DockerIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DotsHorizontalIcon",
+      "type": "registry:ui",
+      "title": "DotsHorizontalIcon",
+      "description": "DotsHorizontalIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DotsHorizontalIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DotsVerticalIcon",
+      "type": "registry:ui",
+      "title": "DotsVerticalIcon",
+      "description": "DotsVerticalIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DotsVerticalIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DoubleCheckIcon",
+      "type": "registry:ui",
+      "title": "DoubleCheckIcon",
+      "description": "DoubleCheckIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DoubleCheckIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DownCheveron",
+      "type": "registry:ui",
+      "title": "DownCheveron",
+      "description": "DownCheveron icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DownCheveron.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DrumIcon",
+      "type": "registry:ui",
+      "title": "DrumIcon",
+      "description": "DrumIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DrumIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ExpandIcon",
+      "type": "registry:ui",
+      "title": "ExpandIcon",
+      "description": "ExpandIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ExpandIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ExternalLinkIcon",
+      "type": "registry:ui",
+      "title": "ExternalLinkIcon",
+      "description": "ExternalLinkIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ExternalLinkIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "EyeIcon",
+      "type": "registry:ui",
+      "title": "EyeIcon",
+      "description": "EyeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/EyeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "EyeOffIcon",
+      "type": "registry:ui",
+      "title": "EyeOffIcon",
+      "description": "EyeOffIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/EyeOffIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FacebookIcon",
+      "type": "registry:ui",
+      "title": "FacebookIcon",
+      "description": "FacebookIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FacebookIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FigmaIcon",
+      "type": "registry:ui",
+      "title": "FigmaIcon",
+      "description": "FigmaIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FigmaIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FileDescriptionIcon",
+      "type": "registry:ui",
+      "title": "FileDescriptionIcon",
+      "description": "FileDescriptionIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FileDescriptionIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FilledBellIcon",
+      "type": "registry:ui",
+      "title": "FilledBellIcon",
+      "description": "FilledBellIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FilledBellIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FilledCheckedIcon",
+      "type": "registry:ui",
+      "title": "FilledCheckedIcon",
+      "description": "FilledCheckedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FilledCheckedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FlameIcon",
+      "type": "registry:ui",
+      "title": "FlameIcon",
+      "description": "FlameIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FlameIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FocusIcon",
+      "type": "registry:ui",
+      "title": "FocusIcon",
+      "description": "FocusIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FocusIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GaugeIcon",
+      "type": "registry:ui",
+      "title": "GaugeIcon",
+      "description": "GaugeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GaugeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GearIcon",
+      "type": "registry:ui",
+      "title": "GearIcon",
+      "description": "GearIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GearIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GhostIcon",
+      "type": "registry:ui",
+      "title": "GhostIcon",
+      "description": "GhostIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GhostIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GithubCopilotIcon",
+      "type": "registry:ui",
+      "title": "GithubCopilotIcon",
+      "description": "GithubCopilotIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GithubCopilotIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GithubIcon",
+      "type": "registry:ui",
+      "title": "GithubIcon",
+      "description": "GithubIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GithubIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GitlabIcon",
+      "type": "registry:ui",
+      "title": "GitlabIcon",
+      "description": "GitlabIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GitlabIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GlobeIcon",
+      "type": "registry:ui",
+      "title": "GlobeIcon",
+      "description": "GlobeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GlobeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GmailIcon",
+      "type": "registry:ui",
+      "title": "GmailIcon",
+      "description": "GmailIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GmailIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "HandHeartIcon",
+      "type": "registry:ui",
+      "title": "HandHeartIcon",
+      "description": "HandHeartIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/HandHeartIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "HashtagIcon",
+      "type": "registry:ui",
+      "title": "HashtagIcon",
+      "description": "HashtagIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/HashtagIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "HeartIcon",
+      "type": "registry:ui",
+      "title": "HeartIcon",
+      "description": "HeartIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/HeartIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "HistoryCircleIcon",
+      "type": "registry:ui",
+      "title": "HistoryCircleIcon",
+      "description": "HistoryCircleIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/HistoryCircleIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "HomeIcon",
+      "type": "registry:ui",
+      "title": "HomeIcon",
+      "description": "HomeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/HomeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "InfoCircleIcon",
+      "type": "registry:ui",
+      "title": "InfoCircleIcon",
+      "description": "InfoCircleIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/InfoCircleIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "InstagramIcon",
+      "type": "registry:ui",
+      "title": "InstagramIcon",
+      "description": "InstagramIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/InstagramIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "JavascriptIcon",
+      "type": "registry:ui",
+      "title": "JavascriptIcon",
+      "description": "JavascriptIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/JavascriptIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "KeyframesIcon",
+      "type": "registry:ui",
+      "title": "KeyframesIcon",
+      "description": "KeyframesIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/KeyframesIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LayersIcon",
+      "type": "registry:ui",
+      "title": "LayersIcon",
+      "description": "LayersIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LayersIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LayoutBottombarCollapseIcon",
+      "type": "registry:ui",
+      "title": "LayoutBottombarCollapseIcon",
+      "description": "LayoutBottombarCollapseIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LayoutBottombarCollapseIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LayoutSidebarRightCollapseIcon",
+      "type": "registry:ui",
+      "title": "LayoutSidebarRightCollapseIcon",
+      "description": "LayoutSidebarRightCollapseIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LayoutSidebarRightCollapseIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LayoutSidebarRightIcon",
+      "type": "registry:ui",
+      "title": "LayoutSidebarRightIcon",
+      "description": "LayoutSidebarRightIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LayoutSidebarRightIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LikeIcon",
+      "type": "registry:ui",
+      "title": "LikeIcon",
+      "description": "LikeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LikeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LinkIcon",
+      "type": "registry:ui",
+      "title": "LinkIcon",
+      "description": "LinkIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LinkIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LinkedinIcon",
+      "type": "registry:ui",
+      "title": "LinkedinIcon",
+      "description": "LinkedinIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LinkedinIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LockIcon",
+      "type": "registry:ui",
+      "title": "LockIcon",
+      "description": "LockIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LockIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LogoutIcon",
+      "type": "registry:ui",
+      "title": "LogoutIcon",
+      "description": "LogoutIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LogoutIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MagnifierIcon",
+      "type": "registry:ui",
+      "title": "MagnifierIcon",
+      "description": "MagnifierIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MagnifierIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MailFilledIcon",
+      "type": "registry:ui",
+      "title": "MailFilledIcon",
+      "description": "MailFilledIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MailFilledIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MehIcon",
+      "type": "registry:ui",
+      "title": "MehIcon",
+      "description": "MehIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MehIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MessageCircleIcon",
+      "type": "registry:ui",
+      "title": "MessageCircleIcon",
+      "description": "MessageCircleIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MessageCircleIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MoonIcon",
+      "type": "registry:ui",
+      "title": "MoonIcon",
+      "description": "MoonIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MoonIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MousePointer2Icon",
+      "type": "registry:ui",
+      "title": "MousePointer2Icon",
+      "description": "MousePointer2Icon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MousePointer2Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MysqlIcon",
+      "type": "registry:ui",
+      "title": "MysqlIcon",
+      "description": "MysqlIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MysqlIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "NodejsIcon",
+      "type": "registry:ui",
+      "title": "NodejsIcon",
+      "description": "NodejsIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/NodejsIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PaintIcon",
+      "type": "registry:ui",
+      "title": "PaintIcon",
+      "description": "PaintIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PaintIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PartyPopperIcon",
+      "type": "registry:ui",
+      "title": "PartyPopperIcon",
+      "description": "PartyPopperIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PartyPopperIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PenIcon",
+      "type": "registry:ui",
+      "title": "PenIcon",
+      "description": "PenIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PenIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PhoneVolume",
+      "type": "registry:ui",
+      "title": "PhoneVolume",
+      "description": "PhoneVolume icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PhoneVolume.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PinterestIcon",
+      "type": "registry:ui",
+      "title": "PinterestIcon",
+      "description": "PinterestIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PinterestIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PlayerIcon",
+      "type": "registry:ui",
+      "title": "PlayerIcon",
+      "description": "PlayerIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PlayerIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PlugConnectedIcon",
+      "type": "registry:ui",
+      "title": "PlugConnectedIcon",
+      "description": "PlugConnectedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PlugConnectedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PlugConnectedXIcon",
+      "type": "registry:ui",
+      "title": "PlugConnectedXIcon",
+      "description": "PlugConnectedXIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PlugConnectedXIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PythonIcon",
+      "type": "registry:ui",
+      "title": "PythonIcon",
+      "description": "PythonIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PythonIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "QrcodeIcon",
+      "type": "registry:ui",
+      "title": "QrcodeIcon",
+      "description": "QrcodeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/QrcodeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "QuestionMark",
+      "type": "registry:ui",
+      "title": "QuestionMark",
+      "description": "QuestionMark icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/QuestionMark.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RadioIcon",
+      "type": "registry:ui",
+      "title": "RadioIcon",
+      "description": "RadioIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RadioIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RainbowIcon",
+      "type": "registry:ui",
+      "title": "RainbowIcon",
+      "description": "RainbowIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RainbowIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RefreshIcon",
+      "type": "registry:ui",
+      "title": "RefreshIcon",
+      "description": "RefreshIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RefreshIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RightCheveron",
+      "type": "registry:ui",
+      "title": "RightCheveron",
+      "description": "RightCheveron icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RightCheveron.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RocketIcon",
+      "type": "registry:ui",
+      "title": "RocketIcon",
+      "description": "RocketIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RocketIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RosetteDiscountCheckIcon",
+      "type": "registry:ui",
+      "title": "RosetteDiscountCheckIcon",
+      "description": "RosetteDiscountCheckIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RosetteDiscountCheckIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RosetteDiscountIcon",
+      "type": "registry:ui",
+      "title": "RosetteDiscountIcon",
+      "description": "RosetteDiscountIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RosetteDiscountIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RouterIcon",
+      "type": "registry:ui",
+      "title": "RouterIcon",
+      "description": "RouterIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/RouterIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SatelliteDishIcon",
+      "type": "registry:ui",
+      "title": "SatelliteDishIcon",
+      "description": "SatelliteDishIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SatelliteDishIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ScanBarcodeIcon",
+      "type": "registry:ui",
+      "title": "ScanBarcodeIcon",
+      "description": "ScanBarcodeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ScanBarcodeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ScanHeartIcon",
+      "type": "registry:ui",
+      "title": "ScanHeartIcon",
+      "description": "ScanHeartIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ScanHeartIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SendHorizontalIcon",
+      "type": "registry:ui",
+      "title": "SendHorizontalIcon",
+      "description": "SendHorizontalIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SendHorizontalIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SendIcon",
+      "type": "registry:ui",
+      "title": "SendIcon",
+      "description": "SendIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SendIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ShieldCheck",
+      "type": "registry:ui",
+      "title": "ShieldCheck",
+      "description": "ShieldCheck icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ShieldCheck.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ShoppingCartIcon",
+      "type": "registry:ui",
+      "title": "ShoppingCartIcon",
+      "description": "ShoppingCartIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ShoppingCartIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SimpleCheckedIcon",
+      "type": "registry:ui",
+      "title": "SimpleCheckedIcon",
+      "description": "SimpleCheckedIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SimpleCheckedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SkullEmoji",
+      "type": "registry:ui",
+      "title": "SkullEmoji",
+      "description": "SkullEmoji icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SkullEmoji.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SlackIcon",
+      "type": "registry:ui",
+      "title": "SlackIcon",
+      "description": "SlackIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SlackIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SnapchatIcon",
+      "type": "registry:ui",
+      "title": "SnapchatIcon",
+      "description": "SnapchatIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SnapchatIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SoupIcon",
+      "type": "registry:ui",
+      "title": "SoupIcon",
+      "description": "SoupIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SoupIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SparklesIcon",
+      "type": "registry:ui",
+      "title": "SparklesIcon",
+      "description": "SparklesIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SparklesIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SpotifyIcon",
+      "type": "registry:ui",
+      "title": "SpotifyIcon",
+      "description": "SpotifyIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SpotifyIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Stack3Icon",
+      "type": "registry:ui",
+      "title": "Stack3Icon",
+      "description": "Stack3Icon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/Stack3Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "StackIcon",
+      "type": "registry:ui",
+      "title": "StackIcon",
+      "description": "StackIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/StackIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "StarIcon",
+      "type": "registry:ui",
+      "title": "StarIcon",
+      "description": "StarIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/StarIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SubscriptIcon",
+      "type": "registry:ui",
+      "title": "SubscriptIcon",
+      "description": "SubscriptIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SubscriptIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TargetIcon",
+      "type": "registry:ui",
+      "title": "TargetIcon",
+      "description": "TargetIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TargetIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TelephoneIcon",
+      "type": "registry:ui",
+      "title": "TelephoneIcon",
+      "description": "TelephoneIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TelephoneIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TerminalIcon",
+      "type": "registry:ui",
+      "title": "TerminalIcon",
+      "description": "TerminalIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TerminalIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ToggleIcon",
+      "type": "registry:ui",
+      "title": "ToggleIcon",
+      "description": "ToggleIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/ToggleIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TrashIcon",
+      "type": "registry:ui",
+      "title": "TrashIcon",
+      "description": "TrashIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TrashIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TriangleAlertIcon",
+      "type": "registry:ui",
+      "title": "TriangleAlertIcon",
+      "description": "TriangleAlertIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TriangleAlertIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TruckElectricIcon",
+      "type": "registry:ui",
+      "title": "TruckElectricIcon",
+      "description": "TruckElectricIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TruckElectricIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TwitterIcon",
+      "type": "registry:ui",
+      "title": "TwitterIcon",
+      "description": "TwitterIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TwitterIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TwitterXIcon",
+      "type": "registry:ui",
+      "title": "TwitterXIcon",
+      "description": "TwitterXIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TwitterXIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TypescriptIcon",
+      "type": "registry:ui",
+      "title": "TypescriptIcon",
+      "description": "TypescriptIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TypescriptIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UnlinkIcon",
+      "type": "registry:ui",
+      "title": "UnlinkIcon",
+      "description": "UnlinkIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UnlinkIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UnorderedListIcon",
+      "type": "registry:ui",
+      "title": "UnorderedListIcon",
+      "description": "UnorderedListIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UnorderedListIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UserCheckIcon",
+      "type": "registry:ui",
+      "title": "UserCheckIcon",
+      "description": "UserCheckIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UserCheckIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UserPlusIcon",
+      "type": "registry:ui",
+      "title": "UserPlusIcon",
+      "description": "UserPlusIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UserPlusIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UsersGroupIcon",
+      "type": "registry:ui",
+      "title": "UsersGroupIcon",
+      "description": "UsersGroupIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UsersGroupIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UsersIcon",
+      "type": "registry:ui",
+      "title": "UsersIcon",
+      "description": "UsersIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UsersIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "VercelIcon",
+      "type": "registry:ui",
+      "title": "VercelIcon",
+      "description": "VercelIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/VercelIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "VinylIcon",
+      "type": "registry:ui",
+      "title": "VinylIcon",
+      "description": "VinylIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/VinylIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Volume2Icon",
+      "type": "registry:ui",
+      "title": "Volume2Icon",
+      "description": "Volume2Icon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/Volume2Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "VolumeXIcon",
+      "type": "registry:ui",
+      "title": "VolumeXIcon",
+      "description": "VolumeXIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/VolumeXIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WashingMachineIcon",
+      "type": "registry:ui",
+      "title": "WashingMachineIcon",
+      "description": "WashingMachineIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/WashingMachineIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WhatsappIcon",
+      "type": "registry:ui",
+      "title": "WhatsappIcon",
+      "description": "WhatsappIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/WhatsappIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WifiIcon",
+      "type": "registry:ui",
+      "title": "WifiIcon",
+      "description": "WifiIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/WifiIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WifiOffIcon",
+      "type": "registry:ui",
+      "title": "WifiOffIcon",
+      "description": "WifiOffIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/WifiOffIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WorldIcon",
+      "type": "registry:ui",
+      "title": "WorldIcon",
+      "description": "WorldIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/WorldIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "XIcon",
+      "type": "registry:ui",
+      "title": "XIcon",
+      "description": "XIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/XIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "YoutubeIcon",
+      "type": "registry:ui",
+      "title": "YoutubeIcon",
+      "description": "YoutubeIcon icon",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/YoutubeIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
           "type": "registry:ui"
         }
       ]
     }
   ]
 }
-

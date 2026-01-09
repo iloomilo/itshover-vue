@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "CpuIcon",
+  "type": "registry:ui",
+  "title": "CpuIcon",
+  "description": "CpuIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/CpuIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.pins',\n    { scale: [1, 1.15, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n  animate(\n    '.inner',\n    { scale: [1, 0.9, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n  animate(\n    '.outer',\n    { scale: [1, 1.05, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.pins, .inner, .outer',\n    { scale: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <g class=\"pins\">\n      <path d=\"M12 20v2\" />\n      <path d=\"M12 2v2\" />\n      <path d=\"M17 20v2\" />\n      <path d=\"M17 2v2\" />\n      <path d=\"M2 12h2\" />\n      <path d=\"M2 17h2\" />\n      <path d=\"M2 7h2\" />\n      <path d=\"M20 12h2\" />\n      <path d=\"M20 17h2\" />\n      <path d=\"M20 7h2\" />\n      <path d=\"M7 20v2\" />\n      <path d=\"M7 2v2\" />\n    </g>\n    <rect\n      class=\"outer\"\n      :style=\"{ transformOrigin: '12px 12px' }\"\n      x=\"4\"\n      y=\"4\"\n      width=\"16\"\n      height=\"16\"\n      rx=\"2\"\n    />\n    <rect\n      class=\"inner\"\n      :style=\"{ transformOrigin: '12px 12px' }\"\n      x=\"8\"\n      y=\"8\"\n      width=\"8\"\n      height=\"8\"\n      rx=\"1\"\n    />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

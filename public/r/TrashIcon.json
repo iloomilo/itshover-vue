@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "TrashIcon",
+  "type": "registry:ui",
+  "title": "TrashIcon",
+  "description": "TrashIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/icons/TrashIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst openLid = () => {\n  animate(\n    '.trash-lid-lower',\n    { rotate: -25, y: -4 },\n    { duration: 0.25, ease: 'easeOut' }\n  );\n  animate(\n    '.trash-lid-upper',\n    { rotate: -35, y: -6, x: -2 },\n    { duration: 0.25, ease: 'easeOut' }\n  );\n};\n\nconst closeLid = () => {\n  animate(\n    '.trash-lid-lower',\n    { rotate: 0, y: 0 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n  animate(\n    '.trash-lid-upper',\n    { rotate: 0, y: 0, x: 0 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\nconst start = () => {\n  openLid();\n};\n\nconst stop = () => {\n  closeLid();\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    :class=\"['cursor-pointer', className, 'trash-icon']\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n\n    <path\n      d=\"M4 7l16 0\"\n      class=\"trash-lid-lower\"\n      :style=\"{ transformOrigin: '50% 100%' }\"\n    />\n\n    <path d=\"M10 11l0 6\" />\n    <path d=\"M14 11l0 6\" />\n    <path d=\"M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12\" />\n\n    <path\n      d=\"M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3\"\n      class=\"trash-lid-upper\"\n      :style=\"{ transformOrigin: '50% 100%' }\"\n    />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}
