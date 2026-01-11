@@ -23,7 +23,7 @@ You can install components directly using the `shadcn-vue` CLI. You don't need t
 Make sure you have a working [shadcn-vue](https://www.shadcn-vue.com/) project set up.
 
 ### 2. Add an Icon
-Run the following command in your terminal to add an icon (e.g., `trash`):
+Run the following command in your terminal to add an icon (e.g., `AccessibiltyIcon`):
 
 ```bash
-npx shadcn-vue@latest add https://itshover-vue.com/r/AccessibilityIcon.json
+npx shadcn-vue@latest add https:/itshover-vue.vercel.app/r/AccessibilityIcon.json
