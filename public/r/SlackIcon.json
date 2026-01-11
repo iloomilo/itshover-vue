@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/SlackIcon.vue",
+      "path": "itshover/icons/SlackIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.piece1',\n    { rotate: [0, -90, 0] },\n    { duration: 0.6, ease: 'easeInOut' }\n  );\n  animate(\n    '.piece2',\n    { rotate: [0, 90, 0] },\n    { duration: 0.6, ease: 'easeInOut', delay: 0.1 }\n  );\n  animate(\n    '.piece3',\n    { rotate: [0, -90, 0] },\n    { duration: 0.6, ease: 'easeInOut', delay: 0.2 }\n  );\n  animate(\n    '.piece4',\n    { rotate: [0, 90, 0] },\n    { duration: 0.6, ease: 'easeInOut', delay: 0.3 }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.piece1, .piece2, .piece3, .piece4',\n    { rotate: 0 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <g class=\"piece1\" :style=\"{ transformOrigin: 'center' }\">\n      <path d=\"M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6\" />\n    </g>\n    <g class=\"piece2\" :style=\"{ transformOrigin: 'center' }\">\n      <path d=\"M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6\" />\n    </g>\n    <g class=\"piece3\" :style=\"{ transformOrigin: 'center' }\">\n      <path d=\"M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6\" />\n    </g>\n    <g class=\"piece4\" :style=\"{ transformOrigin: 'center' }\">\n      <path d=\"M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6\" />\n    </g>\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

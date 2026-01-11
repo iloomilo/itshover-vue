@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/LayoutBottombarCollapseIcon.vue",
+      "path": "itshover/icons/LayoutBottombarCollapseIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.chevron',\n    {\n      y: 2,\n    },\n    {\n      duration: 0.3,\n      ease: 'easeOut',\n    }\n  );\n\n  animate(\n    '.bottombar',\n    {\n      opacity: 0.6,\n    },\n    {\n      duration: 0.3,\n      ease: 'easeInOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.chevron, .bottombar',\n    {\n      y: 0,\n      opacity: 1,\n    },\n    {\n      duration: 0.25,\n      ease: 'easeInOut',\n    }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    :fill=\"color\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n\n    <path d=\"M18 3a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h12zm0 2h-12a1 1 0 0 0 -.993 .883l-.007 .117v9h14v-9a1 1 0 0 0 -.883 -.993l-.117 -.007z\" />\n\n    <g class=\"chevron\">\n      <path d=\"M10.613 8.21l.094 .083l1.293 1.292l1.293 -1.292a1 1 0 0 1 1.32 -.083l.094 .083a1 1 0 0 1 .083 1.32l-.083 .094l-2 2a1 1 0 0 1 -1.32 .083l-.094 -.083l-2 -2a1 1 0 0 1 1.32 -1.497z\" />\n    </g>\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

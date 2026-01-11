@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   components: [
     {
-      path: '../registry/icons',
+      path: '../icons',
       pathPrefix: false, 
       extensions: ['.vue'],
       global: true,

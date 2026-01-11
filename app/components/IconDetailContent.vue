@@ -141,7 +141,7 @@ const playAnimation = () => {
               <TabsContent value="cli" class="mt-0 space-y-4">
                 <div>
                   <CodeBlock
-                    :command="`${LINKS.SITE_URL}/r/${iconData.name}.json`"
+                    :command="`${LINKS.SITE_URL}/r/${iconData.componentName}.json`"
                     class="w-full"
                   />
                 </div>

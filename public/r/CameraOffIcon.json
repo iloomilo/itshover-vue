@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/CameraOffIcon.vue",
+      "path": "itshover/icons/CameraOffIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.slash',\n    { scale: 1.1, rotate: 5 },\n    { duration: 0.3, ease: 'easeOut' }\n  );\n  animate('.camera', { opacity: 0.4 }, { duration: 0.3, ease: 'easeOut' });\n};\n\nconst stop = () => {\n  animate(\n    '.slash',\n    { scale: 1, rotate: 0 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n  animate('.camera', { opacity: 1 }, { duration: 0.2, ease: 'easeInOut' });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <g class=\"camera\">\n      <path d=\"M14.564 14.558a3 3 0 1 1-4.122-4.121\" />\n      <path d=\"M20 20H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 .819-.175\" />\n      <path d=\"M9.695 4.024A2 2 0 0 1 10.004 4h3.993a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v7.344\" />\n    </g>\n    <path\n      class=\"slash\"\n      :style=\"{ transformOrigin: '12px 12px' }\"\n      d=\"m2 2 20 20\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

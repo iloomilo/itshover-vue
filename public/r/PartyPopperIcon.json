@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/PartyPopperIcon.vue",
+      "path": "itshover/icons/PartyPopperIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate('.popper', { y: 3, x: -3 }, { duration: 0.25, ease: 'easeOut' });\n\n  animate(\n    '.confetti',\n    {\n      y: [0, -6, -10],\n      x: [0, 6, 10],\n      opacity: [1, 1, 0],\n      scale: [1, 1.2, 0.8],\n    },\n    { duration: 0.6, ease: 'easeOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.popper, .confetti',\n    { y: 0, x: 0, opacity: 1, scale: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path class=\"popper\" d=\"M5.8 11.3 2 22l10.7-3.79\" />\n    <path class=\"confetti\" d=\"M4 3h.01\" />\n    <path class=\"confetti\" d=\"M22 8h.01\" />\n    <path class=\"confetti\" d=\"M15 2h.01\" />\n    <path class=\"confetti\" d=\"M22 20h.01\" />\n    <path\n      class=\"confetti\"\n      d=\"m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10\"\n    />\n    <path\n      class=\"confetti\"\n      d=\"m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17\"\n    />\n    <path\n      class=\"confetti\"\n      d=\"m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7\"\n    />\n    <path\n      class=\"popper\"\n      d=\"M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

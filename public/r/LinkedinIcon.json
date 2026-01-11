@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/LinkedinIcon.vue",
+      "path": "itshover/icons/LinkedinIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.border',\n    { scale: [1, 1.05, 1] },\n    { duration: 0.4, ease: 'easeInOut' }\n  );\n  animate(\n    '.lines',\n    { pathLength: [0, 1] },\n    { duration: 0.5, ease: 'easeOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.lines, .border',\n    { pathLength: 1, scale: 1 },\n    { duration: 0.2 }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path\n      class=\"lines\"\n      d=\"M8 11v5\"\n    />\n    <path\n      class=\"lines\"\n      d=\"M8 8v.01\"\n    />\n    <path\n      class=\"lines\"\n      d=\"M12 16v-5\"\n    />\n    <path\n      class=\"lines\"\n      d=\"M16 16v-3a2 2 0 1 0 -4 0\"\n    />\n    <path\n      class=\"border\"\n      d=\"M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z\"\n      :style=\"{ transformOrigin: 'center' }\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/WifiIcon.vue",
+      "path": "itshover/icons/WifiIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.wave-1',\n    { opacity: [1, 0.3, 1] },\n    { duration: 0.6, ease: 'easeInOut' }\n  );\n  animate(\n    '.wave-2',\n    { opacity: [1, 0.3, 1] },\n    { duration: 0.6, ease: 'easeInOut', delay: 0.15 }\n  );\n  animate(\n    '.wave-3',\n    { opacity: [1, 0.3, 1] },\n    { duration: 0.6, ease: 'easeInOut', delay: 0.3 }\n  );\n};\n\nconst stop = () => {\n  animate('.wave-1', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' });\n  animate('.wave-2', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' });\n  animate('.wave-3', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path d=\"M12 18l.01 0\" />\n    <path class=\"wave-1\" d=\"M9.172 15.172a4 4 0 0 1 5.656 0\" />\n    <path class=\"wave-2\" d=\"M6.343 12.343a8 8 0 0 1 11.314 0\" />\n    <path\n      class=\"wave-3\"\n      d=\"M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

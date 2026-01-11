@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "registry:build": "node scripts/build-registry.ts && pnpm dlx shadcn-vue@latest build"
+    "registry:build": "node scripts/build-registry.ts" 
   },
   "dependencies": {
     "@nuxt/image": "2.0.0",

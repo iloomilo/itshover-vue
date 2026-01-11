@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/SatelliteDishIcon.vue",
+      "path": "itshover/icons/SatelliteDishIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.signal-inner',\n    {\n      scale: [1, 1.15, 1],\n      opacity: [1, 0.6, 1],\n    },\n    {\n      duration: 0.6,\n      ease: 'easeInOut',\n    }\n  );\n\n  animate(\n    '.signal-outer',\n    {\n      scale: [1, 1.25, 1],\n      opacity: [1, 0.4, 1],\n    },\n    {\n      duration: 0.7,\n      ease: 'easeInOut',\n      delay: 0.1,\n    }\n  );\n\n  animate(\n    '.dish',\n    {\n      rotate: [0, -2, 2, 0],\n    },\n    {\n      duration: 0.5,\n      ease: 'easeInOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.signal-inner, .signal-outer, .dish',\n    { scale: 1, opacity: 1, rotate: 0 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path\n      class=\"dish\"\n      d=\"M4 10a7.31 7.31 0 0 0 10 10Z\"\n      :style=\"{ transformOrigin: '9px 15px' }\"\n    />\n\n    <path d=\"m9 15 3-3\" />\n\n    <path\n      class=\"signal-inner\"\n      d=\"M17 13a6 6 0 0 0-6-6\"\n      :style=\"{ transformOrigin: '14px 10px' }\"\n    />\n\n    <path\n      class=\"signal-outer\"\n      d=\"M21 13A10 10 0 0 0 11 3\"\n      :style=\"{ transformOrigin: '16px 8px' }\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }

@@ -11,12 +11,12 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/icons/SparklesIcon.vue",
+      "path": "itshover/icons/SparklesIcon.vue",
       "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.sparkle-main',\n    { rotate: 180, scale: [1, 1.2, 1] },\n    { duration: 0.6, ease: 'easeInOut' }\n  );\n\n  animate(\n    '.sparkle-top',\n    {\n      rotate: -90,\n      scale: [1, 0.8, 1.1],\n      opacity: [1, 0.6, 1],\n    },\n    { duration: 0.5, ease: 'easeInOut', delay: 0.1 }\n  );\n\n  animate(\n    '.sparkle-bottom',\n    {\n      rotate: 90,\n      scale: [1, 1.15, 0.9],\n      opacity: [1, 0.7, 1],\n    },\n    { duration: 0.5, ease: 'easeInOut', delay: 0.05 }\n  );\n};\n\nconst stop = () => {\n  animate('.sparkle-main', { rotate: 0, scale: 1 }, { duration: 0.25 });\n  animate(\n    '.sparkle-top',\n    { rotate: 0, scale: 1, opacity: 1 },\n    { duration: 0.25 }\n  );\n  animate(\n    '.sparkle-bottom',\n    { rotate: 0, scale: 1, opacity: 1 },\n    { duration: 0.25 }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path\n      class=\"sparkle-bottom\"\n      d=\"M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2z\"\n      :style=\"{ transformOrigin: '18px 18px' }\"\n    />\n\n    <path\n      class=\"sparkle-top\"\n      d=\"M16 6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2z\"\n      :style=\"{ transformOrigin: '18px 6px' }\"\n    />\n\n    <path\n      class=\"sparkle-main\"\n      d=\"M9 18a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z\"\n      :style=\"{ transformOrigin: '9px 12px' }\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "registry/types/types.ts",
+      "path": "itshover/types/types.ts",
       "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }
