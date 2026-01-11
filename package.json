@@ -11,8 +11,11 @@
     "registry:build": "node scripts/build-registry.ts && pnpm dlx shadcn-vue@latest build"
   },
   "dependencies": {
+    "@nuxt/image": "2.0.0",
+    "@vueuse/core": "^14.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fuse.js": "^7.1.0",
     "lucide-vue-next": "^0.562.0",
     "motion-v": "^1.7.6",
     "nuxt": "^4.2.2",

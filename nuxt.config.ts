@@ -15,11 +15,11 @@ export default defineNuxtConfig({
       path: '../registry/icons',
       pathPrefix: false, 
       extensions: ['.vue'],
+      global: true,
     },
     '~/components'
   ],
-
-  modules: ["shadcn-nuxt", "motion-v/nuxt"],
+  modules: ["shadcn-nuxt", "motion-v/nuxt", "@nuxt/image"],
   shadcn: {
     /**
      * Prefix for all the imported component.
