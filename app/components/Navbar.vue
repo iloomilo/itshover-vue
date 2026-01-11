@@ -31,7 +31,7 @@ function isMac() {
           <LayersIcon class="text-primary" />
           <div class="flex flex-col">
             <h1 class="font-sans text-foreground">
-              <span class="text-primary">its</span>hover
+              <span class="text-primary">its</span>hover<span class="text-primary">-vue</span>
             </h1>
           </div>
         </NuxtLink>
