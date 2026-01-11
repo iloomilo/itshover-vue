@@ -1,75 +1,29 @@
-# Nuxt Minimal Starter
+# itshover-vue
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+An unofficial Vue / Nuxt port of the beautiful [itshover.com](https://www.itshover.com/) icon library.
+Bring your app to life with interaction-based animated icons, fully compatible with **shadcn-vue**.
 
-## Setup
+![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
+![Vue](https://img.shields.io/badge/Vue.js-3.x-green.svg)
+![Nuxt](https://img.shields.io/badge/Nuxt-4.x-green.svg)
 
-Make sure to install dependencies:
+## 🌟 Credits & Attribution
 
-```bash
-# npm
-npm install
+This project is a port of [itshover.com](https://www.itshover.com/).
+**Original design and code © Abhijit-Jha**.
 
-# pnpm
-pnpm install
+Licensed under the **Apache License, Version 2.0**.
+This project modifies the original React code to work with Vue.js.
 
-# yarn
-yarn install
+## 🚀 Installation
 
-# bun
-bun install
-```
+You can install components directly using the `shadcn-vue` CLI. You don't need to copy-paste code manually.
 
-## Development Server
+### 1. Prerequisites
+Make sure you have a working [shadcn-vue](https://www.shadcn-vue.com/) project set up.
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+### 2. Add an Icon
+Run the following command in your terminal to add an icon (e.g., `trash`):
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+npx shadcn-vue@latest add https://itshover-vue.com/r/AccessibilityIcon.json
