@@ -51,9 +51,6 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.1.18(vite@7.3.0(@types/node@25.0.6)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2))
-      '@types/node':
-        specifier: ^25.0.6
-        version: 25.0.6
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -5173,6 +5170,7 @@ snapshots:
   '@types/node@25.0.6':
     dependencies:
       undici-types: 7.16.0
+    optional: true
 
   '@types/parse-path@7.1.0':
     dependencies:
@@ -7467,7 +7465,8 @@ snapshots:
       magic-string: 0.30.21
       unplugin: 2.3.11
 
-  undici-types@7.16.0: {}
+  undici-types@7.16.0:
+    optional: true
 
   unenv@2.0.0-rc.24:
     dependencies:
