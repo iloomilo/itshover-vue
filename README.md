@@ -1,4 +1,4 @@
-# itshover-vue
+# 💚itshover-vue💚
 
 An unofficial Vue / Nuxt port of the beautiful [itshover.com](https://www.itshover.com/) icon library.
 Bring your app to life with interaction-based animated icons, fully compatible with **shadcn-vue**.
@@ -8,11 +8,12 @@ Bring your app to life with interaction-based animated icons, fully compatible w
 ![Nuxt](https://img.shields.io/badge/Nuxt-4.x-green.svg)
 
 ## 🌟 Credits & Attribution
+**Original library repository:** [itshover](https://github.com/itshover/itshover)  
+**Original code © 2026 itshover**  
+**Port © 2026 iloomilo**
 
-This project is a port of [itshover.com](https://www.itshover.com/).
-**Original design and code © Abhijit-Jha**.
-
-Licensed under the **Apache License, Version 2.0**.
+Licensed under the **Apache License, Version 2.0**.  
+See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for details.  
 This project modifies the original React code to work with Vue.js.
 
 ## 🚀 Installation
@@ -26,4 +27,4 @@ Make sure you have a working [shadcn-vue](https://www.shadcn-vue.com/) project s
 Run the following command in your terminal to add an icon (e.g., `AccessibiltyIcon`):
 
 ```bash
-npx shadcn-vue@latest add https:/itshover-vue.vercel.app/r/AccessibilityIcon.json
+npx shadcn-vue@latest add https://itshover-vue.vercel.app/r/AccessibilityIcon.json
