@@ -147,7 +147,6 @@ async function generate() {
     
     log.success(`Patched paths in ${patchedCount} JSON files`);
 
-    // Done
     const duration = ((performance.now() - startTime) / 1000).toFixed(2);
     console.log(`\n${style.green}${style.bright}✨  Build completed successfully in ${duration}s!${style.reset}\n`);
 
