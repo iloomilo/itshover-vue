@@ -10,7 +10,7 @@ Bring your app to life with interaction-based animated icons, fully compatible w
 ## 🌟 Credits & Attribution
 **Original library repository:** [itshover](https://github.com/itshover/itshover)  
 **Original code © 2026 itshover**  
-**Port © 2026 Ilo**
+**Port © 2026 iloomilo**
 
 Licensed under the **Apache License, Version 2.0**.  
 See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for details.  
