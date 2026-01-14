@@ -12,11 +12,11 @@ export const useIconCode = () => {
         return str.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join("");
     }
 
-    const loadIcon = async (slug: string) => {
-        if (!slug) return
+    const loadIcon = async (componentName: string) => {
+        if (!componentName) return
 
         loading.value = true
-        const moduleKey = Object.keys(iconModules).find(path => path.endsWith(`/${slug}.vue`))
+        const moduleKey = Object.keys(iconModules).find(path => path.endsWith(`/${componentName}.vue`))
         if (moduleKey && iconModules[moduleKey]) {
             try {
                 code.value = await iconModules[moduleKey]() as string
