@@ -63,11 +63,10 @@ const playAnimation = () => {
     </NuxtLink>
 
     <div class="flex items-center gap-2">
-      
       <Tooltip>
         <TooltipTrigger as-child>
           <button
-            class="text-muted-foreground hover:text-foreground transition-colors"
+            class="text-muted-foreground hover:text-foreground h-[16px] transition-colors"
             @click="copyFileToClipboard"
           >
             <SimpleCheckedIcon v-if="isCopied" :size="16" class="text-green-500" />
