@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useAnimate } from 'motion-v';
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
 
@@ -11,11 +12,18 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
-    '.wheel',
-    { rotate: [0, 360] },
-    { duration: 1, ease: 'easeInOut', repeat: Infinity }
+const animationControls = ref<ReturnType<typeof animate>[]>([]);
+
+const start = async () => {
+  animationControls.value.forEach((control) => control.stop());
+  animationControls.value = [];
+
+  animationControls.value.push(
+    animate(
+      '.wheel',
+      { rotate: [0, 360] },
+      { duration: 1, ease: 'easeInOut', repeat: Infinity }
+    )
   );
   animate(
     '.person',
@@ -25,6 +33,9 @@ const start = () => {
 };
 
 const stop = () => {
+  animationControls.value.forEach((control) => control.stop());
+  animationControls.value = [];
+
   animate('.wheel', { rotate: 0 }, { duration: 0.3 });
   animate('.person', { y: 0 }, { duration: 0.2 });
 };

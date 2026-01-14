@@ -474,8 +474,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["dots", "menu", "more", "options", "vertical"],
   },
   {
-    name: "down-cheveron",
-    componentName: "DownCheveron",
+    name: "down-chevron-icon",
+    componentName: "DownChevronIcon",
     keywords: ["arrow", "down", "expand", "more"],
   },
   {
@@ -600,7 +600,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "instagram-icon",
-    componentName: "Instagram",
+    componentName: "InstagramIcon",
     keywords: ["instagram", "social", "media", "photo"],
   },
   {
@@ -660,7 +660,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "qrcode-icon",
-    componentName: "QrCodeIcon",
+    componentName: "QrcodeIcon",
     keywords: ["qr", "code", "scan", "barcode"],
   },
   {
@@ -679,8 +679,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["refresh", "reload", "sync", "update"],
   },
   {
-    name: "right-cheveron",
-    componentName: "RightCheveron",
+    name: "right-chevron-icon",
+    componentName: "RightChevronIcon",
     keywords: ["arrow", "right", "next", "forward"],
   },
   {
@@ -991,7 +991,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "linkedin-icon",
-    componentName: "LinkedInIcon",
+    componentName: "LinkedinIcon",
     keywords: ["linkedin", "social", "professional", "network", "job"],
   },
   {
@@ -1011,7 +1011,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "javascript-icon",
-    componentName: "JavaScriptIcon",
+    componentName: "JavascriptIcon",
     keywords: ["javascript", "js", "code", "programming", "web"],
   },
   {
@@ -1021,7 +1021,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "nodejs-icon",
-    componentName: "NodeJSIcon",
+    componentName: "NodejsIcon",
     keywords: ["nodejs", "node", "javascript", "server", "backend"],
   },
   {
@@ -1046,7 +1046,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "mysql-icon",
-    componentName: "MySQLIcon",
+    componentName: "MysqlIcon",
     keywords: ["mysql", "database", "sql", "db"],
   },
   {
@@ -1076,7 +1076,7 @@ const ICON_LIST: IconType[] = [
   },
   {
     name: "typescript-icon",
-    componentName: "TypeScriptIcon",
+    componentName: "TypescriptIcon",
     keywords: ["typescript", "ts", "code", "programming", "javascript"],
   },
   {
@@ -1204,6 +1204,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["aws", "brand", "cloud", "amazon"],
   },
   {
+    name: "brand-bags-fm-icon",
+    componentName: "BrandBagsFmIcon",
+    keywords: ["bags", "fm", "brand", "logo", "shopping", "ecommerce"],
+  },
+  {
     name: "brand-threads-icon",
     componentName: "BrandThreadsIcon",
     keywords: ["threads", "brand", "social", "meta"],
@@ -1275,6 +1280,26 @@ const ICON_LIST: IconType[] = [
     name: "brand-grok-icon",
     componentName: "BrandGrokIcon",
     keywords: ["grok", "grok-icon", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "bug-icon",
+    componentName: "BugIcon",
+    keywords: ["bug", "insect", "debug", "error", "pest", "crawl"],
+  },
+  {
+    name: "layout-dashboard-icon",
+    componentName: "LayoutDashboardIcon",
+    keywords: ["layout", "dashboard", "grid", "panel", "widgets", "admin"],
+  },
+  {
+    name: "user-icon",
+    componentName: "UserIcon",
+    keywords: ["user", "person", "profile", "account", "avatar"],
+  },
+  {
+    name: "wallet-icon",
+    componentName: "WalletIcon",
+    keywords: ["wallet", "money", "payment", "finance", "cash", "billfold"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 export { ICON_LIST };

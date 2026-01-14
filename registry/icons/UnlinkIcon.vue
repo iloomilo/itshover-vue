@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.chain-left',
     {
@@ -24,7 +24,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     '.chain-right',
     {
       x: 3,

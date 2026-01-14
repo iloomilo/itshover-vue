@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.fb-path',
     { scale: [1, 0.9, 1.05, 1] },
     { duration: 0.5, ease: 'easeInOut' }

@@ -19,22 +19,22 @@ onMounted(() => {
   animate('.battery-pause-4', { opacity: 0 }, { duration: 0 });
 });
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.battery-pause-3',
     { opacity: 1 },
     { duration: 0.15, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.battery-pause-4',
     { opacity: 1 },
     { duration: 0.15, ease: 'easeOut' }
   );
 };
 
-const stop = () => {
-  animate(
+const stop = async () => {
+  await animate(
     '.battery-pause-3, .battery-pause-4',
     { opacity: 0 },
     { duration: 0.2, ease: 'easeInOut' }

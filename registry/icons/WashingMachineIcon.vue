@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useAnimate } from 'motion-v';
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
 
@@ -11,21 +12,31 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
+const animationControls = ref<ReturnType<typeof animate>[]>([]);
+
 const start = () => {
-  animate(
-    '.drum-inner',
-    {
-      rotate: [0, 360],
-    },
-    {
-      duration: 2,
-      repeat: Infinity,
-      ease: 'linear',
-    }
+  animationControls.value.forEach((control) => control.stop());
+  animationControls.value = [];
+
+  animationControls.value.push(
+    animate(
+      '.drum-inner',
+      {
+        rotate: [0, 360],
+      },
+      {
+        duration: 2,
+        repeat: Infinity,
+        ease: 'linear',
+      }
+    )
   );
 };
 
 const stop = () => {
+  animationControls.value.forEach((control) => control.stop());
+  animationControls.value = [];
+
   animate(
     '.drum-inner',
     {

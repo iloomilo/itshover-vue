@@ -66,7 +66,6 @@ const playAnimation = () => {
             :is="resolveComponent(icon.componentName)"
             ref="iconRef"
             :size="56"
-            class="transition-transform duration-300 group-hover:scale-110"
           />
         </TooltipTrigger>
         <TooltipContent>{{ icon.name }}</TooltipContent>

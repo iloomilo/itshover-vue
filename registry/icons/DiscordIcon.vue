@@ -11,19 +11,19 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.eyes',
     { scale: [1, 1.3, 1] },
     { duration: 0.3, ease: 'easeInOut' }
   );
-  animate(
+  await animate(
     '.mouth',
     { scaleX: [1, 1.1, 1] },
     { duration: 0.4, ease: 'easeInOut' }
   );
   animate('.body', { y: [0, -1, 0] }, { duration: 0.5, ease: 'easeInOut' });
-};
+}
 
 const stop = () => {
   animate(

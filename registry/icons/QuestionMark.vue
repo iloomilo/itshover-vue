@@ -11,14 +11,14 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.question-mark',
     { pathLength: [0, 1] },
     { duration: 0.4, ease: 'easeInOut' }
   );
 
-  animate(
+  await animate(
     '.question-mark-dot',
     {
       pathLength: [0, 1],

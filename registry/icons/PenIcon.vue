@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
+import { useAnimate, motion } from 'motion-v';
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
 
 const props = withDefaults(defineProps<AnimatedIconProps>(), {
@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.pen-group',
     {
       x: [0, 1, -1, 1, -1, 0],
@@ -22,13 +22,13 @@ const start = () => {
     { duration: 0.8, ease: 'easeInOut' }
   );
 
-  animate(
+  await animate(
     '.pen-slash',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.pen-slash',
     { pathLength: 0, opacity: 0 },
     { duration: 0.2, ease: 'easeInOut' }
@@ -78,9 +78,10 @@ defineExpose({
         transformBox: 'fill-box',
       }"
     >
-      <path
+      <motion.path
         class="pen-slash"
         d="M20 6 L26 12"
+        :initial="{ pathLength: 0, opacity: 0 }"
       />
 
       <path

@@ -11,16 +11,16 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate('.draw', { pathLength: 0, opacity: 0 }, { duration: 0 });
 
-  animate(
+  await animate(
     '.outer',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.45, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.path',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.6, ease: 'easeOut' }

@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+ await animate(
     '.scan-line',
     {
       y: [0, 10, -10, 0],

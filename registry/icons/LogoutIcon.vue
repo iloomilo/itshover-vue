@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.logout-arrow, .logout-arrow-bottom',
     {
       x: [0, 6, 0],

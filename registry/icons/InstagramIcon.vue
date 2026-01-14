@@ -11,13 +11,13 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.ig-body',
     { scale: [1, 1.05, 1] },
     { duration: 0.3, ease: 'easeOut' }
   );
-  animate(
+  await animate(
     '.ig-lens',
     { scale: [1, 1.2, 1] },
     { duration: 0.25, ease: 'easeOut' }

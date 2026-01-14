@@ -11,13 +11,13 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.roof',
     { y: [-2, 0], opacity: [0.6, 1] },
     { duration: 0.4, ease: 'easeOut' }
   );
-  animate(
+  await animate(
     '.house',
     { scale: [0.95, 1] },
     { duration: 0.3, ease: 'easeOut' }

@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.rupee-main, .rupee-line',
     {
       pathLength: 0,
@@ -21,7 +21,7 @@ const start = () => {
     { duration: 0 }
   );
 
-  animate(
+  await animate(
     '.rupee-line',
     {
       pathLength: 1,
@@ -33,7 +33,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     '.rupee-main',
     {
       pathLength: 1,

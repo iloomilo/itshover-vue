@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.x-mark',
     { scale: [1, 1.06, 1] },
     { duration: 0.25, ease: 'easeOut' }

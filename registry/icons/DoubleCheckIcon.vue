@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.check-first',
     {
       pathLength: [0, 1],
@@ -24,7 +24,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     '.check-second',
     {
       pathLength: [0, 1],

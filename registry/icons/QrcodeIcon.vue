@@ -11,13 +11,13 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate('.qr-scan', { opacity: 0, y: 0 }, { duration: 0 });
   animate('.corner-rect', { pathLength: 0, opacity: 0 }, { duration: 0 });
   animate('.inner-element', { opacity: 0, scale: 0.8 }, { duration: 0 });
   animate('.center-dot', { scale: 0, opacity: 0 }, { duration: 0 });
 
-  animate(
+  await animate(
     '.corner-rect',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.4, ease: 'easeOut', delay: (i: number) => i * 0.1 }
@@ -34,7 +34,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     '.inner-element',
     { opacity: [0, 1], scale: [0.8, 1] },
     { duration: 0.3, ease: 'easeOut', delay: (i: number) => i * 0.05 }

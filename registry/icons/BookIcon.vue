@@ -11,26 +11,26 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.book-line',
     { pathLength: 0, opacity: 0 },
     { duration: 0 }
   );
 
-  animate(
+  await animate(
     '.book-line-1',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeInOut', delay: 0.1 }
   );
 
-  animate(
+  await animate(
     '.book-line-2',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeInOut', delay: 0.05 }
   );
 
-  animate(
+  await animate(
     '.book-line-3',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeInOut', delay: 0.05 }

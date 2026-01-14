@@ -11,26 +11,26 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.btc-main, .btc-lines, .btc-center',
     { pathLength: 0, opacity: 0 },
     { duration: 0 }
   );
 
-  animate(
+  await animate(
     '.btc-lines',
     { pathLength: 1, opacity: 1 },
     { duration: 0.25, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.btc-main',
     { pathLength: 1, opacity: 1 },
     { duration: 0.35, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.btc-center',
     { pathLength: 1, opacity: 1 },
     { duration: 0.2, ease: 'easeOut' }

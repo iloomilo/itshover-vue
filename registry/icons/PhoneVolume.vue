@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.phone-wave-inner',
     {
@@ -23,7 +23,7 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
+  await animate(
     '.phone-wave-outer',
     {
       scale: [1, 1.25, 1],

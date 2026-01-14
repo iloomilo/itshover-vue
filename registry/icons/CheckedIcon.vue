@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     scope.value,
     {
       scale: 1.1,
@@ -22,7 +22,7 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
+  await animate(
     '.check-icon',
     {
       pathLength: 0,
@@ -32,7 +32,7 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
+  await animate(
     '.check-icon',
     {
       pathLength: 1,
@@ -43,7 +43,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     scope.value,
     {
       scale: 1,

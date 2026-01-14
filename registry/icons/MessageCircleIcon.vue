@@ -11,10 +11,10 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate('.message-path', { pathLength: 0, opacity: 0 }, { duration: 0 });
 
-  animate(
+  await animate(
     '.message-path',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.6, ease: 'easeInOut' }

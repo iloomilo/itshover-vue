@@ -11,20 +11,20 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.eur-curve, .eur-line',
     { pathLength: 0, opacity: 0 },
     { duration: 0 }
   );
 
-  animate(
+  await animate(
     '.eur-line',
     { pathLength: 1, opacity: 1 },
     { duration: 0.25, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.eur-curve',
     { pathLength: 1, opacity: 1 },
     { duration: 0.4, ease: 'easeOut' }

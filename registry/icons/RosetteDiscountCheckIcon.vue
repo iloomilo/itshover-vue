@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.rosette-badge',
     {
@@ -24,7 +24,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     '.discount-check',
     {
       pathLength: [0, 1],

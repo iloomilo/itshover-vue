@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.skull-head',
     {
@@ -33,7 +33,7 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
+  await animate(
     '.skull-tooth',
     {
       y: [0, -3, 0, -2, 0, -3, 0],
@@ -44,7 +44,7 @@ const start = () => {
       delay: 0.1,
     }
   );
-  animate(
+  await animate(
     '.skull-head',
     {
       y: [0, -4, 0],

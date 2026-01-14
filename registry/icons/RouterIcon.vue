@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.signal-inner',
     {
@@ -24,7 +24,7 @@ const start = () => {
     }
   );
 
-  animate(
+  await animate(
     '.signal-outer',
     {
       scale: [1, 1.3, 1],

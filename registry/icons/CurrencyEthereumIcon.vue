@@ -11,20 +11,20 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.eth-outer, .eth-inner',
     { pathLength: 0, opacity: 0 },
     { duration: 0 }
   );
 
-  animate(
+  await animate(
     '.eth-outer',
     { pathLength: 1, opacity: 1 },
     { duration: 0.3, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.eth-inner',
     { pathLength: 1, opacity: 1 },
     { duration: 0.25, ease: 'easeOut' }

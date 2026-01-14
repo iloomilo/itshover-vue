@@ -11,8 +11,8 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  Promise.all([
+const start = async () => {
+  await Promise.all([
     animate(
       '.rocket-upper',
       {
@@ -34,7 +34,7 @@ const start = () => {
     ),
   ]);
 
-  animate(
+  await animate(
     '.rocket-upper',
     { x: -40, y: 40, opacity: 0 },
     { duration: 0 }

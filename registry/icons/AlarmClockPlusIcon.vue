@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useAnimate } from 'motion-v';
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
 
@@ -11,8 +12,12 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const animationControls = ref<ReturnType<typeof animate>[]>([]);
+
+const start = async () => {
+  stop(); // Ensure any running animations are stopped before starting new ones
+
+  const clockAnimation = animate(
     '.clock',
     {
       y: -1.5,
@@ -23,8 +28,9 @@ const start = () => {
       x: { duration: 0.3, repeat: Infinity, ease: 'linear' },
     }
   );
+  animationControls.value.push(clockAnimation);
 
-  animate(
+  const bellsAnimation = animate(
     '.bells',
     {
       y: -2.5,
@@ -35,8 +41,9 @@ const start = () => {
       x: { duration: 0.3, repeat: Infinity, ease: 'linear' },
     }
   );
+  animationControls.value.push(bellsAnimation);
 
-  animate(
+  await animate(
     '.plus',
     { scale: [1, 1.2, 1] },
     { duration: 0.4, ease: 'easeOut' }
@@ -44,6 +51,9 @@ const start = () => {
 };
 
 const stop = () => {
+  animationControls.value.forEach((control) => control.stop());
+  animationControls.value = [];
+
   animate('.clock', { y: 0, x: 0 }, { duration: 0.2 });
   animate('.bells', { y: 0, x: 0 }, { duration: 0.2 });
 };

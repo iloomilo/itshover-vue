@@ -19,26 +19,26 @@ onMounted(() => {
   animate('.battery-bar-4', { opacity: 0 }, { duration: 0 });
 });
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.battery-bar-1',
     { opacity: 1 },
     { duration: 0.15, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.battery-bar-2',
     { opacity: 1 },
     { duration: 0.15, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.battery-bar-3',
     { opacity: 1 },
     { duration: 0.15, ease: 'easeOut' }
   );
 
-  animate(
+  await animate(
     '.battery-bar-4',
     { opacity: 1 },
     { duration: 0.15, ease: 'easeOut' }

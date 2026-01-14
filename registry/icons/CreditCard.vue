@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
+const start = async () => {
   animate(
     '.card-body',
     {
@@ -23,7 +23,7 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
+  await animate(
     '.card-stripe',
     {
       opacity: [0, 1, 0],

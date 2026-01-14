@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
+import { useAnimate, motion } from 'motion-v';
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
 
 const props = withDefaults(defineProps<AnimatedIconProps>(), {
@@ -11,13 +11,13 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
+const start = async () => {
+  await animate(
     '.check-path',
     { pathLength: 0 },
     { duration: 0.1, ease: 'easeInOut' }
   );
-  animate(
+  await animate(
     '.check-path',
     { pathLength: 1 },
     { duration: 0.4, ease: 'easeInOut' }
@@ -49,7 +49,7 @@ defineExpose({
       class=""
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path
+      <motion.path
         d="M5 12l5 5l10 -10"
         :class="['check-path', className]"
       />

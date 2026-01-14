@@ -11,9 +11,9 @@ const props = withDefaults(defineProps<AnimatedIconProps>(), {
 
 const [scope, animate] = useAnimate();
 
-const start = () => {
-  animate(
-    scope.value,
+const start = async () => {
+  await animate(
+    'svg',
     {
       scale: 1.1,
     },
@@ -33,7 +33,7 @@ const start = () => {
       ease: 'easeOut',
     }
   );
-  animate(
+  await animate(
     '.check-icon',
     {
       pathLength: 0,
@@ -54,7 +54,7 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
+  await animate(
     '.check-icon',
     {
       pathLength: 1,
@@ -64,8 +64,8 @@ const start = () => {
       ease: 'easeInOut',
     }
   );
-  animate(
-    scope.value,
+  await animate(
+    'svg',
     {
       scale: 1,
     },
@@ -78,18 +78,8 @@ const start = () => {
 
 const stop = () => {
   animate(
-    scope.value,
-    { scale: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-  animate(
-    '.filled-circle',
-    { scale: 1, opacity: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-  animate(
-    '.check-icon',
-    { pathLength: 1 },
+    'svg, .filled-circle, .check-icon',
+    { scale: 1, opacity: 1, pathLength: 1 },
     { duration: 0.2, ease: 'easeInOut' }
   );
 };
