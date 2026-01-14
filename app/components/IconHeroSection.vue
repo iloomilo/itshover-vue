@@ -127,7 +127,7 @@ import { LINKS } from '~/constants/links';
               <div class="from-primary/20 via-primary/10 absolute inset-0 -z-10 translate-y-4 scale-95 rounded-2xl bg-gradient-to-br to-transparent opacity-50 blur-2xl" />
               
               <CodeBlock
-                :command="`${LINKS.SITE_URL}/plug-connected-icon.json`"
+                :command="`${LINKS.SITE_URL}/PlugConnectedIcon.json`"
                 class="shadow-2xl"
               />
             </div>
