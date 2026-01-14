@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "PassportIcon",
+  "type": "registry:ui",
+  "title": "PassportIcon",
+  "description": "PassportIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/PassportIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = async () => {\n  animate(\n    '.flap',\n    {\n      x: 1,\n      opacity: 1,\n    },\n    {\n      duration: 0.25,\n      delay: 0.3,\n      ease: 'easeOut',\n    }\n  );\n\n  await animate(\n    '.globe',\n    { pathLength: [0, 1] },\n    { duration: 0.8, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.flap',\n    { x: 0, opacity: 0 },\n    { duration: 0.3, ease: 'easeInOut' }\n  );\n\n  animate('.globe', { pathLength: 1 }, { duration: 0.8 });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path d=\"M2 9c0-3.3 0-4.95 1.025-5.975S5.7 2 9 2h3c3.3 0 4.95 0 5.975 1.025S19 5.7 19 9v6c0 3.3 0 4.95-1.025 5.975S15.3 22 12 22H9c-3.3 0-4.95 0-5.975-1.025S2 18.3 2 15z\"></path>\n    <path d=\"M7 17h8\"></path>\n    <!-- flap -->\n    <path\n      class=\"flap\"\n      d=\"M12.95 22c2.645 0 3.967 0 4.917-.756.95-.757 1.252-2.051 1.858-4.64l1.917-8.197c.335-1.433.503-2.15.2-2.67C21.287 4.796 19.878 5 18.958 5\"\n    ></path>\n    <!-- globe -->\n    <path\n      class=\"globe\"\n      d=\"M11 14a4 4 0 0 1 0-8M11 14a4 4 0 0 0 0-8\"\n    ></path>\n    <path\n      class=\"globe\"\n      d=\"M11 14s1.5-1.79 1.5-4S11 6 11 6M11 14s-1.5-1.79-1.5-4S11 6 11 6\"\n    ></path>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

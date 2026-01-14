@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "BrandWindowsIcon",
+  "type": "registry:ui",
+  "title": "BrandWindowsIcon",
+  "description": "BrandWindowsIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/BrandWindowsIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 1, // Note: React source used 1 here override default\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = async () => {\n  // Stage 1: All windows explode outward (Windows key press!)\n  await animate(\n    'path:nth-of-type(2)', // Top-right\n    {\n      x: [0, 8, 6],\n      y: [0, -8, -6],\n      rotate: [0, 15, 10],\n      scale: [1, 1.1, 1.05],\n    },\n    { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  animate(\n    'path:nth-of-type(3)', // Bottom-left\n    {\n      x: [0, -8, -6],\n      y: [0, 8, 6],\n      rotate: [0, -15, -10],\n      scale: [1, 1.1, 1.05],\n    },\n    { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  animate(\n    'path:nth-of-type(4)', // Top-left\n    {\n      x: [0, -8, -6],\n      y: [0, -8, -6],\n      rotate: [0, -15, -10],\n      scale: [1, 1.1, 1.05],\n    },\n    { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  await animate(\n    'path:nth-of-type(5)', // Bottom-right\n    {\n      x: [0, 8, 6],\n      y: [0, 8, 6],\n      rotate: [0, 15, 10],\n      scale: [1, 1.1, 1.05],\n    },\n    { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  // Stage 2: 3D flip the entire icon\n  await animate(\n    scope.value,\n    {\n      rotateY: [0, 180, 360],\n      scale: [1, 1.15, 1],\n    },\n    { duration: 0.6, ease: 'easeInOut' }\n  );\n\n  // Stage 3: Windows snap back together with bounce\n  animate(\n    'path:nth-of-type(2)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  animate(\n    'path:nth-of-type(3)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  animate(\n    'path:nth-of-type(4)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  await animate(\n    'path:nth-of-type(5)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }\n  );\n\n  // Stage 4: Final pulse\n  await animate(\n    scope.value,\n    {\n      scale: [1, 1.08, 1],\n    },\n    { duration: 0.3, ease: 'easeOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    scope.value,\n    { rotateY: 0, scale: 1 },\n    { duration: 0.4, ease: 'easeOut' }\n  );\n  animate(\n    'path:nth-of-type(2)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.4 }\n  );\n  animate(\n    'path:nth-of-type(3)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.4 }\n  );\n  animate(\n    'path:nth-of-type(4)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.4 }\n  );\n  animate(\n    'path:nth-of-type(5)',\n    { x: 0, y: 0, rotate: 0, scale: 1 },\n    { duration: 0.4 }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    :fill=\"color\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{\n      perspective: '1000px',\n      transformStyle: 'preserve-3d',\n    }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n    <path d=\"M21 13v5c0 1.57 -1.248 2.832 -2.715 2.923l-.113 .003l-.042 .018a1 1 0 0 1 -.336 .056l-.118 -.008l-4.676 -.585v-7.407z\" />\n    <path d=\"M11 13v7.157l-5.3 -.662c-1.514 -.151 -2.7 -1.383 -2.7 -2.895v-3.6z\" />\n    <path d=\"M11 3.842v7.158h-8v-3.6c0 -1.454 1.096 -2.648 2.505 -2.87z\" />\n    <path d=\"M21 5.9v5.1h-8v-7.409l4.717 -.589c1.759 -.145 3.283 1.189 3.283 2.898\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

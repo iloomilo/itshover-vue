@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "BrandAwsIcon",
+  "type": "registry:ui",
+  "title": "BrandAwsIcon",
+  "description": "BrandAwsIcon icon",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/BrandAwsIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate, motion } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = async () => {\n  await animate(\n    '.smile',\n    {\n      pathOffset: 1,\n      opacity: [0, 1],\n      pathLength: 1,\n    },\n    {\n      duration: 0.1,\n      ease: 'easeInOut',\n    }\n  );\n\n  await animate(\n    '.smile',\n    { pathOffset: 0 },\n    { duration: 0.45, ease: 'easeInOut' }\n  );\n\n  await animate(\n    '.arrowhead',\n    { scale: [0.8, 1.15, 1], opacity: [0, 1] },\n    { duration: 0.4, ease: 'easeOut' }\n  );\n};\n\nconst stop = () => {};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer select-none', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n\n    <!-- Smile + Arrow -->\n    <motion.g class=\"smile-group\">\n      <motion.path\n        class=\"smile\"\n        d=\"M17 18.5a15.198 15.198 0 0 1 -7.37 1.44a14.62 14.62 0 0 1 -6.63 -2.94\"\n      />\n      <motion.path\n        class=\"arrowhead\"\n        d=\"M19.5 21c.907 -1.411 1.451 -3.323 1.5 -5c-1.197 -.773 -2.577 -.935 -4 -1\"\n      />\n    </motion.g>\n\n    <motion.g class=\"text\">\n      <path d=\"M3 11v-4.5a1.5 1.5 0 0 1 3 0v4.5\" />\n      <path d=\"M3 9h3\" />\n      <path d=\"M9 5l1.2 6l1.8 -4l1.8 4l1.2 -6\" />\n      <path d=\"M18 10.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75\" />\n    </motion.g>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}
