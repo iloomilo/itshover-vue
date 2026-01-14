@@ -27,4 +27,4 @@ Make sure you have a working [shadcn-vue](https://www.shadcn-vue.com/) project s
 Run the following command in your terminal to add an icon (e.g., `AccessibiltyIcon`):
 
 ```bash
-npx shadcn-vue@latest add https://itshover-vue.vercel.app/r/AccessibilityIcon.json
+npx shadcn-vue@latest add https://itshover-vue.com/r/AccessibilityIcon.json
