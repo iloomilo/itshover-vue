@@ -1,12 +1,12 @@
 <script setup lang="ts">
-interface Props {
+
+defineProps<{
   src: string
   alt: string
   label: string
+  quadratic?: boolean
   description: string
-}
-
-defineProps<Props>()
+}>()
 </script>
 
 <template>
@@ -14,6 +14,8 @@ defineProps<Props>()
     <NuxtImg
       :src="src"
       :alt="alt"
+      :width="quadratic ? 430 : 654"
+      height="398"
       class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
     />
 

@@ -29,6 +29,7 @@ const fadeInUp = {
             src="/product/open.png"
             alt="open source"
             label="open source"
+            :quadratic="true"
             description="fully open, editable, and community owned."
           />
         </FeatureCard>
@@ -74,6 +75,7 @@ const fadeInUp = {
             src="/product/motion.png"
             alt="motion first"
             label="motion first"
+            :quadratic="true"
             description="every icon is designed with motion as a feature, not an afterthought."
           />
         </FeatureCard>

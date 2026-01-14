@@ -41,16 +41,17 @@ function isMac() {
         <NuxtLink to="/icons" class="text-muted-foreground transition-colors hover:text-foreground/80">
           icons
         </NuxtLink>
-        <NuxtLink to="/sponsor" class="text-muted-foreground transition-colors hover:text-foreground/80">
+        <!-- @TODO implement sponsor and example page
+         <NuxtLink to="/sponsor" class="text-muted-foreground transition-colors hover:text-foreground/80">
           sponsor
         </NuxtLink>
         <NuxtLink to="/example" class="text-muted-foreground transition-colors hover:text-foreground/80">
           example
-        </NuxtLink>
+        </NuxtLink> -->
       </nav>
 
       <div class="hidden flex-1 items-center justify-end gap-2 md:flex">
-        <GithubStars />
+        <!--<GithubStars />-->
 
         <a :href="LINKS.TWITTER" target="_blank"
           class="mr-3 flex items-center justify-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80">
@@ -95,7 +96,7 @@ function isMac() {
           @click="isMobileMenuOpen = false">
           Icons
         </NuxtLink>
-
+    <!-- @TODO implement sponsor and example pages
         <NuxtLink to="/sponsor"
           class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground/80"
           @click="isMobileMenuOpen = false">
@@ -106,7 +107,7 @@ function isMac() {
           class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground/80"
           @click="isMobileMenuOpen = false">
           Example
-        </NuxtLink>
+        </NuxtLink> -->
 
         <button @click="
           () => {
@@ -136,7 +137,7 @@ function isMac() {
             </a>
           </div>
 
-          <GithubStars />
+        <!--<GithubStars />-->
         </div>
       </nav>
     </div>

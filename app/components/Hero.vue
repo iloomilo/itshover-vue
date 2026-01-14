@@ -33,13 +33,16 @@ const productHuntUrl = computed(() => {
           rel="noopener noreferrer"
           class="inline-block"
         >
-          <NuxtImg
-            width="200"
-            height="200"
-            alt="Its Hover - Icons that move and react mirroring user intent | Product Hunt"
-            class="h-auto w-[200px] sm:w-[220px]"
-            :src="productHuntUrl"
-          />
+          <ClientOnly>
+            <NuxtImg
+              alt="Its Hover - Icons that move and react mirroring user intent | Product Hunt"
+              class="h-auto w-[200px] sm:w-[220px]"
+              :src="productHuntUrl"
+              sizes="200px sm:220px"
+              width="220"
+              height="48"
+            />
+          </ClientOnly>
         </a>
       </div>
 
@@ -80,11 +83,11 @@ const productHuntUrl = computed(() => {
           </PrimaryButton>
         </NuxtLink>
         
-        <NuxtLink to="/sponsor">
+<!--         <NuxtLink to="/sponsor">
           <SecondaryButton class="cursor-pointer lowercase">
             Sponsor
           </SecondaryButton>
-        </NuxtLink>
+        </NuxtLink> -->
       </motion.div>
 
     </div>

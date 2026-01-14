@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { motion } from 'motion-v'
 import { LINKS } from '~/constants/links'
 import { SPONSOR } from '~/constants/sponsor'
@@ -41,12 +40,14 @@ const featuredIcons = [
         
         <div class="space-y-4">
           <h3 class="text-lg font-semibold">Quick Links</h3>
-          <nav class="flex flex-col space-y-3">
+         <nav class="flex flex-col space-y-3">
             <NuxtLink to="/" class="text-muted-foreground hover:text-foreground transition-colors">Home</NuxtLink>
+          <!--  @TODO implement sponsor and example pages  
             <NuxtLink to="/icons" class="text-muted-foreground hover:text-foreground transition-colors">Icons</NuxtLink>
             <NuxtLink to="/sponsor" class="text-muted-foreground hover:text-foreground transition-colors">Sponsor</NuxtLink>
+            -->
             <NuxtLink :to="LINKS.GITHUB" target="_blank" rel="noreferrer" class="text-muted-foreground hover:text-foreground transition-colors">GitHub</NuxtLink>
-          </nav>
+          </nav> 
         </div>
 
         <div class="space-y-4">
