@@ -85,7 +85,7 @@ const playAnimation = () => {
           </button>
         </TooltipTrigger>
         <TooltipContent side="bottom" class="bg-foreground text-background">
-          <p>Copy {{ icon.name }}.vue file</p>
+          <p>Copy {{ icon.componentName }}.vue file</p>
         </TooltipContent>
       </Tooltip>
 

@@ -181,7 +181,7 @@ const playAnimation = () => {
                   </div>
                   <div class="bg-muted/30 relative overflow-hidden rounded-xl border">
                     <div class="flex items-center justify-between border-b px-4 py-2">
-                      <span class="text-muted-foreground text-xs">{{ iconData.name }}.vue</span>
+                      <span class="text-muted-foreground text-xs">{{ iconData.componentName }}.vue</span>
                       <button
                         @click="copyCode"
                         :disabled="!code"
