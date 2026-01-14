@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import IconDetailContent from '@/components/IconDetailContent.vue'
-
 const route = useRoute()
-const iconName = route.params.slug as string
+const { code, loading, loadIcon, toPascalCase } = useIconCode()
 
-const { data: code } = await useFetch(`/api/icons/${iconName}`)
+watchEffect(() => {
+  loadIcon(toPascalCase(route.params.slug as string))
+})
 </script>
 
 <template>
+  <div v-if="loading">Loading ...</div>  
   <IconDetailContent 
-    :slug="iconName" 
-    :code="code || ''" 
+    v-else
+    :slug="route.params.slug as string" 
+    :code="code" 
   />
-</template
+</template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, resolveComponent } from 'vue'
+import { useClipboard } from '@vueuse/core'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip' 
 import { LINKS } from '~/constants/links';
 import type { IconType } from '@/constants/icons'
@@ -8,30 +9,19 @@ import type { IconType } from '@/constants/icons'
 const props = defineProps<{
   icon: IconType 
 }>()
-
+const { code, loadIcon } = useIconCode()
 const iconRef = ref<any>(null) 
-const isCopied = ref(false)
-const isCommandCopied = ref(false)
+const { copy: copyCode, copied: isCopied } = useClipboard({ copiedDuring: 1000 })
+const { copy: copyCommand, copied: isCommandCopied } = useClipboard({ copiedDuring: 1000 })
 
 const copyFileToClipboard = async () => {
-  try {
-    const response = await $fetch(`/api/icons/${props.icon.name}`)
-    
-    const content = response || `// Source code for ${props.icon.name}` 
-
-    await navigator.clipboard.writeText(content as string)
-    isCopied.value = true
-    setTimeout(() => (isCopied.value = false), 1000)
-  } catch (err) {
-    console.error('Failed to copy icon content', err)
-  }
+    await loadIcon(props.icon.componentName)
+    await copyCode(code.value)
 }
 
 const copyCommandToClipboard = async () => {
-  const command = `npx shadcn@latest add ${LINKS.SITE_URL}/r/${props.icon.name}.json`
-  await navigator.clipboard.writeText(command)
-  isCommandCopied.value = true
-  setTimeout(() => (isCommandCopied.value = false), 1000)
+  const command = `npx shadcn-vue@latest add ${LINKS.SITE_URL}/r/${props.icon.componentName}.json`
+  await copyCommand(command)
 }
 
 const playAnimation = () => {

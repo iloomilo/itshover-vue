@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useClipboard } from '@vueuse/core'
 import { motion, AnimatePresence } from 'motion-v'
 import { cn } from '@/lib/utils'
 
@@ -9,29 +10,22 @@ const props = defineProps<{
 }>()
 
 const activeTab = ref('npm')
-const copied = ref(false)
 const packageManagers = ['npm', 'pnpm', 'yarn', 'bun']
 
 const getCommand = (pm: string) => {
   switch (pm) {
-    case 'pnpm':
-      return `pnpm dlx shadcn-vue@latest add ${props.command}`
-    case 'yarn':
-      return `yarn shadcn-vue@latest add ${props.command}`
-    case 'bun':
-      return `bunx --bun shadcn-vue@latest add ${props.command}`
-    default:
-      return `npx shadcn-vue@latest add ${props.command}`
-  }
+     case 'pnpm':
+       return `pnpm dlx shadcn-vue@latest add ${props.command}`
+     case 'yarn':
+       return `yarn shadcn-vue@latest add ${props.command}`
+     case 'bun':
+       return `bunx --bun shadcn-vue@latest add ${props.command}`
+     default:
+       return `npx shadcn-vue@latest add ${props.command}`
+   }
 }
 
-const copyToClipboard = async (text: string) => {
-  await navigator.clipboard.writeText(text)
-  copied.value = true
-  setTimeout(() => {
-    copied.value = false
-  }, 2000)
-}
+const { copy: copyToClipboard, copied } = useClipboard({ copiedDuring: 2000 })
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, resolveComponent } from 'vue'
+import { useClipboard } from '@vueuse/core'
 import { motion } from 'motion-v'
 import { ICON_LIST } from '@/constants/icons'
 import { LINKS } from '~/constants/links'
@@ -11,21 +12,17 @@ const props = defineProps<{
 }>()
 
 const iconRef = ref<any>(null)
-const codeCopied = ref(false)
-const depCopied = ref(false)
+const { copy: copyCodeText, copied: codeCopied } = useClipboard({ copiedDuring: 2000 })
+const { copy: copyDepText, copied: depCopied } = useClipboard({ copiedDuring: 2000 })
 
 const iconData = computed(() => ICON_LIST.find((icon) => icon.name === props.slug))
 
 const copyCode = async () => {
-  await navigator.clipboard.writeText(props.code)
-  codeCopied.value = true
-  setTimeout(() => (codeCopied.value = false), 2000)
+  await copyCodeText(props.code)
 }
 
 const copyDependency = async () => {
-  await navigator.clipboard.writeText("npm install motion-v") 
-  depCopied.value = true
-  setTimeout(() => (depCopied.value = false), 2000)
+  await copyDepText("npm install motion-v") 
 }
 
 const playAnimation = () => {
