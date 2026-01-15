@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 defineProps<{
   src: string
   alt: string

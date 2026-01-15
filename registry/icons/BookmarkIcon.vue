@@ -1,48 +1,48 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.bookmark-body',
     {
       scaleY: 0.9,
-      y: 2,
+      y: 2
     },
     {
       duration: 0.18,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.bookmark-body',
     {
       scaleY: 1,
-      y: 0,
+      y: 0
     },
     {
       duration: 0.18,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

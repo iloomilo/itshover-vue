@@ -1,42 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  animate(
-    '.roof',
-    { y: [-2, 0], opacity: [0.6, 1] },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-  await animate(
-    '.house',
-    { scale: [0.95, 1] },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-  animate('.door', { scaleY: [0, 1] }, { duration: 0.3, ease: 'easeOut' });
-};
+  animate('.roof', { y: [-2, 0], opacity: [0.6, 1] }, { duration: 0.4, ease: 'easeOut' })
+  await animate('.house', { scale: [0.95, 1] }, { duration: 0.3, ease: 'easeOut' })
+  animate('.door', { scaleY: [0, 1] }, { duration: 0.3, ease: 'easeOut' })
+}
 
 const stop = () => {
   animate(
     '.roof, .house, .door',
     { y: 0, opacity: 1, scale: 1, scaleY: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

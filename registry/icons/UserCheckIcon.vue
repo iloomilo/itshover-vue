@@ -1,72 +1,72 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.user-avatar',
     {
       scale: 1.05,
-      y: -1,
+      y: -1
     },
     {
       duration: 0.25,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.check-mark',
     {
       pathLength: [0, 1],
-      scale: 1.1,
+      scale: 1.1
     },
     {
       duration: 0.4,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.user-avatar',
     {
       scale: 1,
-      y: 0,
+      y: 0
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.check-mark',
     {
       pathLength: 1,
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.25,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -87,18 +87,11 @@ defineExpose({
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 
-    <g
-      class="user-avatar"
-      :style="{ transformOrigin: '50% 50%' }"
-    >
+    <g class="user-avatar" :style="{ transformOrigin: '50% 50%' }">
       <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
       <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
     </g>
 
-    <path
-      d="M15 19l2 2l4 -4"
-      class="check-mark"
-      :style="{ transformOrigin: '18px 19px' }"
-    />
+    <path d="M15 19l2 2l4 -4" class="check-mark" :style="{ transformOrigin: '18px 19px' }" />
   </svg>
 </template>

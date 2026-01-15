@@ -1,66 +1,46 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate('.ray-left', { opacity: 0 }, { duration: 0.1 });
-  animate('.ray-top', { opacity: 0 }, { duration: 0.1 });
-  animate('.ray-right', { opacity: 0 }, { duration: 0.1 });
-  animate('.ray-top-left', { opacity: 0 }, { duration: 0.1 });
-  animate('.ray-top-right', { opacity: 0 }, { duration: 0.1 });
+  animate('.ray-left', { opacity: 0 }, { duration: 0.1 })
+  animate('.ray-top', { opacity: 0 }, { duration: 0.1 })
+  animate('.ray-right', { opacity: 0 }, { duration: 0.1 })
+  animate('.ray-top-left', { opacity: 0 }, { duration: 0.1 })
+  animate('.ray-top-right', { opacity: 0 }, { duration: 0.1 })
 
-  animate(
-    '.ray-left',
-    { opacity: 1 },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-  animate('.ray-top', { opacity: 1 }, { duration: 0.4, ease: 'easeOut' });
-  animate(
-    '.ray-right',
-    { opacity: 1 },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-  animate(
-    '.ray-top-left',
-    { opacity: 1 },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-  animate(
-    '.ray-top-right',
-    { opacity: 1 },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-};
+  animate('.ray-left', { opacity: 1 }, { duration: 0.4, ease: 'easeOut' })
+  animate('.ray-top', { opacity: 1 }, { duration: 0.4, ease: 'easeOut' })
+  animate('.ray-right', { opacity: 1 }, { duration: 0.4, ease: 'easeOut' })
+  animate('.ray-top-left', { opacity: 1 }, { duration: 0.4, ease: 'easeOut' })
+  animate('.ray-top-right', { opacity: 1 }, { duration: 0.4, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate('.ray-left', { opacity: 1 }, { duration: 0.2 });
-  animate('.ray-top', { opacity: 1 }, { duration: 0.2 });
-  animate('.ray-right', { opacity: 1 }, { duration: 0.2 });
-  animate('.ray-top-left', { opacity: 1 }, { duration: 0.2 });
-  animate('.ray-top-right', { opacity: 1 }, { duration: 0.2 });
-};
+  animate('.ray-left', { opacity: 1 }, { duration: 0.2 })
+  animate('.ray-top', { opacity: 1 }, { duration: 0.2 })
+  animate('.ray-right', { opacity: 1 }, { duration: 0.2 })
+  animate('.ray-top-left', { opacity: 1 }, { duration: 0.2 })
+  animate('.ray-top-right', { opacity: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
-  <div
-    ref="scope"
-    @mouseenter="start"
-    @mouseleave="stop"
-  >
+  <div ref="scope" @mouseenter="start" @mouseleave="stop">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       :width="size"

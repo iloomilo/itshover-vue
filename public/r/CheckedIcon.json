@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "CheckedIcon",
   "description": "CheckedIcon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/CheckedIcon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = async () => {\n  await animate(\n    scope.value,\n    {\n      scale: 1.1,\n    },\n    {\n      duration: 0.1,\n      ease: 'easeInOut',\n    }\n  );\n  await animate(\n    '.check-icon',\n    {\n      pathLength: 0,\n    },\n    {\n      duration: 0.1,\n      ease: 'easeInOut',\n    }\n  );\n  await animate(\n    '.check-icon',\n    {\n      pathLength: 1,\n    },\n    {\n      duration: 0.4,\n      ease: 'easeInOut',\n    }\n  );\n\n  await animate(\n    scope.value,\n    {\n      scale: 1,\n    },\n    {\n      duration: 0.2,\n      ease: 'easeInOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(scope.value, { scale: 1 }, { duration: 0.2 });\n  animate('.check-icon', { pathLength: 1 }, { duration: 0.2 });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n      :class=\"['cursor-pointer', className]\"\n    >\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n      <path d=\"M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" />\n      <path d=\"M9 12l2 2l4 -4\" class=\"check-icon\" />\n    </svg>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = async () => {\n  await animate(\n    scope.value,\n    {\n      scale: 1.1\n    },\n    {\n      duration: 0.1,\n      ease: 'easeInOut'\n    }\n  )\n  await animate(\n    '.check-icon',\n    {\n      pathLength: 0\n    },\n    {\n      duration: 0.1,\n      ease: 'easeInOut'\n    }\n  )\n  await animate(\n    '.check-icon',\n    {\n      pathLength: 1\n    },\n    {\n      duration: 0.4,\n      ease: 'easeInOut'\n    }\n  )\n\n  await animate(\n    scope.value,\n    {\n      scale: 1\n    },\n    {\n      duration: 0.2,\n      ease: 'easeInOut'\n    }\n  )\n}\n\nconst stop = () => {\n  animate(scope.value, { scale: 1 }, { duration: 0.2 })\n  animate('.check-icon', { pathLength: 1 }, { duration: 0.2 })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <div ref=\"scope\" @mouseenter=\"start\" @mouseleave=\"stop\">\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n      :class=\"['cursor-pointer', className]\"\n    >\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n      <path d=\"M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" />\n      <path d=\"M9 12l2 2l4 -4\" class=\"check-icon\" />\n    </svg>\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]

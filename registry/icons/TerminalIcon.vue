@@ -1,46 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.cursor-line',
-    { opacity: [1, 0, 1, 0, 1] },
-    { duration: 0.8, ease: 'easeInOut' }
-  );
-  animate(
-    '.terminal-chevron',
-    { x: [0, 2, 0] },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-};
+  animate('.cursor-line', { opacity: [1, 0, 1, 0, 1] }, { duration: 0.8, ease: 'easeInOut' })
+  animate('.terminal-chevron', { x: [0, 2, 0] }, { duration: 0.3, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.cursor-line',
-    { opacity: 1 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-  animate(
-    '.terminal-chevron',
-    { x: 0 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-};
+  animate('.cursor-line', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' })
+  animate('.terminal-chevron', { x: 0 }, { duration: 0.2, ease: 'easeOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

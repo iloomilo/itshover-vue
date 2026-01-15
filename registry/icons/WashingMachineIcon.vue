@@ -1,58 +1,58 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { ref } from 'vue'
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
-const animationControls = ref<ReturnType<typeof animate>[]>([]);
+const animationControls = ref<ReturnType<typeof animate>[]>([])
 
 const start = () => {
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
   animationControls.value.push(
     animate(
       '.drum-inner',
       {
-        rotate: [0, 360],
+        rotate: [0, 360]
       },
       {
         duration: 2,
         repeat: Infinity,
-        ease: 'linear',
+        ease: 'linear'
       }
     )
-  );
-};
+  )
+}
 
 const stop = () => {
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
   animate(
     '.drum-inner',
     {
-      rotate: 0,
+      rotate: 0
     },
     {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

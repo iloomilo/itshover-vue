@@ -1,44 +1,32 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.wave-1',
-    { opacity: [1, 0.3, 1] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.wave-2',
-    { opacity: [1, 0.3, 1] },
-    { duration: 0.6, ease: 'easeInOut', delay: 0.15 }
-  );
-  animate(
-    '.wave-3',
-    { opacity: [1, 0.3, 1] },
-    { duration: 0.6, ease: 'easeInOut', delay: 0.3 }
-  );
-};
+  animate('.wave-1', { opacity: [1, 0.3, 1] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.wave-2', { opacity: [1, 0.3, 1] }, { duration: 0.6, ease: 'easeInOut', delay: 0.15 })
+  animate('.wave-3', { opacity: [1, 0.3, 1] }, { duration: 0.6, ease: 'easeInOut', delay: 0.3 })
+}
 
 const stop = () => {
-  animate('.wave-1', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' });
-  animate('.wave-2', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' });
-  animate('.wave-3', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' });
-};
+  animate('.wave-1', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' })
+  animate('.wave-2', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' })
+  animate('.wave-3', { opacity: 1 }, { duration: 0.2, ease: 'easeOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -61,9 +49,6 @@ defineExpose({
     <path d="M12 18l.01 0" />
     <path class="wave-1" d="M9.172 15.172a4 4 0 0 1 5.656 0" />
     <path class="wave-2" d="M6.343 12.343a8 8 0 0 1 11.314 0" />
-    <path
-      class="wave-3"
-      d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0"
-    />
+    <path class="wave-3" d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0" />
   </svg>
 </template>

@@ -9,9 +9,7 @@
       "title": "AccessibilityIcon",
       "description": "AccessibilityIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -30,9 +28,7 @@
       "title": "AirplaneIcon",
       "description": "AirplaneIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -51,9 +47,7 @@
       "title": "AlarmClockPlusIcon",
       "description": "AlarmClockPlusIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -72,9 +66,7 @@
       "title": "AlignCenterIcon",
       "description": "AlignCenterIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -93,9 +85,7 @@
       "title": "AlignVerticalSpaceAroundIcon",
       "description": "AlignVerticalSpaceAroundIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -114,9 +104,7 @@
       "title": "AmbulanceIcon",
       "description": "AmbulanceIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -135,9 +123,7 @@
       "title": "AmpersandIcon",
       "description": "AmpersandIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -156,9 +142,7 @@
       "title": "AngryIcon",
       "description": "AngryIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -177,9 +161,7 @@
       "title": "AnnoyedIcon",
       "description": "AnnoyedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -198,9 +180,7 @@
       "title": "AppleBrandLogo",
       "description": "AppleBrandLogo icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -219,9 +199,7 @@
       "title": "ArrowBackIcon",
       "description": "ArrowBackIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -240,9 +218,7 @@
       "title": "ArrowBackUpIcon",
       "description": "ArrowBackUpIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -261,9 +237,7 @@
       "title": "ArrowBigDownDashIcon",
       "description": "ArrowBigDownDashIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -282,9 +256,7 @@
       "title": "ArrowBigDownIcon",
       "description": "ArrowBigDownIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -303,9 +275,7 @@
       "title": "ArrowBigLeftDashIcon",
       "description": "ArrowBigLeftDashIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -324,9 +294,7 @@
       "title": "ArrowBigLeftIcon",
       "description": "ArrowBigLeftIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -345,9 +313,7 @@
       "title": "ArrowBigRightDashIcon",
       "description": "ArrowBigRightDashIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -366,9 +332,7 @@
       "title": "ArrowBigRightIcon",
       "description": "ArrowBigRightIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -387,9 +351,7 @@
       "title": "ArrowBigUpDashIcon",
       "description": "ArrowBigUpDashIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -408,9 +370,7 @@
       "title": "ArrowBigUpIcon",
       "description": "ArrowBigUpIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -429,9 +389,7 @@
       "title": "ArrowDown01Icon",
       "description": "ArrowDown01Icon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -450,9 +408,7 @@
       "title": "ArrowDown10Icon",
       "description": "ArrowDown10Icon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -471,9 +427,7 @@
       "title": "ArrowDownAZIcon",
       "description": "ArrowDownAZIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -492,9 +446,7 @@
       "title": "ArrowNarrowDownDashedIcon",
       "description": "ArrowNarrowDownDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -513,9 +465,7 @@
       "title": "ArrowNarrowDownIcon",
       "description": "ArrowNarrowDownIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -534,9 +484,7 @@
       "title": "ArrowNarrowLeftDashedIcon",
       "description": "ArrowNarrowLeftDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -555,9 +503,7 @@
       "title": "ArrowNarrowLeftIcon",
       "description": "ArrowNarrowLeftIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -576,9 +522,7 @@
       "title": "ArrowNarrowRightDashedIcon",
       "description": "ArrowNarrowRightDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -597,9 +541,7 @@
       "title": "ArrowNarrowRightIcon",
       "description": "ArrowNarrowRightIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -618,9 +560,7 @@
       "title": "ArrowNarrowUpDashedIcon",
       "description": "ArrowNarrowUpDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -639,9 +579,7 @@
       "title": "ArrowNarrowUpIcon",
       "description": "ArrowNarrowUpIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -660,9 +598,7 @@
       "title": "AtSignIcon",
       "description": "AtSignIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -681,9 +617,7 @@
       "title": "BananaIcon",
       "description": "BananaIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -702,9 +636,7 @@
       "title": "BatteryChargingIcon",
       "description": "BatteryChargingIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -723,9 +655,7 @@
       "title": "BatteryIcon",
       "description": "BatteryIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -744,9 +674,7 @@
       "title": "BatteryPauseIcon",
       "description": "BatteryPauseIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -765,9 +693,7 @@
       "title": "BellOffIcon",
       "description": "BellOffIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -786,9 +712,7 @@
       "title": "BluetoothConnectedIcon",
       "description": "BluetoothConnectedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -807,9 +731,7 @@
       "title": "BookIcon",
       "description": "BookIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -828,9 +750,7 @@
       "title": "BookmarkIcon",
       "description": "BookmarkIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -849,9 +769,7 @@
       "title": "BrandAwsIcon",
       "description": "BrandAwsIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -870,9 +788,7 @@
       "title": "BrandBagsFmIcon",
       "description": "BrandBagsFmIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -891,9 +807,7 @@
       "title": "BrandCursorIcon",
       "description": "BrandCursorIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -912,9 +826,7 @@
       "title": "BrandGeminiIcon",
       "description": "BrandGeminiIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -933,9 +845,7 @@
       "title": "BrandGoogleIcon",
       "description": "BrandGoogleIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -954,9 +864,7 @@
       "title": "BrandGrokIcon",
       "description": "BrandGrokIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -975,9 +883,7 @@
       "title": "BrandNextjsIcon",
       "description": "BrandNextjsIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -996,9 +902,7 @@
       "title": "BrandNotionIcon",
       "description": "BrandNotionIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1017,9 +921,7 @@
       "title": "BrandOpenaiIcon",
       "description": "BrandOpenaiIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1038,9 +940,7 @@
       "title": "BrandPaypalIcon",
       "description": "BrandPaypalIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1059,9 +959,7 @@
       "title": "BrandQwenIcon",
       "description": "BrandQwenIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1080,9 +978,7 @@
       "title": "BrandRailwayIcon",
       "description": "BrandRailwayIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1101,9 +997,7 @@
       "title": "BrandReactIcon",
       "description": "BrandReactIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1122,9 +1016,7 @@
       "title": "BrandReactNativeIcon",
       "description": "BrandReactNativeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1143,9 +1035,7 @@
       "title": "BrandStripeIcon",
       "description": "BrandStripeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1164,9 +1054,7 @@
       "title": "BrandTelegramIcon",
       "description": "BrandTelegramIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1185,9 +1073,7 @@
       "title": "BrandThreadsIcon",
       "description": "BrandThreadsIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1206,9 +1092,7 @@
       "title": "BrandVercelIcon",
       "description": "BrandVercelIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1227,9 +1111,7 @@
       "title": "BrandWindowsIcon",
       "description": "BrandWindowsIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1248,9 +1130,7 @@
       "title": "BrandZoomIcon",
       "description": "BrandZoomIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1269,9 +1149,7 @@
       "title": "BrightnessDownIcon",
       "description": "BrightnessDownIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1290,9 +1168,7 @@
       "title": "BugIcon",
       "description": "BugIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1311,9 +1187,7 @@
       "title": "BulbSvg",
       "description": "BulbSvg icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1332,9 +1206,7 @@
       "title": "CameraIcon",
       "description": "CameraIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1353,9 +1225,7 @@
       "title": "CameraOffIcon",
       "description": "CameraOffIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1374,9 +1244,7 @@
       "title": "CandyCaneIcon",
       "description": "CandyCaneIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1395,9 +1263,7 @@
       "title": "CartIcon",
       "description": "CartIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1416,9 +1282,7 @@
       "title": "ChartBarIcon",
       "description": "ChartBarIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1437,9 +1301,7 @@
       "title": "ChartCovariateIcon",
       "description": "ChartCovariateIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1458,9 +1320,7 @@
       "title": "ChartHistogramIcon",
       "description": "ChartHistogramIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1479,9 +1339,7 @@
       "title": "ChartLineIcon",
       "description": "ChartLineIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1500,9 +1358,7 @@
       "title": "ChartPieIcon",
       "description": "ChartPieIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1521,9 +1377,7 @@
       "title": "CheckedIcon",
       "description": "CheckedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1542,9 +1396,7 @@
       "title": "ClockIcon",
       "description": "ClockIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1563,9 +1415,7 @@
       "title": "CodeIcon",
       "description": "CodeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1584,9 +1434,7 @@
       "title": "CodeXmlIcon",
       "description": "CodeXmlIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1605,9 +1453,7 @@
       "title": "CoffeeIcon",
       "description": "CoffeeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1626,9 +1472,7 @@
       "title": "CoinBitcoinIcon",
       "description": "CoinBitcoinIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1647,9 +1491,7 @@
       "title": "CopyIcon",
       "description": "CopyIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1668,9 +1510,7 @@
       "title": "CopyOffIcon",
       "description": "CopyOffIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1689,9 +1529,7 @@
       "title": "CpuIcon",
       "description": "CpuIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1710,9 +1548,7 @@
       "title": "CreditCard",
       "description": "CreditCard icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1731,9 +1567,7 @@
       "title": "CurrencyBitcoinIcon",
       "description": "CurrencyBitcoinIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1752,9 +1586,7 @@
       "title": "CurrencyDollarIcon",
       "description": "CurrencyDollarIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1773,9 +1605,7 @@
       "title": "CurrencyEthereumIcon",
       "description": "CurrencyEthereumIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1794,9 +1624,7 @@
       "title": "CurrencyEuroIcon",
       "description": "CurrencyEuroIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1815,9 +1643,7 @@
       "title": "CurrencyRupeeIcon",
       "description": "CurrencyRupeeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1836,9 +1662,7 @@
       "title": "DeviceAirpodsIcon",
       "description": "DeviceAirpodsIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1857,9 +1681,7 @@
       "title": "DialpadIcon",
       "description": "DialpadIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1878,9 +1700,7 @@
       "title": "DiscordIcon",
       "description": "DiscordIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1899,9 +1719,7 @@
       "title": "DockerIcon",
       "description": "DockerIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1920,9 +1738,7 @@
       "title": "DotsHorizontalIcon",
       "description": "DotsHorizontalIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1941,9 +1757,7 @@
       "title": "DotsVerticalIcon",
       "description": "DotsVerticalIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1962,9 +1776,7 @@
       "title": "DoubleCheckIcon",
       "description": "DoubleCheckIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -1983,9 +1795,7 @@
       "title": "DownChevronIcon",
       "description": "DownChevronIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2004,9 +1814,7 @@
       "title": "DrumIcon",
       "description": "DrumIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2025,9 +1833,7 @@
       "title": "ExpandIcon",
       "description": "ExpandIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2046,9 +1852,7 @@
       "title": "ExternalLinkIcon",
       "description": "ExternalLinkIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2067,9 +1871,7 @@
       "title": "EyeIcon",
       "description": "EyeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2088,9 +1890,7 @@
       "title": "EyeOffIcon",
       "description": "EyeOffIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2109,9 +1909,7 @@
       "title": "FacebookIcon",
       "description": "FacebookIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2130,9 +1928,7 @@
       "title": "FigmaIcon",
       "description": "FigmaIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2151,9 +1947,7 @@
       "title": "FileDescriptionIcon",
       "description": "FileDescriptionIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2172,9 +1966,7 @@
       "title": "FilledBellIcon",
       "description": "FilledBellIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2193,9 +1985,7 @@
       "title": "FilledCheckedIcon",
       "description": "FilledCheckedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2214,9 +2004,7 @@
       "title": "FlameIcon",
       "description": "FlameIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2235,9 +2023,7 @@
       "title": "FocusIcon",
       "description": "FocusIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2256,9 +2042,7 @@
       "title": "GaugeIcon",
       "description": "GaugeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2277,9 +2061,7 @@
       "title": "GearIcon",
       "description": "GearIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2298,9 +2080,7 @@
       "title": "GhostIcon",
       "description": "GhostIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2319,9 +2099,7 @@
       "title": "GithubCopilotIcon",
       "description": "GithubCopilotIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2340,9 +2118,7 @@
       "title": "GithubIcon",
       "description": "GithubIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2361,9 +2137,7 @@
       "title": "GitlabIcon",
       "description": "GitlabIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2382,9 +2156,7 @@
       "title": "GlobeIcon",
       "description": "GlobeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2403,9 +2175,7 @@
       "title": "GmailIcon",
       "description": "GmailIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2424,9 +2194,7 @@
       "title": "GolangIcon",
       "description": "GolangIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2445,9 +2213,7 @@
       "title": "HandHeartIcon",
       "description": "HandHeartIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2466,9 +2232,7 @@
       "title": "HashtagIcon",
       "description": "HashtagIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2487,9 +2251,7 @@
       "title": "HeartIcon",
       "description": "HeartIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2508,9 +2270,7 @@
       "title": "HistoryCircleIcon",
       "description": "HistoryCircleIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2529,9 +2289,7 @@
       "title": "HomeIcon",
       "description": "HomeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2550,9 +2308,7 @@
       "title": "HotelIcon",
       "description": "HotelIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2571,9 +2327,7 @@
       "title": "InfoCircleIcon",
       "description": "InfoCircleIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2592,9 +2346,7 @@
       "title": "InstagramIcon",
       "description": "InstagramIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2613,9 +2365,7 @@
       "title": "JavascriptIcon",
       "description": "JavascriptIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2634,9 +2384,7 @@
       "title": "KeyframesIcon",
       "description": "KeyframesIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2655,9 +2403,7 @@
       "title": "LayersIcon",
       "description": "LayersIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2676,9 +2422,7 @@
       "title": "LayoutBottombarCollapseIcon",
       "description": "LayoutBottombarCollapseIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2697,9 +2441,7 @@
       "title": "LayoutDashboardIcon",
       "description": "LayoutDashboardIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2718,9 +2460,7 @@
       "title": "LayoutSidebarRightCollapseIcon",
       "description": "LayoutSidebarRightCollapseIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2739,9 +2479,7 @@
       "title": "LayoutSidebarRightIcon",
       "description": "LayoutSidebarRightIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2760,9 +2498,7 @@
       "title": "LikeIcon",
       "description": "LikeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2781,9 +2517,7 @@
       "title": "LinkIcon",
       "description": "LinkIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2802,9 +2536,7 @@
       "title": "LinkedinIcon",
       "description": "LinkedinIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2823,9 +2555,7 @@
       "title": "LockIcon",
       "description": "LockIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2844,9 +2574,7 @@
       "title": "LogoutIcon",
       "description": "LogoutIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2865,9 +2593,7 @@
       "title": "MagnifierIcon",
       "description": "MagnifierIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2886,9 +2612,7 @@
       "title": "MailFilledIcon",
       "description": "MailFilledIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2907,9 +2631,7 @@
       "title": "MehIcon",
       "description": "MehIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2928,9 +2650,7 @@
       "title": "MessageCircleIcon",
       "description": "MessageCircleIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2949,9 +2669,7 @@
       "title": "MoonIcon",
       "description": "MoonIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2970,9 +2688,7 @@
       "title": "MousePointer2Icon",
       "description": "MousePointer2Icon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -2991,9 +2707,7 @@
       "title": "MysqlIcon",
       "description": "MysqlIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3012,9 +2726,7 @@
       "title": "NodejsIcon",
       "description": "NodejsIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3033,9 +2745,7 @@
       "title": "PaintIcon",
       "description": "PaintIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3054,9 +2764,7 @@
       "title": "PartyPopperIcon",
       "description": "PartyPopperIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3075,9 +2783,7 @@
       "title": "PassportIcon",
       "description": "PassportIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3096,9 +2802,7 @@
       "title": "PenIcon",
       "description": "PenIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3117,9 +2821,7 @@
       "title": "PhoneVolume",
       "description": "PhoneVolume icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3138,9 +2840,7 @@
       "title": "PinterestIcon",
       "description": "PinterestIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3159,9 +2859,7 @@
       "title": "PlayerIcon",
       "description": "PlayerIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3180,9 +2878,7 @@
       "title": "PlugConnectedIcon",
       "description": "PlugConnectedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3201,9 +2897,7 @@
       "title": "PlugConnectedXIcon",
       "description": "PlugConnectedXIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3222,9 +2916,7 @@
       "title": "PythonIcon",
       "description": "PythonIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3243,9 +2935,7 @@
       "title": "QrcodeIcon",
       "description": "QrcodeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3264,9 +2954,7 @@
       "title": "QuestionMark",
       "description": "QuestionMark icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3285,9 +2973,7 @@
       "title": "RadioIcon",
       "description": "RadioIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3306,9 +2992,7 @@
       "title": "RainbowIcon",
       "description": "RainbowIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3327,9 +3011,7 @@
       "title": "RefreshIcon",
       "description": "RefreshIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3348,9 +3030,7 @@
       "title": "RightChevronIcon",
       "description": "RightChevronIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3369,9 +3049,7 @@
       "title": "RocketIcon",
       "description": "RocketIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3390,9 +3068,7 @@
       "title": "RosetteDiscountCheckIcon",
       "description": "RosetteDiscountCheckIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3411,9 +3087,7 @@
       "title": "RosetteDiscountIcon",
       "description": "RosetteDiscountIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3432,9 +3106,7 @@
       "title": "RouterIcon",
       "description": "RouterIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3453,9 +3125,7 @@
       "title": "SatelliteDishIcon",
       "description": "SatelliteDishIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3474,9 +3144,7 @@
       "title": "ScanBarcodeIcon",
       "description": "ScanBarcodeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3495,9 +3163,7 @@
       "title": "ScanHeartIcon",
       "description": "ScanHeartIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3516,9 +3182,7 @@
       "title": "SendHorizontalIcon",
       "description": "SendHorizontalIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3537,9 +3201,7 @@
       "title": "SendIcon",
       "description": "SendIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3558,9 +3220,7 @@
       "title": "ShieldCheck",
       "description": "ShieldCheck icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3579,9 +3239,7 @@
       "title": "ShoppingCartIcon",
       "description": "ShoppingCartIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3600,9 +3258,7 @@
       "title": "SimpleCheckedIcon",
       "description": "SimpleCheckedIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3621,9 +3277,7 @@
       "title": "SkullEmoji",
       "description": "SkullEmoji icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3642,9 +3296,7 @@
       "title": "SlackIcon",
       "description": "SlackIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3663,9 +3315,7 @@
       "title": "SnapchatIcon",
       "description": "SnapchatIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3684,9 +3334,7 @@
       "title": "SoupIcon",
       "description": "SoupIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3705,9 +3353,7 @@
       "title": "SparklesIcon",
       "description": "SparklesIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3726,9 +3372,7 @@
       "title": "SpotifyIcon",
       "description": "SpotifyIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3747,9 +3391,7 @@
       "title": "Stack3Icon",
       "description": "Stack3Icon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3768,9 +3410,7 @@
       "title": "StackIcon",
       "description": "StackIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3789,9 +3429,7 @@
       "title": "StarIcon",
       "description": "StarIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3810,9 +3448,7 @@
       "title": "SubscriptIcon",
       "description": "SubscriptIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3831,9 +3467,7 @@
       "title": "TargetIcon",
       "description": "TargetIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3852,9 +3486,7 @@
       "title": "TelephoneIcon",
       "description": "TelephoneIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3873,9 +3505,7 @@
       "title": "TerminalIcon",
       "description": "TerminalIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3894,9 +3524,7 @@
       "title": "ToggleIcon",
       "description": "ToggleIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3915,9 +3543,7 @@
       "title": "TrashIcon",
       "description": "TrashIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3936,9 +3562,7 @@
       "title": "TravelBag",
       "description": "TravelBag icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3957,9 +3581,7 @@
       "title": "TriangleAlertIcon",
       "description": "TriangleAlertIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3978,9 +3600,7 @@
       "title": "TruckElectricIcon",
       "description": "TruckElectricIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -3999,9 +3619,7 @@
       "title": "TwitterIcon",
       "description": "TwitterIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4020,9 +3638,7 @@
       "title": "TwitterXIcon",
       "description": "TwitterXIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4041,9 +3657,7 @@
       "title": "TypescriptIcon",
       "description": "TypescriptIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4062,9 +3676,7 @@
       "title": "UnlinkIcon",
       "description": "UnlinkIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4083,9 +3695,7 @@
       "title": "UnorderedListIcon",
       "description": "UnorderedListIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4104,9 +3714,7 @@
       "title": "UserCheckIcon",
       "description": "UserCheckIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4125,9 +3733,7 @@
       "title": "UserIcon",
       "description": "UserIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4146,9 +3752,7 @@
       "title": "UserPlusIcon",
       "description": "UserPlusIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4167,9 +3771,7 @@
       "title": "UsersGroupIcon",
       "description": "UsersGroupIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4188,9 +3790,7 @@
       "title": "UsersIcon",
       "description": "UsersIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4209,9 +3809,7 @@
       "title": "VinylIcon",
       "description": "VinylIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4230,9 +3828,7 @@
       "title": "Volume2Icon",
       "description": "Volume2Icon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4251,9 +3847,7 @@
       "title": "VolumeXIcon",
       "description": "VolumeXIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4272,9 +3866,7 @@
       "title": "WalletIcon",
       "description": "WalletIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4293,9 +3885,7 @@
       "title": "WashingMachineIcon",
       "description": "WashingMachineIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4314,9 +3904,7 @@
       "title": "WhatsappIcon",
       "description": "WhatsappIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4335,9 +3923,7 @@
       "title": "WifiIcon",
       "description": "WifiIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4356,9 +3942,7 @@
       "title": "WifiOffIcon",
       "description": "WifiOffIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4377,9 +3961,7 @@
       "title": "WorldIcon",
       "description": "WorldIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4398,9 +3980,7 @@
       "title": "XIcon",
       "description": "XIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
@@ -4419,9 +3999,7 @@
       "title": "YoutubeIcon",
       "description": "YoutubeIcon icon",
       "registryDependencies": [],
-      "dependencies": [
-        "motion"
-      ],
+      "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {

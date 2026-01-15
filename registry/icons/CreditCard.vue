@@ -1,62 +1,62 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   animate(
     '.card-body',
     {
       rotate: [0, -3, 3, 0],
-      scale: [1, 1.02, 1],
+      scale: [1, 1.02, 1]
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     '.card-stripe',
     {
       opacity: [0, 1, 0],
-      x: [-18, 18],
+      x: [-18, 18]
     },
     {
       duration: 0.5,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   animate(
     '.card-chip',
     {
       scale: [1, 1.6, 1],
-      opacity: [0.6, 1, 0.6],
+      opacity: [0.6, 1, 0.6]
     },
     {
       duration: 0.25,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.card-body', { rotate: 0, scale: 1 }, { duration: 0.2 });
-  animate('.card-stripe', { opacity: 0, x: 0 }, { duration: 0.2 });
-  animate('.card-chip', { scale: 1, opacity: 0.6 }, { duration: 0.2 });
-};
+  animate('.card-body', { rotate: 0, scale: 1 }, { duration: 0.2 })
+  animate('.card-stripe', { opacity: 0, x: 0 }, { duration: 0.2 })
+  animate('.card-chip', { scale: 1, opacity: 0.6 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -85,11 +85,7 @@ defineExpose({
 
       <path class="card-stripe" d="M3 10l18 0" opacity="0" />
 
-      <path
-        class="card-chip"
-        :style="{ transformOrigin: '7px 15px' }"
-        d="M7 15l.01 0"
-      />
+      <path class="card-chip" :style="{ transformOrigin: '7px 15px' }" d="M7 15l.01 0" />
 
       <path class="card-number" d="M11 15l2 0" />
     </svg>

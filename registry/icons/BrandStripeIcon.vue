@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import { useId } from 'vue';
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useId } from 'vue'
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
-const id = useId();
-const clipId = `fillClip-${id.replace(/:/g, '')}`;
+const [scope, animate] = useAnimate()
+const id = useId()
+const clipId = `fillClip-${id.replace(/:/g, '')}`
 
 const start = async () => {
   await animate(
     '.fill-rect',
     {
-      y: [-2, 26],
+      y: [-2, 26]
     },
     { duration: 1.4, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.fill-rect', { y: -2 }, { duration: 0.3, ease: 'easeOut' });
-};
+  animate('.fill-rect', { y: -2 }, { duration: 0.3, ease: 'easeOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

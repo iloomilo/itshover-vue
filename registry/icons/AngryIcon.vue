@@ -1,40 +1,32 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.eyebrows',
-    { y: 1, scaleY: 1.2 },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-  animate('.mouth', { scaleY: 1.2 }, { duration: 0.3, ease: 'easeOut' });
-  animate('.eyes', { scale: 0.8 }, { duration: 0.3, ease: 'easeOut' });
-};
+  animate('.eyebrows', { y: 1, scaleY: 1.2 }, { duration: 0.3, ease: 'easeOut' })
+  animate('.mouth', { scaleY: 1.2 }, { duration: 0.3, ease: 'easeOut' })
+  animate('.eyes', { scale: 0.8 }, { duration: 0.3, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate(
-    '.eyebrows',
-    { y: 0, scaleY: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-  animate('.mouth', { scaleY: 1 }, { duration: 0.2, ease: 'easeInOut' });
-  animate('.eyes', { scale: 1 }, { duration: 0.2, ease: 'easeInOut' });
-};
+  animate('.eyebrows', { y: 0, scaleY: 1 }, { duration: 0.2, ease: 'easeInOut' })
+  animate('.mouth', { scaleY: 1 }, { duration: 0.2, ease: 'easeInOut' })
+  animate('.eyes', { scale: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -54,11 +46,7 @@ defineExpose({
     @mouseleave="stop"
   >
     <circle cx="12" cy="12" r="10" />
-    <path
-      class="mouth"
-      :style="{ transformOrigin: '12px 16px' }"
-      d="M16 16s-1.5-2-4-2-4 2-4 2"
-    />
+    <path class="mouth" :style="{ transformOrigin: '12px 16px' }" d="M16 16s-1.5-2-4-2-4 2-4 2" />
     <g class="eyebrows">
       <path d="M7.5 8 10 9" />
       <path d="m14 9 2.5-1" />

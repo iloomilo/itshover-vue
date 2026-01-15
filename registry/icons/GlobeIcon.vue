@@ -1,32 +1,28 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.globe-circle',
-    { rotate: 360 },
-    { duration: 2, ease: 'linear', repeat: Infinity }
-  );
-};
+  animate('.globe-circle', { rotate: 360 }, { duration: 2, ease: 'linear', repeat: Infinity })
+}
 
 const stop = () => {
-  animate('.globe-circle', { rotate: 0 }, { duration: 0.5 });
-};
+  animate('.globe-circle', { rotate: 0 }, { duration: 0.5 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -47,10 +43,7 @@ defineExpose({
       stroke-miterlimit="10"
       stroke-linecap="square"
     >
-      <g
-        class="globe-circle"
-        :style="{ transformOrigin: '23px 19px' }"
-      >
+      <g class="globe-circle" :style="{ transformOrigin: '23px 19px' }">
         <path
           class="globe-continent-1"
           d="M36.6225 22.1264C34.6145 19.2959 32.3651 15.7913 28.4377 17.3428C24.4307 18.9257 30.0493 23.15 25.2064 26.9189C22.1135 29.3259 22.8515 31.6477 23.9478 33"

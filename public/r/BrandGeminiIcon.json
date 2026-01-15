@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "BrandGeminiIcon",
   "description": "BrandGeminiIcon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/BrandGeminiIcon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    scope.value,\n    { scale: 0.9, rotate: [0, 180] },\n    {\n      duration: 0.8,\n      ease: 'easeInOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate(\n    scope.value,\n    { scale: 1, rotate: 0 },\n    {\n      duration: 0.8,\n      ease: 'easeInOut',\n    }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    :fill=\"color\"\n    :class=\"['gemini-icon cursor-pointer', className]\"\n    role=\"img\"\n    aria-label=\"Gemini\"\n    :style=\"{\n      flex: 'none',\n      lineHeight: 1,\n      transformBox: 'fill-box',\n      transformOrigin: 'center',\n    }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <title>Gemini</title>\n    <!-- Gemini star glyph -->\n    <path\n      class=\"gemini-shape\"\n      d=\"M20.616 10.835a14.147 14.147 0 01-4.45-3.001 14.111 14.111 0 01-3.678-6.452.503.503 0 00-.975 0 14.134 14.134 0 01-3.679 6.452 14.155 14.155 0 01-4.45 3.001c-.65.28-1.318.505-2.002.678a.502.502 0 000 .975c.684.172 1.35.397 2.002.677a14.147 14.147 0 014.45 3.001 14.112 14.112 0 013.679 6.453.502.502 0 00.975 0c.172-.685.397-1.351.677-2.003a14.145 14.145 0 013.001-4.45 14.113 14.113 0 016.453-3.678.503.503 0 000-.975 13.245 13.245 0 01-2.003-.678z\"\n    />\n  </svg>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate(\n    scope.value,\n    { scale: 0.9, rotate: [0, 180] },\n    {\n      duration: 0.8,\n      ease: 'easeInOut'\n    }\n  )\n}\n\nconst stop = () => {\n  animate(\n    scope.value,\n    { scale: 1, rotate: 0 },\n    {\n      duration: 0.8,\n      ease: 'easeInOut'\n    }\n  )\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    :fill=\"color\"\n    :class=\"['gemini-icon cursor-pointer', className]\"\n    role=\"img\"\n    aria-label=\"Gemini\"\n    :style=\"{\n      flex: 'none',\n      lineHeight: 1,\n      transformBox: 'fill-box',\n      transformOrigin: 'center'\n    }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <title>Gemini</title>\n    <!-- Gemini star glyph -->\n    <path\n      class=\"gemini-shape\"\n      d=\"M20.616 10.835a14.147 14.147 0 01-4.45-3.001 14.111 14.111 0 01-3.678-6.452.503.503 0 00-.975 0 14.134 14.134 0 01-3.679 6.452 14.155 14.155 0 01-4.45 3.001c-.65.28-1.318.505-2.002.678a.502.502 0 000 .975c.684.172 1.35.397 2.002.677a14.147 14.147 0 014.45 3.001 14.112 14.112 0 013.679 6.453.502.502 0 00.975 0c.172-.685.397-1.351.677-2.003a14.145 14.145 0 013.001-4.45 14.113 14.113 0 016.453-3.678.503.503 0 000-.975 13.245 13.245 0 01-2.003-.678z\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]

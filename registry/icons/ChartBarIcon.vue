@@ -1,52 +1,32 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate('.bar-1', { scaleY: [0, 1] }, { duration: 0.3, ease: 'easeOut' });
-  animate(
-    '.bar-2',
-    { scaleY: [0, 1] },
-    { duration: 0.3, ease: 'easeOut', delay: 0.1 }
-  );
-  animate(
-    '.bar-3',
-    { scaleY: [0, 1] },
-    { duration: 0.3, ease: 'easeOut', delay: 0.2 }
-  );
-  animate(
-    '.base-line',
-    { scaleX: [1, 1.05, 1] },
-    { duration: 0.4, ease: 'easeInOut' }
-  );
-};
+  animate('.bar-1', { scaleY: [0, 1] }, { duration: 0.3, ease: 'easeOut' })
+  animate('.bar-2', { scaleY: [0, 1] }, { duration: 0.3, ease: 'easeOut', delay: 0.1 })
+  animate('.bar-3', { scaleY: [0, 1] }, { duration: 0.3, ease: 'easeOut', delay: 0.2 })
+  animate('.base-line', { scaleX: [1, 1.05, 1] }, { duration: 0.4, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.bar-1 , .bar-2 , .bar-3',
-    { scaleY: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-  animate(
-    '.base-line',
-    { scaleX: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.bar-1 , .bar-2 , .bar-3', { scaleY: 1 }, { duration: 0.2, ease: 'easeInOut' })
+  animate('.base-line', { scaleX: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -85,10 +65,6 @@ defineExpose({
       :style="{ transformOrigin: '18px 20px' }"
     />
 
-    <path
-      d="M4 20h14"
-      class="base-line"
-      :style="{ transformOrigin: '11px 20px' }"
-    />
+    <path d="M4 20h14" class="base-line" :style="{ transformOrigin: '11px 20px' }" />
   </svg>
 </template>

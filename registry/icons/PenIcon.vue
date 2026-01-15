@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate, motion } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate, motion } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await animate(
@@ -17,42 +17,30 @@ const start = async () => {
     {
       x: [0, 1, -1, 1, -1, 0],
       y: [0, -2, -4, -6, -8, -10],
-      rotate: [0, -6, -4, -6, -4, 0],
+      rotate: [0, -6, -4, -6, -4, 0]
     },
     { duration: 0.8, ease: 'easeInOut' }
-  );
+  )
 
   await animate(
     '.pen-slash',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeOut' }
-  );
+  )
 
-  await animate(
-    '.pen-slash',
-    { pathLength: 0, opacity: 0 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
+  await animate('.pen-slash', { pathLength: 0, opacity: 0 }, { duration: 0.2, ease: 'easeInOut' })
 
-  animate(
-    '.pen-group',
-    { x: 0, y: 0, rotate: 0 },
-    { duration: 0.25, ease: 'easeInOut' }
-  );
-};
+  animate('.pen-group', { x: 0, y: 0, rotate: 0 }, { duration: 0.25, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.pen-group',
-    { x: 0, y: 0, rotate: 0 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.pen-group', { x: 0, y: 0, rotate: 0 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -75,14 +63,10 @@ defineExpose({
       class="pen-group"
       :style="{
         transformOrigin: '50% 50%',
-        transformBox: 'fill-box',
+        transformBox: 'fill-box'
       }"
     >
-      <motion.path
-        class="pen-slash"
-        d="M20 6 L26 12"
-        :initial="{ pathLength: 0, opacity: 0 }"
-      />
+      <motion.path class="pen-slash" d="M20 6 L26 12" :initial="{ pathLength: 0, opacity: 0 }" />
 
       <path
         class="pen-body"

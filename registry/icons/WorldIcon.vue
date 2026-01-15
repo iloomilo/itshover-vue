@@ -1,46 +1,46 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.world-meridians',
     {
-      pathLength: [0, 1],
+      pathLength: [0, 1]
     },
     {
       duration: 1,
-      ease: 'linear',
+      ease: 'linear'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.world-meridians',
     {
-      pathLength: 1,
+      pathLength: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -67,20 +67,11 @@ defineExpose({
       :style="{ transformOrigin: '50% 50%' }"
     />
 
-    <g
-      class="world-meridians"
-      :style="{ transformOrigin: '50% 50%' }"
-    >
+    <g class="world-meridians" :style="{ transformOrigin: '50% 50%' }">
       <path d="M3.6 9h16.8" class="world-meridians" />
       <path d="M3.6 15h16.8" class="world-meridians" />
-      <path
-        d="M11.5 3a17 17 0 0 0 0 18"
-        class="world-meridians"
-      />
-      <path
-        d="M12.5 3a17 17 0 0 1 0 18"
-        class="world-meridians"
-      />
+      <path d="M11.5 3a17 17 0 0 0 0 18" class="world-meridians" />
+      <path d="M12.5 3a17 17 0 0 1 0 18" class="world-meridians" />
     </g>
   </svg>
 </template>

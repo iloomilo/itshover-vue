@@ -1,58 +1,58 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.eye-pupil',
     {
-      scale: 0.7,
+      scale: 0.7
     },
     {
       duration: 0.15,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.eye-shape',
     {
-      scaleY: 0.9,
+      scaleY: 0.9
     },
     {
       duration: 0.15,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.eye-pupil, .eye-shape',
     {
       scale: 1,
-      scaleY: 1,
+      scaleY: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

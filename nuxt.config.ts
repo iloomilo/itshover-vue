@@ -1,37 +1,37 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ["~/assets/css/tailwind.css"],
+  css: ['~/assets/css/tailwind.css'],
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss()]
   },
 
   components: [
     {
-      path: "../registry/icons",
+      path: '../registry/icons',
       pathPrefix: false,
-      extensions: [".vue"],
-      global: true,
+      extensions: ['.vue'],
+      global: true
     },
-    "~/components",
+    '~/components'
   ],
-  modules: ["shadcn-nuxt", "motion-v/nuxt", "@nuxt/image"],
+  modules: ['shadcn-nuxt', 'motion-v/nuxt', '@nuxt/image', '@nuxt/eslint'],
   shadcn: {
     /**
      * Prefix for all the imported component.
      * @default "Ui"
      */
-    prefix: "",
+    prefix: '',
     /**
      * Directory that the component lives in.
      * Will respect the Nuxt aliases.
      * @link https://nuxt.com/docs/api/nuxt-config#alias
      * @default "@/components/ui"
      */
-    componentDir: "@/components/ui",
-  },
-});
+    componentDir: '@/components/ui'
+  }
+})

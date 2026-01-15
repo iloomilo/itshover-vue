@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { ref } from 'vue'
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
-const animationControls = ref<ReturnType<typeof animate>[]>([]);
+const [scope, animate] = useAnimate()
+const animationControls = ref<ReturnType<typeof animate>[]>([])
 
 const start = async () => {
   // Clear any existing animations
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
   // Smooth pop entrance
   await animate(
     '.orbit-system',
     { scale: [0.95, 1.02, 1] },
     { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }
-  );
+  )
 
   // Center dot gentle pulse
   animationControls.value.push(
@@ -31,15 +31,15 @@ const start = async () => {
       '.center-dot',
       {
         scale: [1, 1.3, 1],
-        opacity: [1, 0.8, 1],
+        opacity: [1, 0.8, 1]
       },
       {
         duration: 2.5,
         ease: 'easeInOut',
-        repeat: Infinity,
+        repeat: Infinity
       }
     )
-  );
+  )
 
   // Smooth continuous rotation
   animationControls.value.push(
@@ -49,51 +49,47 @@ const start = async () => {
       {
         duration: 20,
         ease: 'linear',
-        repeat: Infinity,
+        repeat: Infinity
       }
     )
-  );
+  )
 
   // Subtle wave through rings
-  const rings = ['.ring-1', '.ring-2', '.ring-3'];
+  const rings = ['.ring-1', '.ring-2', '.ring-3']
   rings.forEach((ring, i) => {
     animationControls.value.push(
       animate(
         ring,
         {
-          opacity: [1, 0.7, 1],
+          opacity: [1, 0.7, 1]
         },
         {
           duration: 3,
           ease: 'easeInOut',
           repeat: Infinity,
-          delay: i * 1,
+          delay: i * 1
         }
       )
-    );
-  });
-};
+    )
+  })
+}
 
 const stop = () => {
   // Cancel all infinite animations
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
-  animate(
-    '.orbit-system',
-    { rotate: 0, scale: 1 },
-    { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }
-  );
+  animate('.orbit-system', { rotate: 0, scale: 1 }, { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] })
 
-  animate('.ring-1, .ring-2, .ring-3', { opacity: 1 }, { duration: 0.3 });
+  animate('.ring-1, .ring-2, .ring-3', { opacity: 1 }, { duration: 0.3 })
 
-  animate('.center-dot', { scale: 1, opacity: 1 }, { duration: 0.3 });
-};
+  animate('.center-dot', { scale: 1, opacity: 1 }, { duration: 0.3 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

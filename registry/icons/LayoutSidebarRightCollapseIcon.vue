@@ -1,34 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.chevron',
-    { x: [0, 2, 0], opacity: [1, 0.7, 1] },
-    { duration: 1.5 }
-  );
-  animate('.sidebar', { x: [0, 2, 0] }, { duration: 2 });
-};
+  animate('.chevron', { x: [0, 2, 0], opacity: [1, 0.7, 1] }, { duration: 1.5 })
+  animate('.sidebar', { x: [0, 2, 0] }, { duration: 2 })
+}
 
 const stop = () => {
-  animate('.chevron', { x: 0, opacity: 1 }, { duration: 0.2 });
-  animate('.sidebar', { x: 0 }, { duration: 0.2 });
-};
+  animate('.chevron', { x: 0, opacity: 1 }, { duration: 0.2 })
+  animate('.sidebar', { x: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

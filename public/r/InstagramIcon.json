@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "InstagramIcon",
   "description": "InstagramIcon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/InstagramIcon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = async () => {\n  animate(\n    '.ig-body',\n    { scale: [1, 1.05, 1] },\n    { duration: 0.3, ease: 'easeOut' }\n  );\n  await animate(\n    '.ig-lens',\n    { scale: [1, 1.2, 1] },\n    { duration: 0.25, ease: 'easeOut' }\n  );\n  animate(\n    '.ig-dot',\n    { opacity: [1, 0, 1] },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.ig-body, .ig-lens, .ig-dot',\n    { scale: 1, opacity: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    :class=\"['inline-flex', 'cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path\n        class=\"ig-body\"\n        :style=\"{ transformOrigin: '50% 50%' }\"\n        d=\"M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z\"\n      />\n\n      <path\n        class=\"ig-lens\"\n        :style=\"{ transformOrigin: '50% 50%' }\"\n        d=\"M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0\"\n      />\n\n      <path class=\"ig-dot\" d=\"M16.5 7.5v.01\" />\n    </svg>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = async () => {\n  animate('.ig-body', { scale: [1, 1.05, 1] }, { duration: 0.3, ease: 'easeOut' })\n  await animate('.ig-lens', { scale: [1, 1.2, 1] }, { duration: 0.25, ease: 'easeOut' })\n  animate('.ig-dot', { opacity: [1, 0, 1] }, { duration: 0.2, ease: 'easeInOut' })\n}\n\nconst stop = () => {\n  animate(\n    '.ig-body, .ig-lens, .ig-dot',\n    { scale: 1, opacity: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  )\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    :class=\"['inline-flex', 'cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path\n        class=\"ig-body\"\n        :style=\"{ transformOrigin: '50% 50%' }\"\n        d=\"M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z\"\n      />\n\n      <path\n        class=\"ig-lens\"\n        :style=\"{ transformOrigin: '50% 50%' }\"\n        d=\"M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0\"\n      />\n\n      <path class=\"ig-dot\" d=\"M16.5 7.5v.01\" />\n    </svg>\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]

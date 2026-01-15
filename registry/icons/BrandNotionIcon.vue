@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   // Page flip: shell tilts like turning a page
@@ -17,24 +17,24 @@ const start = () => {
     '.notion-shell',
     { rotateY: [0, -15, 0], skewY: [0, 2, 0] },
     { duration: 0.5, ease: 'easeInOut' }
-  );
+  )
   // Letter slightly pops forward
   animate(
     '.notion-letter',
     { scale: [1, 1.03, 1], x: [0, 1, 0] },
     { duration: 0.5, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.notion-shell', { rotateY: 0, skewY: 0 }, { duration: 0.2 });
-  animate('.notion-letter', { scale: 1, x: 0 }, { duration: 0.2 });
-};
+  animate('.notion-shell', { rotateY: 0, skewY: 0 }, { duration: 0.2 })
+  animate('.notion-letter', { scale: 1, x: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

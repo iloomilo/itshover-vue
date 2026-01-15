@@ -1,50 +1,46 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  await animate(
-    '.book-line',
-    { pathLength: 0, opacity: 0 },
-    { duration: 0 }
-  );
+  await animate('.book-line', { pathLength: 0, opacity: 0 }, { duration: 0 })
 
   await animate(
     '.book-line-1',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeInOut', delay: 0.1 }
-  );
+  )
 
   await animate(
     '.book-line-2',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeInOut', delay: 0.05 }
-  );
+  )
 
   await animate(
     '.book-line-3',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeInOut', delay: 0.05 }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.book-line', { pathLength: 1, opacity: 1 }, { duration: 0.2 });
-};
+  animate('.book-line', { pathLength: 1, opacity: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -73,10 +69,7 @@ defineExpose({
         d="M24 41C31.0005 36.9995 37.9995 36.9995 45 41V10.0003C37.9995 5.99989 31.0005 5.99989 24 10.0003C16.9995 5.99989 10.0005 5.99989 3 10.0003V41C10.0005 36.9995 16.9995 36.9995 24 41Z"
       />
 
-      <path
-        class="book-line book-line-1"
-        d="M30 16.5C32.8362 15.1345 36.5662 15.06 39.5 16.2763"
-      />
+      <path class="book-line book-line-1" d="M30 16.5C32.8362 15.1345 36.5662 15.06 39.5 16.2763" />
 
       <path
         class="book-line book-line-2"

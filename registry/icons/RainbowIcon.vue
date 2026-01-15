@@ -1,42 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.arc1',
-    { pathLength: [0, 1] },
-    { duration: 0.6, ease: 'easeOut' }
-  );
-  animate(
-    '.arc2',
-    { pathLength: [0, 1] },
-    { duration: 0.6, ease: 'easeOut', delay: 0.1 }
-  );
-  animate(
-    '.arc3',
-    { pathLength: [0, 1] },
-    { duration: 0.6, ease: 'easeOut', delay: 0.2 }
-  );
-};
+  animate('.arc1', { pathLength: [0, 1] }, { duration: 0.6, ease: 'easeOut' })
+  animate('.arc2', { pathLength: [0, 1] }, { duration: 0.6, ease: 'easeOut', delay: 0.1 })
+  animate('.arc3', { pathLength: [0, 1] }, { duration: 0.6, ease: 'easeOut', delay: 0.2 })
+}
 
 const stop = () => {
-  animate('.arc1, .arc2, .arc3', { pathLength: 1 }, { duration: 0.2 });
-};
+  animate('.arc1, .arc2, .arc3', { pathLength: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -55,17 +43,8 @@ defineExpose({
     @mouseenter="start"
     @mouseleave="stop"
   >
-    <path
-      class="arc1"
-      d="M22 17a10 10 0 0 0-20 0"
-    />
-    <path
-      class="arc2"
-      d="M6 17a6 6 0 0 1 12 0"
-    />
-    <path
-      class="arc3"
-      d="M10 17a2 2 0 0 1 4 0"
-    />
+    <path class="arc1" d="M22 17a10 10 0 0 0-20 0" />
+    <path class="arc2" d="M6 17a6 6 0 0 1 12 0" />
+    <path class="arc3" d="M10 17a2 2 0 0 1 4 0" />
   </svg>
 </template>

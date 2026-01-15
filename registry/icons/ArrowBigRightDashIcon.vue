@@ -1,38 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate('.arrow', { x: 4 }, { duration: 0.3, ease: 'easeOut' });
-  animate(
-    '.dash',
-    { scale: 1.2, opacity: 0.7 },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-};
+  animate('.arrow', { x: 4 }, { duration: 0.3, ease: 'easeOut' })
+  animate('.dash', { scale: 1.2, opacity: 0.7 }, { duration: 0.3, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate('.arrow', { x: 0 }, { duration: 0.2, ease: 'easeInOut' });
-  animate(
-    '.dash',
-    { scale: 1, opacity: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.arrow', { x: 0 }, { duration: 0.2, ease: 'easeInOut' })
+  animate('.dash', { scale: 1, opacity: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -55,10 +47,6 @@ defineExpose({
       class="arrow"
       d="M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z"
     />
-    <path
-      class="dash"
-      :style="{ transformOrigin: '4px 12px' }"
-      d="M4 9v6"
-    />
+    <path class="dash" :style="{ transformOrigin: '4px 12px' }" d="M4 9v6" />
   </svg>
 </template>

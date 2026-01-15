@@ -1,41 +1,41 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.roller-symbol',
     {
       y: [0, 4],
-      rotate: [0, 12],
+      rotate: [0, 12]
     },
     {
       duration: 0.35,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.paint-stroke',
     {
       scaleX: [0, 1],
-      opacity: [0, 1],
+      opacity: [0, 1]
     },
     {
       duration: 0.35,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
@@ -44,19 +44,19 @@ const stop = () => {
       y: 0,
       rotate: 0,
       scaleX: 1,
-      opacity: 1,
+      opacity: 1
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -87,14 +87,11 @@ defineExpose({
       :fill="color"
       :style="{
         transformOrigin: 'left center',
-        opacity: 0,
+        opacity: 0
       }"
     />
 
-    <g
-      class="roller-symbol"
-      :style="{ transformOrigin: '50% 50%' }"
-    >
+    <g class="roller-symbol" :style="{ transformOrigin: '50% 50%' }">
       <path d="M5 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
       <path d="M19 6h1a2 2 0 0 1 2 2a5 5 0 0 1 -5 5l-5 0v2" />
       <path d="M10 15m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />

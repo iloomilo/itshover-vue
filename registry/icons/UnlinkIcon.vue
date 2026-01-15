@@ -1,100 +1,88 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   animate(
     '.chain-left',
     {
       x: -3,
-      y: 3,
+      y: 3
     },
     {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   await animate(
     '.chain-right',
     {
       x: 3,
-      y: -3,
+      y: -3
     },
     {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.break-indicator',
     {
       scale: [1, 1.2, 1],
-      opacity: [1, 0.6, 1],
+      opacity: [1, 0.6, 1]
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.chain-left',
     {
       x: 0,
-      y: 0,
+      y: 0
     },
     {
       duration: 0.3,
-      ease: 'easeIn',
+      ease: 'easeIn'
     }
-  );
+  )
 
   animate(
     '.chain-right',
     {
       x: 0,
-      y: 0,
+      y: 0
     },
     {
       duration: 0.3,
-      ease: 'easeIn',
+      ease: 'easeIn'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate(
-    '.chain-left',
-    { x: 0, y: 0 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-  animate(
-    '.chain-right',
-    { x: 0, y: 0 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-  animate(
-    '.break-indicator',
-    { scale: 1, opacity: 1 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-};
+  animate('.chain-left', { x: 0, y: 0 }, { duration: 0.2, ease: 'easeOut' })
+  animate('.chain-right', { x: 0, y: 0 }, { duration: 0.2, ease: 'easeOut' })
+  animate('.break-indicator', { scale: 1, opacity: 1 }, { duration: 0.2, ease: 'easeOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

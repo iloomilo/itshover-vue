@@ -2,12 +2,12 @@
 import { computed } from 'vue'
 import { motion } from 'motion-v'
 import { useColorMode } from '@vueuse/core'
-const colorMode = useColorMode() 
+const colorMode = useColorMode()
 
 const textAnimation = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.3 },
+  transition: { duration: 0.3 }
 }
 
 const productHuntUrl = computed(() => {
@@ -17,14 +17,14 @@ const productHuntUrl = computed(() => {
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center py-20 text-center md:py-32 overflow-hidden w-full">
-    
+  <section
+    class="flex flex-col items-center justify-center py-20 text-center md:py-32 overflow-hidden w-full"
+  >
     <div class="absolute inset-0 z-0">
       <HeroBackground />
     </div>
 
     <div class="relative z-10 flex flex-col items-center w-full px-4">
-      
       <div class="mb-6 flex flex-col items-center gap-3">
         <GithubBadge />
         <a
@@ -64,8 +64,8 @@ const productHuntUrl = computed(() => {
           :transition="textAnimation.transition"
           class="text-muted-foreground mx-auto max-w-xl text-lg lowercase sm:text-xl"
         >
-          Editable Vue components with motion baked in. Works seamlessly with
-          Nuxt, shadcn, and modern design systems.
+          Editable Vue components with motion baked in. Works seamlessly with Nuxt, shadcn, and
+          modern design systems.
         </motion.p>
       </div>
 
@@ -82,14 +82,13 @@ const productHuntUrl = computed(() => {
             <ArrowNarrowRightIcon class="ml-2 h-4 w-4" />
           </PrimaryButton>
         </NuxtLink>
-        
-<!--         <NuxtLink to="/sponsor">
+
+        <!--         <NuxtLink to="/sponsor">
           <SecondaryButton class="cursor-pointer lowercase">
             Sponsor
           </SecondaryButton>
         </NuxtLink> -->
       </motion.div>
-
     </div>
   </section>
 </template>

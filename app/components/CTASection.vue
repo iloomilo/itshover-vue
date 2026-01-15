@@ -21,10 +21,9 @@ const openGithub = () => {
       <h2 class="text-2xl font-bold tracking-tight lowercase sm:text-3xl md:text-4xl">
         Ready to Bring your icons to life?
       </h2>
-      
+
       <p class="text-muted-foreground text-md mx-auto max-w-xl lowercase sm:text-lg">
-        A growing open source library of animated icons built for real
-        interfaces.
+        A growing open source library of animated icons built for real interfaces.
       </p>
 
       <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -35,12 +34,7 @@ const openGithub = () => {
           </PrimaryButton>
         </NuxtLink>
 
-        <SecondaryButton
-          class="lowercase"
-          @click="openGithub"
-        >
-          Star on GitHub
-        </SecondaryButton>
+        <SecondaryButton class="lowercase" @click="openGithub"> Star on GitHub </SecondaryButton>
       </div>
     </div>
   </motion.section>

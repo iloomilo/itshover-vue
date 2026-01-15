@@ -1,41 +1,29 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  await animate(
-    '.railway-inner',
-    { opacity: 0 },
-    { duration: 0.6, ease: 'linear' }
-  );
-  await animate(
-    '.railway-lower',
-    { x: [0, -3, 3, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-};
+  await animate('.railway-inner', { opacity: 0 }, { duration: 0.6, ease: 'linear' })
+  await animate('.railway-lower', { x: [0, -3, 3, 0] }, { duration: 0.6, ease: 'easeInOut' })
+}
 
 const stop = async () => {
-  await animate(
-    '.railway-inner',
-    { opacity: 1 },
-    { duration: 0.2, ease: 'linear' }
-  );
-};
+  await animate('.railway-inner', { opacity: 1 }, { duration: 0.2, ease: 'linear' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

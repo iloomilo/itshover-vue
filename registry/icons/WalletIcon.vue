@@ -1,42 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 40,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   // Flap opens outward
-  animate(
-    '.flap',
-    { rotateY: 25, x: 2 },
-    { duration: 0.4, ease: 'easeOut' }
-  );
+  animate('.flap', { rotateY: 25, x: 2 }, { duration: 0.4, ease: 'easeOut' })
 
   // Wallet expands slightly
-  animate(
-    '.wallet-body',
-    { scale: 1.05 },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-};
+  animate('.wallet-body', { scale: 1.05 }, { duration: 0.4, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate('.flap', { rotateY: 0, x: 0 }, { duration: 0.4, ease: 'easeIn' });
+  animate('.flap', { rotateY: 0, x: 0 }, { duration: 0.4, ease: 'easeIn' })
 
-  animate('.wallet-body', { scale: 1 }, { duration: 0.4, ease: 'easeIn' });
-};
+  animate('.wallet-body', { scale: 1 }, { duration: 0.4, ease: 'easeIn' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -69,7 +61,7 @@ defineExpose({
       d="M20 12v4h-4a2 2 0 0 1 0 -4h4"
       :style="{
         transformOrigin: '50% 50%',
-        transformStyle: 'preserve-3d',
+        transformStyle: 'preserve-3d'
       }"
     />
   </svg>

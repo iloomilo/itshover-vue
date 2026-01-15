@@ -1,39 +1,31 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 40,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
-const swapDistance = 10;
+const swapDistance = 10
 
 const start = () => {
-  animate(
-    '.zero',
-    { y: swapDistance },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-  animate(
-    '.one',
-    { y: -swapDistance },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-};
+  animate('.zero', { y: swapDistance }, { duration: 0.3, ease: 'easeInOut' })
+  animate('.one', { y: -swapDistance }, { duration: 0.3, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate('.zero, .one', { y: 0 }, { duration: 0.3, ease: 'easeInOut' });
-};
+  animate('.zero, .one', { y: 0 }, { duration: 0.3, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -54,14 +46,7 @@ defineExpose({
   >
     <path d="m3 16 4 4 4-4" />
     <path d="M7 20V4" />
-    <rect
-      class="zero"
-      x="15"
-      y="4"
-      width="4"
-      height="6"
-      ry="2"
-    />
+    <rect class="zero" x="15" y="4" width="4" height="6" ry="2" />
     <g class="one">
       <path d="M17 20v-6h-2" />
       <path d="M15 20h4" />

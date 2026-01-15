@@ -1,51 +1,43 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  await animate(
-    '.question-mark',
-    { pathLength: [0, 1] },
-    { duration: 0.4, ease: 'easeInOut' }
-  );
+  await animate('.question-mark', { pathLength: [0, 1] }, { duration: 0.4, ease: 'easeInOut' })
 
   await animate(
     '.question-mark-dot',
     {
       pathLength: [0, 1],
-      y: [0, -3, 0],
+      y: [0, -3, 0]
     },
     { duration: 0.3, ease: 'easeOut' }
-  );
+  )
 
-  animate(
-    '.question-group',
-    { scale: [1, 1.05, 1] },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-};
+  animate('.question-group', { scale: [1, 1.05, 1] }, { duration: 0.2, ease: 'easeOut' })
+}
 
 const stop = () => {
   animate(
     '.question-mark, .question-mark-dot, .question-group',
     { pathLength: 1, y: 0, scale: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "DownChevronIcon",
   "description": "DownChevronIcon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/DownChevronIcon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.chevron-down',\n    {\n      y: [0, 6, 0],\n    },\n    {\n      duration: 0.8,\n      ease: 'easeInOut',\n    }\n  );\n};\n\nconst stop = () => {\n  animate('.chevron-down', { y: 0 }, { duration: 0.2, ease: 'easeInOut' });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    :class=\"['inline-flex', 'cursor-pointer', 'items-center', 'justify-center', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n      class=\"chevron-down\"\n    >\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n      <path d=\"M6 9l6 6l6 -6\" />\n    </svg>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate(\n    '.chevron-down',\n    {\n      y: [0, 6, 0]\n    },\n    {\n      duration: 0.8,\n      ease: 'easeInOut'\n    }\n  )\n}\n\nconst stop = () => {\n  animate('.chevron-down', { y: 0 }, { duration: 0.2, ease: 'easeInOut' })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    :class=\"['inline-flex', 'cursor-pointer', 'items-center', 'justify-center', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n      class=\"chevron-down\"\n    >\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n      <path d=\"M6 9l6 6l6 -6\" />\n    </svg>\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]

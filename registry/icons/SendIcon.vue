@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
@@ -17,32 +17,32 @@ const start = () => {
     {
       x: [0, 24],
       y: [0, -24],
-      opacity: [1, 0],
+      opacity: [1, 0]
     },
     { duration: 0.25, ease: 'easeIn' }
-  );
+  )
 
-  animate('.send-icon', { x: -24, y: 24 }, { duration: 0 });
+  animate('.send-icon', { x: -24, y: 24 }, { duration: 0 })
 
   animate(
     '.send-icon',
     {
       x: [-24, 0],
       y: [24, 0],
-      opacity: [0, 1],
+      opacity: [0, 1]
     },
     { duration: 0.25, ease: 'easeOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.send-icon', { x: 0, y: 0, opacity: 1 }, { duration: 0.2 });
-};
+  animate('.send-icon', { x: 0, y: 0, opacity: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

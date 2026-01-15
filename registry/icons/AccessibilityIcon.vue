@@ -1,49 +1,41 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { ref } from 'vue'
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
-const animationControls = ref<ReturnType<typeof animate>[]>([]);
+const animationControls = ref<ReturnType<typeof animate>[]>([])
 
 const start = async () => {
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
   animationControls.value.push(
-    animate(
-      '.wheel',
-      { rotate: [0, 360] },
-      { duration: 1, ease: 'easeInOut', repeat: Infinity }
-    )
-  );
-  animate(
-    '.person',
-    { y: [0, -2, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-};
+    animate('.wheel', { rotate: [0, 360] }, { duration: 1, ease: 'easeInOut', repeat: Infinity })
+  )
+  animate('.person', { y: [0, -2, 0] }, { duration: 0.6, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
-  animate('.wheel', { rotate: 0 }, { duration: 0.3 });
-  animate('.person', { y: 0 }, { duration: 0.2 });
-};
+  animate('.wheel', { rotate: 0 }, { duration: 0.3 })
+  animate('.person', { y: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

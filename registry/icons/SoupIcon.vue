@@ -1,68 +1,68 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.steam',
     {
       y: [-2, -4],
-      opacity: [1, 0],
+      opacity: [1, 0]
     },
     {
       duration: 0.8,
       ease: 'easeOut',
-      repeat: 2,
+      repeat: 2
     }
-  );
+  )
 
   animate(
     '.bowl',
     {
-      rotate: [0, 1, -1, 0],
+      rotate: [0, 1, -1, 0]
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.steam',
     {
       y: 0,
-      opacity: 1,
+      opacity: 1
     },
     {
-      duration: 0.3,
+      duration: 0.3
     }
-  );
+  )
   animate(
     '.bowl',
     {
-      rotate: 0,
+      rotate: 0
     },
     {
-      duration: 0.3,
+      duration: 0.3
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

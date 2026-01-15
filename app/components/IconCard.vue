@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import { ref, resolveComponent } from 'vue'
 import { useClipboard } from '@vueuse/core'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip' 
-import { LINKS } from '~/constants/links';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { LINKS } from '~/constants/links'
 import type { IconType } from '@/constants/icons'
-
+import type { AnimatedIconHandle } from '~~/registry/types/types'
 
 const props = defineProps<{
-  icon: IconType 
+  icon: IconType
 }>()
 const { code, loadIcon } = useIconCode()
-const iconRef = ref<any>(null) 
+const iconRef = ref<AnimatedIconHandle | null>(null)
 const { copy: copyCode, copied: isCopied } = useClipboard({ copiedDuring: 1000 })
 const { copy: copyCommand, copied: isCommandCopied } = useClipboard({ copiedDuring: 1000 })
 
 const copyFileToClipboard = async () => {
-    await loadIcon(props.icon.componentName)
-    await copyCode(code.value)
+  await loadIcon(props.icon.componentName)
+  await copyCode(code.value)
 }
 
 const copyCommandToClipboard = async () => {
@@ -33,12 +33,13 @@ const playAnimation = () => {
 </script>
 
 <template>
-  <div class="bg-background relative flex min-w-[140px] flex-1 flex-col items-center justify-center gap-4 rounded-lg border p-4 shadow-sm transition-all hover:shadow-md sm:w-48 sm:flex-none">
-    
+  <div
+    class="bg-background relative flex min-w-[140px] flex-1 flex-col items-center justify-center gap-4 rounded-lg border p-4 shadow-sm transition-all hover:shadow-md sm:w-48 sm:flex-none"
+  >
     <div class="absolute top-2 right-2 hidden sm:hidden [@media(hover:none)]:block">
       <button
-        @click.prevent="playAnimation"
         class="text-muted-foreground hover:bg-accent hover:text-foreground rounded-md p-2 transition-colors"
+        @click.prevent="playAnimation"
       >
         <PlayerIcon :size="16" />
       </button>
@@ -52,11 +53,7 @@ const playAnimation = () => {
     >
       <Tooltip>
         <TooltipTrigger as-child>
-          <component
-            :is="resolveComponent(icon.componentName)"
-            ref="iconRef"
-            :size="56"
-          />
+          <component :is="resolveComponent(icon.componentName)" ref="iconRef" :size="56" />
         </TooltipTrigger>
         <TooltipContent>{{ icon.name }}</TooltipContent>
       </Tooltip>
@@ -92,7 +89,6 @@ const playAnimation = () => {
           <p>Copy shadcn command</p>
         </TooltipContent>
       </Tooltip>
-
     </div>
   </div>
 </template>

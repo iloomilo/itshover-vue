@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
@@ -17,10 +17,10 @@ const start = () => {
     { scale: 0.9, rotate: [0, 180] },
     {
       duration: 0.8,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
@@ -28,15 +28,15 @@ const stop = () => {
     { scale: 1, rotate: 0 },
     {
       duration: 0.8,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -54,7 +54,7 @@ defineExpose({
       flex: 'none',
       lineHeight: 1,
       transformBox: 'fill-box',
-      transformOrigin: 'center',
+      transformOrigin: 'center'
     }"
     @mouseenter="start"
     @mouseleave="stop"

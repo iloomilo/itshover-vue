@@ -1,46 +1,42 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  animate('.draw', { pathLength: 0, opacity: 0 }, { duration: 0 });
+  animate('.draw', { pathLength: 0, opacity: 0 }, { duration: 0 })
 
   await animate(
     '.outer',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.45, ease: 'easeOut' }
-  );
+  )
 
   await animate(
     '.path',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.6, ease: 'easeOut' }
-  );
+  )
 
-  animate(
-    '.inner',
-    { pathLength: [0, 1], opacity: [0, 1] },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-};
+  animate('.inner', { pathLength: [0, 1], opacity: [0, 1] }, { duration: 0.3, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate('.draw', { pathLength: 1, opacity: 1 }, { duration: 0.2 });
-};
+  animate('.draw', { pathLength: 1, opacity: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -59,21 +55,8 @@ defineExpose({
     @mouseenter="start"
     @mouseleave="stop"
   >
-    <circle
-      class="draw inner"
-      cx="12"
-      cy="12"
-      r="4"
-    />
-    <path
-      class="draw path"
-      d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"
-    />
-    <circle
-      class="draw outer"
-      cx="12"
-      cy="12"
-      r="10"
-    />
+    <circle class="draw inner" cx="12" cy="12" r="4" />
+    <path class="draw path" d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+    <circle class="draw outer" cx="12" cy="12" r="10" />
   </svg>
 </template>

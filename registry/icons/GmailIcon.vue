@@ -1,46 +1,42 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.envelope-top',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.4, ease: 'easeOut' }
-  );
+  )
   animate(
     '.envelope-flap',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.5, ease: 'easeOut' }
-  );
-  animate(
-    '.sides',
-    { scaleY: [0.95, 1] },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-};
+  )
+  animate('.sides', { scaleY: [0.95, 1] }, { duration: 0.3, ease: 'easeOut' })
+}
 
 const stop = () => {
   animate(
     '.envelope-top, .envelope-flap, .sides',
     { pathLength: 1, opacity: 1, scaleY: 1 },
     { duration: 0.2 }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -70,13 +66,7 @@ defineExpose({
       :style="{ transformOrigin: 'center' }"
       d="M5 20h3v-16h-3a1 1 0 0 0 -1 1v14a1 1 0 0 0 1 1z"
     />
-    <path
-      class="envelope-top"
-      d="M16 4l-4 4l-4 -4"
-    />
-    <path
-      class="envelope-flap"
-      d="M4 6.5l8 7.5l8 -7.5"
-    />
+    <path class="envelope-top" d="M16 4l-4 4l-4 -4" />
+    <path class="envelope-flap" d="M4 6.5l8 7.5l8 -7.5" />
   </svg>
 </template>

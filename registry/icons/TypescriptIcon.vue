@@ -1,38 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.ts-text',
-    { pathLength: [0, 1], opacity: [0, 1] },
-    { duration: 0.6, ease: 'easeOut' }
-  );
-  animate(
-    '.border',
-    { scale: [1, 1.03, 1] },
-    { duration: 0.4, ease: 'easeInOut' }
-  );
-};
+  animate('.ts-text', { pathLength: [0, 1], opacity: [0, 1] }, { duration: 0.6, ease: 'easeOut' })
+  animate('.border', { scale: [1, 1.03, 1] }, { duration: 0.4, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate('.ts-text', { pathLength: 1, opacity: 1 }, { duration: 0.2 });
-  animate('.border', { scale: 1 }, { duration: 0.2 });
-};
+  animate('.ts-text', { pathLength: 1, opacity: 1 }, { duration: 0.2 })
+  animate('.border', { scale: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -56,14 +48,8 @@ defineExpose({
       class="ts-text"
       d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5"
     />
-    <path
-      class="ts-text"
-      d="M9 12h4"
-    />
-    <path
-      class="ts-text"
-      d="M11 12v6"
-    />
+    <path class="ts-text" d="M9 12h4" />
+    <path class="ts-text" d="M11 12v6" />
     <path
       class="border"
       :style="{ transformOrigin: 'center' }"

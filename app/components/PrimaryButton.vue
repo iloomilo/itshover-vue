@@ -10,10 +10,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <Button
-    :class="cn('rounded-full px-8', props.class)"
-    size="lg"
-  >
+  <Button :class="cn('rounded-full px-8', props.class)" size="lg">
     <slot />
   </Button>
 </template>

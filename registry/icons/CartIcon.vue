@@ -1,45 +1,33 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.cart-icon',
-    { x: [0, 6, 0] },
-    { duration: 0.35, ease: 'easeInOut' }
-  );
-  animate(
-    '.cart-wheel-left',
-    { rotate: [0, 360] },
-    { duration: 0.35, ease: 'easeInOut' }
-  );
+  animate('.cart-icon', { x: [0, 6, 0] }, { duration: 0.35, ease: 'easeInOut' })
+  animate('.cart-wheel-left', { rotate: [0, 360] }, { duration: 0.35, ease: 'easeInOut' })
 
-  animate(
-    '.cart-wheel-right',
-    { rotate: [0, 360] },
-    { duration: 0.35, ease: 'easeInOut' }
-  );
-};
+  animate('.cart-wheel-right', { rotate: [0, 360] }, { duration: 0.35, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate('.cart-icon', { x: 0 }, { duration: 0.2 });
-  animate('.cart-wheel-left', { rotate: 0 }, { duration: 0.2 });
-  animate('.cart-wheel-right', { rotate: 0 }, { duration: 0.2 });
-};
+  animate('.cart-icon', { x: 0 }, { duration: 0.2 })
+  animate('.cart-wheel-left', { rotate: 0 }, { duration: 0.2 })
+  animate('.cart-wheel-right', { rotate: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

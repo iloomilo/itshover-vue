@@ -1,41 +1,29 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.eyes',
-    { scaleY: [1, 0.3, 1, 0.3, 1] },
-    { duration: 0.8, ease: 'easeInOut' }
-  );
-  animate(
-    '.mouth',
-    { scaleX: [1, 0.9, 1] },
-    { duration: 0.5, ease: 'easeInOut' }
-  );
-};
+  animate('.eyes', { scaleY: [1, 0.3, 1, 0.3, 1] }, { duration: 0.8, ease: 'easeInOut' })
+  animate('.mouth', { scaleX: [1, 0.9, 1] }, { duration: 0.5, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.eyes, .mouth',
-    { scaleY: 1, scaleX: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.eyes, .mouth', { scaleY: 1, scaleX: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -55,29 +43,8 @@ defineExpose({
     @mouseleave="stop"
   >
     <circle cx="12" cy="12" r="10" />
-    <line
-      class="mouth"
-      x1="8"
-      x2="16"
-      y1="15"
-      y2="15"
-      :style="{ transformOrigin: '12px 15px' }"
-    />
-    <line
-      class="eyes"
-      x1="9"
-      x2="9.01"
-      y1="9"
-      y2="9"
-      :style="{ transformOrigin: '9px 9px' }"
-    />
-    <line
-      class="eyes"
-      x1="15"
-      x2="15.01"
-      y1="9"
-      y2="9"
-      :style="{ transformOrigin: '15px 9px' }"
-    />
+    <line class="mouth" x1="8" x2="16" y1="15" y2="15" :style="{ transformOrigin: '12px 15px' }" />
+    <line class="eyes" x1="9" x2="9.01" y1="9" y2="9" :style="{ transformOrigin: '9px 9px' }" />
+    <line class="eyes" x1="15" x2="15.01" y1="9" y2="9" :style="{ transformOrigin: '15px 9px' }" />
   </svg>
 </template>

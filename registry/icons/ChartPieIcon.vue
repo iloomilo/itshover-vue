@@ -1,71 +1,71 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.pie-main',
     {
-      pathLength: [0, 1],
+      pathLength: [0, 1]
     },
     {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.pie-slice',
     {
       pathLength: [0, 1],
-      rotate: [0, 5],
+      rotate: [0, 5]
     },
     {
       duration: 0.4,
       ease: 'easeOut',
-      delay: 0.2,
+      delay: 0.2
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.pie-main',
     {
-      pathLength: 1,
+      pathLength: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.pie-slice',
     {
       pathLength: 1,
-      rotate: 0,
+      rotate: 0
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

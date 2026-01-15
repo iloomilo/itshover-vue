@@ -1,46 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.star-fill',
-    { opacity: [0, 1], scale: [0.8, 1] },
-    { duration: 0.4, ease: 'easeOut' }
-  );
+  animate('.star-fill', { opacity: [0, 1], scale: [0.8, 1] }, { duration: 0.4, ease: 'easeOut' })
   animate(
     '.star-outline',
     { scale: [1, 1.1, 1], rotate: [0, -5, 5, 0] },
     { duration: 0.5, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate(
-    '.star-fill',
-    { opacity: [1, 0] },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-  animate(
-    '.star-outline',
-    { scale: 1, rotate: 0 },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-};
+  animate('.star-fill', { opacity: [1, 0] }, { duration: 0.3, ease: 'easeOut' })
+  animate('.star-outline', { scale: 1, rotate: 0 }, { duration: 0.3, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,46 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.layer-1',
-    { y: -3, scale: 1.05 },
-    { duration: 0.3, ease: 'easeOut' }
-  );
+  animate('.layer-1', { y: -3, scale: 1.05 }, { duration: 0.3, ease: 'easeOut' })
 
-  animate(
-    '.layer-2',
-    { y: -1, opacity: 0.8 },
-    { duration: 0.3, delay: 0.05, ease: 'easeOut' }
-  );
+  animate('.layer-2', { y: -1, opacity: 0.8 }, { duration: 0.3, delay: 0.05, ease: 'easeOut' })
 
-  animate(
-    '.layer-3',
-    { y: 1, opacity: 0.6 },
-    { duration: 0.3, delay: 0.1, ease: 'easeOut' }
-  );
-};
+  animate('.layer-3', { y: 1, opacity: 0.6 }, { duration: 0.3, delay: 0.1, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate('.layer-1', { y: 0, scale: 1 }, { duration: 0.25 });
-  animate('.layer-2', { y: 0, opacity: 1 }, { duration: 0.25 });
-  animate('.layer-3', { y: 0, opacity: 1 }, { duration: 0.25 });
-};
+  animate('.layer-1', { y: 0, scale: 1 }, { duration: 0.25 })
+  animate('.layer-2', { y: 0, opacity: 1 }, { duration: 0.25 })
+  animate('.layer-3', { y: 0, opacity: 1 }, { duration: 0.25 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

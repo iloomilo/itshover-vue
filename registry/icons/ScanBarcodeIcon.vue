@@ -1,53 +1,53 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
- await animate(
+  await animate(
     '.scan-line',
     {
       y: [0, 10, -10, 0],
-      opacity: [0.3, 1, 0.3, 1],
+      opacity: [0.3, 1, 0.3, 1]
     },
     {
       duration: 1.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.corners',
     {
-      scale: [1, 1.05, 1],
+      scale: [1, 1.05, 1]
     },
     {
       duration: 0.4,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.scan-line, .corners',
     { y: 0, opacity: 1, scale: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -79,13 +79,6 @@ defineExpose({
       <path d="M17 7v10" />
     </g>
 
-    <line
-      class="scan-line"
-      x1="8"
-      x2="17"
-      y1="12"
-      y2="12"
-      :stroke-width="1"
-    />
+    <line class="scan-line" x1="8" x2="17" y1="12" y2="12" :stroke-width="1" />
   </svg>
 </template>

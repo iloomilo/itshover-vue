@@ -1,59 +1,39 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   // Subtle container pulse
-  animate(
-    scope.value,
-    { scale: 1.05 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
+  animate(scope.value, { scale: 1.05 }, { duration: 0.25, ease: 'easeOut' })
 
   // Upper flows up-right
-  animate(
-    '.grok-upper',
-    { x: 3, y: -3, opacity: 0.85 },
-    { duration: 0.35, ease: 'easeOut' }
-  );
+  animate('.grok-upper', { x: 3, y: -3, opacity: 0.85 }, { duration: 0.35, ease: 'easeOut' })
 
   // Lower flows down-left
-  animate(
-    '.grok-lower',
-    { x: -3, y: 3, opacity: 0.85 },
-    { duration: 0.35, ease: 'easeOut' }
-  );
-};
+  animate('.grok-lower', { x: -3, y: 3, opacity: 0.85 }, { duration: 0.35, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate(scope.value, { scale: 1 }, { duration: 0.2 });
+  animate(scope.value, { scale: 1 }, { duration: 0.2 })
 
-  animate(
-    '.grok-upper',
-    { x: 0, y: 0, opacity: 1 },
-    { duration: 0.25, ease: 'easeInOut' }
-  );
+  animate('.grok-upper', { x: 0, y: 0, opacity: 1 }, { duration: 0.25, ease: 'easeInOut' })
 
-  animate(
-    '.grok-lower',
-    { x: 0, y: 0, opacity: 1 },
-    { duration: 0.25, ease: 'easeInOut' }
-  );
-};
+  animate('.grok-lower', { x: 0, y: 0, opacity: 1 }, { duration: 0.25, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,66 +1,66 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   animate(
     '.phone-wave-inner',
     {
       scale: [1, 1.15, 1],
-      opacity: [0.4, 1, 0.4],
+      opacity: [0.4, 1, 0.4]
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     '.phone-wave-outer',
     {
       scale: [1, 1.25, 1],
-      opacity: [0.2, 0.8, 0.2],
+      opacity: [0.2, 0.8, 0.2]
     },
     {
       duration: 0.45,
       ease: 'easeInOut',
-      delay: 0.1,
+      delay: 0.1
     }
-  );
+  )
 
   animate(
     '.phone-wave',
     {
       opacity: 1,
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.phone-wave-inner, .phone-wave-outer, .phone-wave',
     { opacity: 1, scale: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

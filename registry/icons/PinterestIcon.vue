@@ -1,41 +1,29 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.pin',
-    { y: [0, -3, 0], rotate: [0, -10, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.circle',
-    { scale: [1, 1.05, 1] },
-    { duration: 0.4, ease: 'easeInOut' }
-  );
-};
+  animate('.pin', { y: [0, -3, 0], rotate: [0, -10, 0] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.circle', { scale: [1, 1.05, 1] }, { duration: 0.4, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.pin, .circle',
-    { y: 0, rotate: 0, scale: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.pin, .circle', { y: 0, rotate: 0, scale: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -55,11 +43,7 @@ defineExpose({
     @mouseleave="stop"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path
-      class="pin"
-      :style="{ transformOrigin: 'center' }"
-      d="M8 20l4 -9"
-    />
+    <path class="pin" :style="{ transformOrigin: 'center' }" d="M8 20l4 -9" />
     <path
       class="pin"
       :style="{ transformOrigin: 'center' }"

@@ -1,36 +1,32 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  animate('.p-back', { x: 2, y: -2 }, { duration: 0.3, ease: 'easeOut' });
-  await animate(
-    '.p-front',
-    { x: -2, y: 2 },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-  animate('.p-back', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeIn' });
-  animate('.p-front', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeIn' });
-};
+  animate('.p-back', { x: 2, y: -2 }, { duration: 0.3, ease: 'easeOut' })
+  await animate('.p-front', { x: -2, y: 2 }, { duration: 0.3, ease: 'easeOut' })
+  animate('.p-back', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeIn' })
+  animate('.p-front', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeIn' })
+}
 
 const stop = () => {
-  animate('.p-back', { x: 0, y: 0 }, { duration: 0.2 });
-  animate('.p-front', { x: 0, y: 0 }, { duration: 0.2 });
-};
+  animate('.p-back', { x: 0, y: 0 }, { duration: 0.2 })
+  animate('.p-front', { x: 0, y: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

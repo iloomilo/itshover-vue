@@ -1,57 +1,41 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate('.stadium-roof', { y: -3 }, { duration: 0.25, ease: 'easeOut' });
+  animate('.stadium-roof', { y: -3 }, { duration: 0.25, ease: 'easeOut' })
 
-  animate(
-    '.stadium-pillar-left',
-    { y: -2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
+  animate('.stadium-pillar-left', { y: -2 }, { duration: 0.25, ease: 'easeOut' })
 
-  animate(
-    '.stadium-pillar-right',
-    { y: -2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
-  animate(
-    '.stadium-center',
-    { scale: [1, 1.15, 1] },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-  animate(
-    '.stadium-bowl',
-    { scaleY: [1, 0.97, 1] },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-};
+  animate('.stadium-pillar-right', { y: -2 }, { duration: 0.25, ease: 'easeOut' })
+  animate('.stadium-center', { scale: [1, 1.15, 1] }, { duration: 0.3, ease: 'easeInOut' })
+  animate('.stadium-bowl', { scaleY: [1, 0.97, 1] }, { duration: 0.3, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  const resetProps = { x: 0, y: 0, scale: 1, scaleY: 1 };
-  const resetOptions = { duration: 0.25, ease: 'easeInOut' as const };
+  const resetProps = { x: 0, y: 0, scale: 1, scaleY: 1 }
+  const resetOptions = { duration: 0.25, ease: 'easeInOut' as const }
 
   animate(
     '.stadium-roof, .stadium-pillar-left, .stadium-pillar-right, .stadium-center, .stadium-bowl',
     resetProps,
     resetOptions
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -89,15 +73,9 @@ defineExpose({
         d="M11 18H7.5C6.11929 18 5 16.8807 5 15.5V12.263C5 10.4575 6.13996 8.83551 7.84843 8.19566C19.2334 3.93478 28.7666 3.93478 40.1516 8.19566C41.86 8.83551 43 10.4575 43 12.263V15.5C43 16.8807 41.8807 18 40.5 18H37"
       />
 
-      <path
-        class="stadium-pillar stadium-pillar-left"
-        d="M17 19V14"
-      />
+      <path class="stadium-pillar stadium-pillar-left" d="M17 19V14" />
 
-      <path
-        class="stadium-pillar stadium-pillar-right"
-        d="M31 19V14"
-      />
+      <path class="stadium-pillar stadium-pillar-right" d="M31 19V14" />
     </svg>
   </div>
 </template>

@@ -1,46 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.circle',
-    { rotate: [0, 360, 0] },
-    { duration: 0.8, ease: 'easeInOut' }
-  );
-  animate(
-    '.layer1',
-    { x: [-1, 1, -1, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.layer2',
-    { x: [1, -1, 1, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-};
+  animate('.circle', { rotate: [0, 360, 0] }, { duration: 0.8, ease: 'easeInOut' })
+  animate('.layer1', { x: [-1, 1, -1, 0] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.layer2', { x: [1, -1, 1, 0] }, { duration: 0.6, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.circle, .layer1, .layer2',
-    { rotate: 0, x: 0 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.circle, .layer1, .layer2', { rotate: 0, x: 0 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -69,9 +53,6 @@ defineExpose({
       class="layer1"
       d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z"
     />
-    <path
-      class="layer2"
-      d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15"
-    />
+    <path class="layer2" d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15" />
   </svg>
 </template>

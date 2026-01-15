@@ -1,37 +1,29 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.bell',
-    { x: [-1, 1, -1, 1, 0] },
-    { duration: 0.4, ease: 'easeInOut' }
-  );
-  animate(
-    '.slash',
-    { pathLength: [0, 1], opacity: [0, 1] },
-    { duration: 0.5, ease: 'easeOut' }
-  );
-};
+  animate('.bell', { x: [-1, 1, -1, 1, 0] }, { duration: 0.4, ease: 'easeInOut' })
+  animate('.slash', { pathLength: [0, 1], opacity: [0, 1] }, { duration: 0.5, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate('.slash', { pathLength: 1, opacity: 1 }, { duration: 0.2 });
-};
+  animate('.slash', { pathLength: 1, opacity: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -55,13 +47,7 @@ defineExpose({
       class="bell"
       d="M17 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 .258-1.742"
     />
-    <path
-      class="slash"
-      d="m2 2 20 20"
-    />
-    <path
-      class="bell"
-      d="M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05"
-    />
+    <path class="slash" d="m2 2 20 20" />
+    <path class="bell" d="M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05" />
   </svg>
 </template>

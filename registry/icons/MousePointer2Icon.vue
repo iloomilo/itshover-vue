@@ -1,39 +1,39 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.pointer',
     {
       x: [0, 3, 0, -3, 0],
-      y: [0, -3, 0, 3, 0],
+      y: [0, -3, 0, 3, 0]
     },
     {
       duration: 1.2,
       ease: 'easeInOut',
-      repeat: Infinity,
+      repeat: Infinity
     }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.pointer', { x: 0, y: 0 }, { duration: 0.3 });
-};
+  animate('.pointer', { x: 0, y: 0 }, { duration: 0.3 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -7,7 +7,7 @@
       <p class="mt-5">
         <strong>Company / Website Owner:</strong><br />
         Ilcan Tiryaki
-        <br>
+        <br />
         c/o Online-Impressum.de #4190
       </p>
 

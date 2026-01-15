@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await Promise.all([
@@ -18,7 +18,7 @@ const start = async () => {
       {
         x: [0, 40],
         y: [0, -40],
-        opacity: [1, 0],
+        opacity: [1, 0]
       },
       { duration: 0.35, ease: 'easeIn' }
     ),
@@ -28,43 +28,31 @@ const start = async () => {
         x: [0, -20],
         y: [0, 20],
         scale: [0.8, 1.2],
-        opacity: [0.6, 0],
+        opacity: [0.6, 0]
       },
       { duration: 0.25, ease: 'easeOut', delay: 0.05 }
-    ),
-  ]);
+    )
+  ])
 
-  await animate(
-    '.rocket-upper',
-    { x: -40, y: 40, opacity: 0 },
-    { duration: 0 }
-  );
+  await animate('.rocket-upper', { x: -40, y: 40, opacity: 0 }, { duration: 0 })
 
-  animate(
-    '.rocket-upper',
-    { x: 0, y: 0, opacity: 1 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
+  animate('.rocket-upper', { x: 0, y: 0, opacity: 1 }, { duration: 0.25, ease: 'easeOut' })
 
   animate(
     '.rocket-flame',
     { x: 0, y: 0, opacity: 1, scale: 1 },
     { duration: 0.25, ease: 'easeOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate(
-    '.rocket-upper, .rocket-flame',
-    { x: 0, y: 0, opacity: 1, scale: 1 },
-    { duration: 0.2 }
-  );
-};
+  animate('.rocket-upper, .rocket-flame', { x: 0, y: 0, opacity: 1, scale: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -104,13 +92,7 @@ defineExpose({
       stroke-linecap="round"
     />
 
-    <circle
-      class="rocket-window rocket-upper"
-      cx="19"
-      cy="13"
-      r="2"
-      fill="currentColor"
-    />
+    <circle class="rocket-window rocket-upper" cx="19" cy="13" r="2" fill="currentColor" />
 
     <path
       class="rocket-flame"

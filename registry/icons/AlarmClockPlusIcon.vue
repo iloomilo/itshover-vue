@@ -1,67 +1,63 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { ref } from 'vue'
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
-const animationControls = ref<ReturnType<typeof animate>[]>([]);
+const animationControls = ref<ReturnType<typeof animate>[]>([])
 
 const start = async () => {
-  stop(); // Ensure any running animations are stopped before starting new ones
+  stop() // Ensure any running animations are stopped before starting new ones
 
   const clockAnimation = animate(
     '.clock',
     {
       y: -1.5,
-      x: [-1, 1, -1, 1, -1, 0],
+      x: [-1, 1, -1, 1, -1, 0]
     },
     {
       y: { duration: 0.2, type: 'spring', stiffness: 200, damping: 25 },
-      x: { duration: 0.3, repeat: Infinity, ease: 'linear' },
+      x: { duration: 0.3, repeat: Infinity, ease: 'linear' }
     }
-  );
-  animationControls.value.push(clockAnimation);
+  )
+  animationControls.value.push(clockAnimation)
 
   const bellsAnimation = animate(
     '.bells',
     {
       y: -2.5,
-      x: [-2, 2, -2, 2, -2, 0],
+      x: [-2, 2, -2, 2, -2, 0]
     },
     {
       y: { duration: 0.2, type: 'spring', stiffness: 200, damping: 25 },
-      x: { duration: 0.3, repeat: Infinity, ease: 'linear' },
+      x: { duration: 0.3, repeat: Infinity, ease: 'linear' }
     }
-  );
-  animationControls.value.push(bellsAnimation);
+  )
+  animationControls.value.push(bellsAnimation)
 
-  await animate(
-    '.plus',
-    { scale: [1, 1.2, 1] },
-    { duration: 0.4, ease: 'easeOut' }
-  );
-};
+  await animate('.plus', { scale: [1, 1.2, 1] }, { duration: 0.4, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animationControls.value.forEach((control) => control.stop());
-  animationControls.value = [];
+  animationControls.value.forEach((control) => control.stop())
+  animationControls.value = []
 
-  animate('.clock', { y: 0, x: 0 }, { duration: 0.2 });
-  animate('.bells', { y: 0, x: 0 }, { duration: 0.2 });
-};
+  animate('.clock', { y: 0, x: 0 }, { duration: 0.2 })
+  animate('.bells', { y: 0, x: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -82,16 +78,8 @@ defineExpose({
     @mouseleave="stop"
   >
     <circle class="clock" cx="12" cy="13" r="8" />
-    <path
-      class="bells"
-      :style="{ transformOrigin: '3.5px 4.5px' }"
-      d="M5 3 2 6"
-    />
-    <path
-      class="bells"
-      :style="{ transformOrigin: '20.5px 4.5px' }"
-      d="m22 6-3-3"
-    />
+    <path class="bells" :style="{ transformOrigin: '3.5px 4.5px' }" d="M5 3 2 6" />
+    <path class="bells" :style="{ transformOrigin: '20.5px 4.5px' }" d="m22 6-3-3" />
     <path class="clock" d="M6.38 18.7 4 21" />
     <path class="clock" d="M17.64 18.67 20 21" />
     <g class="plus" :style="{ transformOrigin: '12px 13px' }">

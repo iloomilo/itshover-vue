@@ -1,3 +1,3 @@
 export const SPONSOR = {
-  buymeacoffee: "https://ko-fi.com/iloomilo",
-};
+  buymeacoffee: 'https://ko-fi.com/iloomilo'
+}

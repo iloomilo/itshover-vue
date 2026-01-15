@@ -1,55 +1,55 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.user-center',
     {
       y: -2,
-      scale: 1.05,
+      scale: 1.05
     },
     {
       duration: 0.25,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.user-left',
     {
       x: -1,
-      scale: 1.02,
+      scale: 1.02
     },
     {
       duration: 0.3,
       ease: 'easeOut',
-      delay: 0.05,
+      delay: 0.05
     }
-  );
+  )
 
   animate(
     '.user-right',
     {
       x: 1,
-      scale: 1.02,
+      scale: 1.02
     },
     {
       duration: 0.3,
       ease: 'easeOut',
-      delay: 0.05,
+      delay: 0.05
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
@@ -57,45 +57,45 @@ const stop = () => {
     {
       x: 0,
       y: 0,
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.25,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.user-left',
     {
       x: 0,
       y: 0,
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.25,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.user-right',
     {
       x: 0,
       y: 0,
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.25,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

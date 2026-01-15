@@ -1,41 +1,29 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.airpod-left',
-    { y: [0, -2, 0], x: [0, -1, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.airpod-right',
-    { y: [0, -2, 0], x: [0, 1, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-};
+  animate('.airpod-left', { y: [0, -2, 0], x: [0, -1, 0] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.airpod-right', { y: [0, -2, 0], x: [0, 1, 0] }, { duration: 0.6, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.airpod-left,.airpod-right',
-    { y: 0, x: 0 },
-    { duration: 0.3, ease: 'easeInOut' }
-  );
-};
+  animate('.airpod-left,.airpod-right', { y: 0, x: 0 }, { duration: 0.3, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,46 +1,30 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.pins',
-    { scale: [1, 1.15, 1] },
-    { duration: 0.5, ease: 'easeInOut' }
-  );
-  animate(
-    '.inner',
-    { scale: [1, 0.9, 1] },
-    { duration: 0.5, ease: 'easeInOut' }
-  );
-  animate(
-    '.outer',
-    { scale: [1, 1.05, 1] },
-    { duration: 0.5, ease: 'easeInOut' }
-  );
-};
+  animate('.pins', { scale: [1, 1.15, 1] }, { duration: 0.5, ease: 'easeInOut' })
+  animate('.inner', { scale: [1, 0.9, 1] }, { duration: 0.5, ease: 'easeInOut' })
+  animate('.outer', { scale: [1, 1.05, 1] }, { duration: 0.5, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate(
-    '.pins, .inner, .outer',
-    { scale: 1 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.pins, .inner, .outer', { scale: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

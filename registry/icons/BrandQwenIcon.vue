@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   // Wobble animation: slight rotation back and forth with scale pulse
@@ -17,21 +17,17 @@ const start = () => {
     scope.value,
     { rotate: [0, -8, 8, -4, 4, 0], scale: [1, 1.05, 1] },
     { duration: 0.6, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate(
-    scope.value,
-    { rotate: 0, scale: 1 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-};
+  animate(scope.value, { rotate: 0, scale: 1 }, { duration: 0.2, ease: 'easeOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

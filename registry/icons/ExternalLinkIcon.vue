@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
@@ -17,25 +17,25 @@ const start = () => {
     {
       x: 2,
       y: -2,
-      scale: 1.1,
+      scale: 1.1
     },
     {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.external-box',
     {
-      scale: 0.95,
+      scale: 0.95
     },
     {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
@@ -43,19 +43,19 @@ const stop = () => {
     {
       x: 0,
       y: 0,
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.25,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -82,10 +82,7 @@ defineExpose({
       :style="{ transformOrigin: '50% 50%' }"
     />
 
-    <g
-      class="external-arrow"
-      :style="{ transformOrigin: '50% 50%' }"
-    >
+    <g class="external-arrow" :style="{ transformOrigin: '50% 50%' }">
       <path d="M11 13l9 -9" />
       <path d="M15 4h5v5" />
     </g>

@@ -1,44 +1,36 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  animate('.message-path', { pathLength: 0, opacity: 0 }, { duration: 0 });
+  animate('.message-path', { pathLength: 0, opacity: 0 }, { duration: 0 })
 
   await animate(
     '.message-path',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.6, ease: 'easeInOut' }
-  );
+  )
 
-  animate(
-    '.message-path',
-    { scale: [1, 1.05, 1] },
-    { duration: 0.3, ease: 'easeOut' }
-  );
-};
+  animate('.message-path', { scale: [1, 1.05, 1] }, { duration: 0.3, ease: 'easeOut' })
+}
 
 const stop = () => {
-  animate(
-    '.message-path',
-    { pathLength: 1, opacity: 1, scale: 1 },
-    { duration: 0.2 }
-  );
-};
+  animate('.message-path', { pathLength: 1, opacity: 1, scale: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,70 +1,70 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.vinyl-disc',
     {
-      rotate: [0, 360],
+      rotate: [0, 360]
     },
     {
       duration: 3,
       repeat: Infinity,
-      ease: 'linear',
+      ease: 'linear'
     }
-  );
+  )
 
   animate(
     '.center-dot',
     {
-      scale: [1, 1.2, 1],
+      scale: [1, 1.2, 1]
     },
     {
       duration: 1,
       repeat: Infinity,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.vinyl-disc',
     {
-      rotate: 0,
+      rotate: 0
     },
     {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.center-dot',
     {
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -91,10 +91,7 @@ defineExpose({
       :style="{ transformOrigin: '50% 50%' }"
     />
 
-    <path
-      class="center-dot"
-      d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
-    />
+    <path class="center-dot" d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
 
     <path d="M20 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
     <path d="M20 4l-3.5 10l-2.5 2" />

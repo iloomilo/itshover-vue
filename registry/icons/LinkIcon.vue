@@ -1,48 +1,40 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.link-top',
-    { x: 1.5, y: -1.5 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
+  animate('.link-top', { x: 1.5, y: -1.5 }, { duration: 0.25, ease: 'easeOut' })
 
-  animate(
-    '.link-bottom',
-    { x: -1.5, y: 1.5 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
+  animate('.link-bottom', { x: -1.5, y: 1.5 }, { duration: 0.25, ease: 'easeOut' })
 
   animate(
     '.link-middle',
     { opacity: [0.6, 1], scale: [0.95, 1] },
     { duration: 0.2, ease: 'easeOut' }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.link-top, .link-bottom, .link-middle',
     { x: 0, y: 0, opacity: 1, scale: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -63,11 +55,7 @@ defineExpose({
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 
-    <path
-      d="M9 15l6 -6"
-      class="link-middle"
-      :style="{ transformOrigin: '50% 50%' }"
-    />
+    <path d="M9 15l6 -6" class="link-middle" :style="{ transformOrigin: '50% 50%' }" />
 
     <path
       d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"

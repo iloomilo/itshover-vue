@@ -1,50 +1,50 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   // Reset
-  animate('.icon-group', { scale: 1, rotate: 0 });
-  animate('.animated-path', { pathLength: 1, opacity: 1 });
+  animate('.icon-group', { scale: 1, rotate: 0 })
+  animate('.animated-path', { pathLength: 1, opacity: 1 })
 
   // Animation
   animate(
     '.animated-path',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 1, ease: 'easeInOut' }
-  );
+  )
 
   await animate(
     '.icon-group',
     {
       scale: [0.5, 1.1, 1],
-      rotate: [180, -10, 0],
+      rotate: [180, -10, 0]
     },
     {
       duration: 1,
-      ease: [0.34, 1.56, 0.64, 1],
+      ease: [0.34, 1.56, 0.64, 1]
     }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate('.icon-group', { scale: 1, rotate: 0 });
-  animate('.animated-path', { pathLength: 1, opacity: 1 });
-};
+  animate('.icon-group', { scale: 1, rotate: 0 })
+  animate('.animated-path', { pathLength: 1, opacity: 1 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

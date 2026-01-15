@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  animate('.qr-scan', { opacity: 0, y: 0 }, { duration: 0 });
-  animate('.corner-rect', { pathLength: 0, opacity: 0 }, { duration: 0 });
-  animate('.inner-element', { opacity: 0, scale: 0.8 }, { duration: 0 });
-  animate('.center-dot', { scale: 0, opacity: 0 }, { duration: 0 });
+  animate('.qr-scan', { opacity: 0, y: 0 }, { duration: 0 })
+  animate('.corner-rect', { pathLength: 0, opacity: 0 }, { duration: 0 })
+  animate('.inner-element', { opacity: 0, scale: 0.8 }, { duration: 0 })
+  animate('.center-dot', { scale: 0, opacity: 0 }, { duration: 0 })
 
   await animate(
     '.corner-rect',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.4, ease: 'easeOut', delay: (i: number) => i * 0.1 }
-  );
+  )
 
   animate(
     '.qr-scan',
@@ -30,35 +30,35 @@ const start = async () => {
       duration: 1.5,
       ease: 'easeInOut',
       repeat: Infinity,
-      repeatDelay: 0.3,
+      repeatDelay: 0.3
     }
-  );
+  )
 
   await animate(
     '.inner-element',
     { opacity: [0, 1], scale: [0.8, 1] },
     { duration: 0.3, ease: 'easeOut', delay: (i: number) => i * 0.05 }
-  );
+  )
 
   animate(
     '.center-dot',
     { scale: [0, 1.2, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeOut', delay: (i: number) => i * 0.08 }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.qr-scan, .corner-rect, .inner-element, .center-dot',
     { opacity: 1, pathLength: 1, scale: 1, y: 0 },
     { duration: 0.2 }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

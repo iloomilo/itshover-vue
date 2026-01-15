@@ -1,74 +1,74 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.cart-upper',
     {
-      x: [0, 10, 0],
+      x: [0, 10, 0]
     },
     {
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   animate(
     '.cart-wheel-left',
     {
       rotate: [0, 180, 0],
-      x: [0, 10, 0],
+      x: [0, 10, 0]
     },
     {
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.cart-wheel-right',
     {
       rotate: [0, 180, 0],
-      x: [0, 10, 0],
+      x: [0, 10, 0]
     },
     {
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   animate(
     '.cart-item',
     {
-      y: [0, -2, 0],
+      y: [0, -2, 0]
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.cart-upper, .cart-wheel-left, .cart-wheel-right, .cart-item',
     { x: 0, rotate: 0, y: 0 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,74 +1,74 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   animate(
     '.skull-head',
     {
       rotate: [0, -8, 8, -8, 8, -4, 4, 0],
-      y: [0, -2, 0, -2, 0, -1, 0],
+      y: [0, -2, 0, -2, 0, -1, 0]
     },
     {
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   animate(
     '.skull-eye-left, .skull-eye-right',
     {
-      scale: [1, 1.3, 0.8, 1.2, 1],
+      scale: [1, 1.3, 0.8, 1.2, 1]
     },
     {
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     '.skull-tooth',
     {
-      y: [0, -3, 0, -2, 0, -3, 0],
+      y: [0, -3, 0, -2, 0, -3, 0]
     },
     {
       duration: 0.5,
       ease: 'easeInOut',
-      delay: 0.1,
+      delay: 0.1
     }
-  );
+  )
   await animate(
     '.skull-head',
     {
       y: [0, -4, 0],
-      scale: [1, 1.05, 1],
+      scale: [1, 1.05, 1]
     },
     {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.skull-head, .skull-eye-left, .skull-eye-right, .skull-tooth',
     { rotate: 0, y: 0, scale: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -92,10 +92,7 @@ defineExpose({
       stroke-linecap="square"
     >
       <path class="skull-tooth-left skull-tooth" d="M14 27V30" />
-      <path
-        class="skull-tooth-right skull-tooth"
-        d="M18 27V30"
-      />
+      <path class="skull-tooth-right skull-tooth" d="M18 27V30" />
       <path
         class="skull-head"
         :style="{ transformOrigin: '16px 16px' }"

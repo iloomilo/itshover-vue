@@ -1,68 +1,68 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.chart-line',
     {
-      pathLength: [0, 1],
+      pathLength: [0, 1]
     },
     {
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.base-line',
     {
-      scaleX: [0, 1],
+      scaleX: [0, 1]
     },
     {
       duration: 0.4,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.chart-line',
     {
-      pathLength: 1,
+      pathLength: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.base-line',
     {
-      scaleX: 1,
+      scaleX: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -83,15 +83,8 @@ defineExpose({
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 
-    <path
-      d="M4 19l16 0"
-      class="base-line"
-      :style="{ transformOrigin: '4px 19px' }"
-    />
+    <path d="M4 19l16 0" class="base-line" :style="{ transformOrigin: '4px 19px' }" />
 
-    <path
-      d="M4 15l4 -6l4 2l4 -5l4 4"
-      class="chart-line"
-    />
+    <path d="M4 15l4 -6l4 2l4 -5l4 4" class="chart-line" />
   </svg>
 </template>

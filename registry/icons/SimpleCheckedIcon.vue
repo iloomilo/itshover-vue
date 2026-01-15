@@ -1,37 +1,29 @@
 <script setup lang="ts">
-import { useAnimate, motion } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate, motion } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
-  await animate(
-    '.check-path',
-    { pathLength: 0 },
-    { duration: 0.1, ease: 'easeInOut' }
-  );
-  await animate(
-    '.check-path',
-    { pathLength: 1 },
-    { duration: 0.4, ease: 'easeInOut' }
-  );
-};
+  await animate('.check-path', { pathLength: 0 }, { duration: 0.1, ease: 'easeInOut' })
+  await animate('.check-path', { pathLength: 1 }, { duration: 0.4, ease: 'easeInOut' })
+}
 
 const stop = () => {
-  animate('.check-path', { pathLength: 1 }, { duration: 0.2 });
-};
+  animate('.check-path', { pathLength: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -49,10 +41,7 @@ defineExpose({
       class=""
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <motion.path
-        d="M5 12l5 5l10 -10"
-        :class="['check-path', className]"
-      />
+      <motion.path d="M5 12l5 5l10 -10" :class="['check-path', className]" />
     </svg>
   </div>
 </template>

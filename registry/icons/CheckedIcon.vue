@@ -1,77 +1,73 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await animate(
     scope.value,
     {
-      scale: 1.1,
+      scale: 1.1
     },
     {
       duration: 0.1,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     '.check-icon',
     {
-      pathLength: 0,
+      pathLength: 0
     },
     {
       duration: 0.1,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     '.check-icon',
     {
-      pathLength: 1,
+      pathLength: 1
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   await animate(
     scope.value,
     {
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate(scope.value, { scale: 1 }, { duration: 0.2 });
-  animate('.check-icon', { pathLength: 1 }, { duration: 0.2 });
-};
+  animate(scope.value, { scale: 1 }, { duration: 0.2 })
+  animate('.check-icon', { pathLength: 1 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
-  <div
-    ref="scope"
-    @mouseenter="start"
-    @mouseleave="stop"
-  >
+  <div ref="scope" @mouseenter="start" @mouseleave="stop">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       :width="size"

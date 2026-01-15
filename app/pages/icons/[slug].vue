@@ -8,10 +8,6 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div v-if="loading">Loading ...</div>  
-  <IconDetailContent 
-    v-else
-    :slug="route.params.slug as string" 
-    :code="code" 
-  />
+  <div v-if="loading">Loading ...</div>
+  <IconDetailContent v-else :slug="route.params.slug as string" :code="code" />
 </template>

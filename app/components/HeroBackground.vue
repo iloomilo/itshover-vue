@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 import FloatingIcon from './FloatingIcon.vue'
-import type { AnimatedIconHandle } from '~~/registry/types/types';
+import type { AnimatedIconHandle } from '~~/registry/types/types'
 
 const INITIAL_ANIMATION_DELAY_MS = 500
 const IDLE_THRESHOLD_MS = 5000
@@ -86,10 +86,7 @@ onUnmounted(() => {
       </FloatingIcon>
 
       <FloatingIcon class="top-40 left-36 rotate-15 xl:top-60">
-        <LikeIcon
-          ref="likeRef"
-          class="h-32 w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 xl:h-52 xl:w-52"
-        />
+        <LikeIcon ref="likeRef" class="h-32 w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 xl:h-52 xl:w-52" />
       </FloatingIcon>
 
       <FloatingIcon class="top-40 right-20 rotate-25">
@@ -100,10 +97,7 @@ onUnmounted(() => {
       </FloatingIcon>
 
       <FloatingIcon class="right-36 bottom-60 rotate-[-15deg]">
-        <SendIcon
-          ref="sendRef"
-          class="h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 xl:h-44 xl:w-44"
-        />
+        <SendIcon ref="sendRef" class="h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 xl:h-44 xl:w-44" />
       </FloatingIcon>
 
       <FloatingIcon class="bottom-52 left-24 rotate-10">

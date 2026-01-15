@@ -1,51 +1,31 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.piece1',
-    { rotate: [0, -90, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.piece2',
-    { rotate: [0, 90, 0] },
-    { duration: 0.6, ease: 'easeInOut', delay: 0.1 }
-  );
-  animate(
-    '.piece3',
-    { rotate: [0, -90, 0] },
-    { duration: 0.6, ease: 'easeInOut', delay: 0.2 }
-  );
-  animate(
-    '.piece4',
-    { rotate: [0, 90, 0] },
-    { duration: 0.6, ease: 'easeInOut', delay: 0.3 }
-  );
-};
+  animate('.piece1', { rotate: [0, -90, 0] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.piece2', { rotate: [0, 90, 0] }, { duration: 0.6, ease: 'easeInOut', delay: 0.1 })
+  animate('.piece3', { rotate: [0, -90, 0] }, { duration: 0.6, ease: 'easeInOut', delay: 0.2 })
+  animate('.piece4', { rotate: [0, 90, 0] }, { duration: 0.6, ease: 'easeInOut', delay: 0.3 })
+}
 
 const stop = () => {
-  animate(
-    '.piece1, .piece2, .piece3, .piece4',
-    { rotate: 0 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.piece1, .piece2, .piece3, .piece4', { rotate: 0 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

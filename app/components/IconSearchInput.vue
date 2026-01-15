@@ -1,17 +1,20 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, type HTMLAttributes } from 'vue'
 import { motion, AnimatePresence } from 'motion-v'
 import { cn } from '@/lib/utils'
 
-const props = withDefaults(defineProps<{
-  modelValue: string
-  placeholder?: string
-  class?: string
-  autoFocus?: boolean
-}>(), {
-  placeholder: 'Search icons...',
-  autoFocus: false
-})
+const props = withDefaults(
+  defineProps<{
+    modelValue: string
+    placeholder?: string
+    class?: HTMLAttributes['class']
+    autoFocus?: boolean
+  }>(),
+  {
+    placeholder: 'Search icons...',
+    autoFocus: false
+  }
+)
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
@@ -66,29 +69,33 @@ defineExpose({
     />
 
     <div
-      :class="cn(
-        'relative flex w-full items-center gap-3 px-4 py-3',
-        'bg-background rounded-xl border',
-        'shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]',
-        'dark:bg-muted/30 dark:border-white/10',
-        'transition-all duration-300 ease-out',
-        isFocused && 'border-primary/50 dark:border-primary/30 shadow-md',
-      )"
+      :class="
+        cn(
+          'relative flex w-full items-center gap-3 px-4 py-3',
+          'bg-background rounded-xl border',
+          'shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]',
+          'dark:bg-muted/30 dark:border-white/10',
+          'transition-all duration-300 ease-out',
+          isFocused && 'border-primary/50 dark:border-primary/30 shadow-md'
+        )
+      "
     >
       <motion.div
         :animate="{
           scale: isFocused ? 1.1 : 1,
-          rotate: isFocused ? -5 : 0,
+          rotate: isFocused ? -5 : 0
         }"
         :transition="{ duration: 0.2, ease: 'easeOut' }"
         class="text-muted-foreground flex items-center justify-center"
       >
         <MagnifierIcon
           :size="20"
-          :class="cn(
-            'transition-colors duration-200',
-            isFocused ? 'text-primary' : 'text-muted-foreground',
-          )"
+          :class="
+            cn(
+              'transition-colors duration-200',
+              isFocused ? 'text-primary' : 'text-muted-foreground'
+            )
+          "
         />
       </motion.div>
 
@@ -96,16 +103,18 @@ defineExpose({
         ref="inputRef"
         type="text"
         :value="modelValue"
+        :placeholder="placeholder"
+        :class="
+          cn(
+            'text-foreground flex-1 bg-transparent text-sm',
+            'placeholder:text-muted-foreground/60',
+            'border-none outline-none',
+            'transition-all duration-200'
+          )
+        "
         @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
         @focus="isFocused = true"
         @blur="isFocused = false"
-        :placeholder="placeholder"
-        :class="cn(
-          'text-foreground flex-1 bg-transparent text-sm',
-          'placeholder:text-muted-foreground/60',
-          'border-none outline-none',
-          'transition-all duration-200',
-        )"
       />
 
       <AnimatePresence>
@@ -115,14 +124,16 @@ defineExpose({
           :animate="{ opacity: 1, scale: 1, rotate: 0 }"
           :exit="{ opacity: 0, scale: 0.8, rotate: 90 }"
           :transition="{ duration: 0.2, ease: 'easeOut' }"
-          @click="handleClear"
           type="button"
-          :class="cn(
-            'rounded-md p-1',
-            'text-muted-foreground hover:text-foreground',
-            'hover:bg-muted/50',
-            'transition-colors duration-150',
-          )"
+          :class="
+            cn(
+              'rounded-md p-1',
+              'text-muted-foreground hover:text-foreground',
+              'hover:bg-muted/50',
+              'transition-colors duration-150'
+            )
+          "
+          @click="handleClear"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

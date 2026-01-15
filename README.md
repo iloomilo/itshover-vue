@@ -8,6 +8,7 @@ Bring your app to life with interaction-based animated icons, fully compatible w
 ![Nuxt](https://img.shields.io/badge/Nuxt-4.x-green.svg)
 
 ## 🌟 Credits & Attribution
+
 **Original library repository:** [itshover](https://github.com/itshover/itshover)  
 **Original code © 2026 itshover**  
 **Port © 2026 iloomilo**
@@ -21,10 +22,13 @@ This project modifies the original React code to work with Vue.js.
 You can install components directly using the `shadcn-vue` CLI. You don't need to copy-paste code manually.
 
 ### 1. Prerequisites
+
 Make sure you have a working [shadcn-vue](https://www.shadcn-vue.com/) project set up.
 
 ### 2. Add an Icon
+
 Run the following command in your terminal to add an icon (e.g., `AccessibiltyIcon`):
 
 ```bash
 npx shadcn-vue@latest add https://itshover-vue.com/r/AccessibilityIcon.json
+```

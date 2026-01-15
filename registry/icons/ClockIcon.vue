@@ -1,46 +1,46 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.clock-hands',
     {
-      rotate: 360,
+      rotate: 360
     },
     {
       duration: 1,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.clock-hands',
     {
-      rotate: 0,
+      rotate: 0
     },
     {
       duration: 1,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -60,10 +60,7 @@ defineExpose({
     @mouseleave="stop"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path
-      d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
-      class="clock-body"
-    />
+    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" class="clock-body" />
     <path d="M12 7v5l3 3" class="clock-hands" />
   </svg>
 </template>

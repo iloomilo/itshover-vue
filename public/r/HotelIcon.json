@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "HotelIcon",
   "description": "HotelIcon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/HotelIcon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.building',\n    { scaleY: [1, 1.2, 1], y: [0, -2, 0] },\n    { duration: 0.4, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.building',\n    { scaleY: 1, y: 0 },\n    { duration: 0.3, ease: 'easeIn' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path\n      class=\"building\"\n      d=\"M4.75 6.75h1m-1 4h1m-1 4h1m10-8h1m-1 4h1m-1 4h1M12.75 20.75v-4a2 2 0 0 0-4 0v4M.75 2.75h6c.64-1.173 2.19-2 4-2s3.36.827 4 2h6\"\n    />\n    <path\n      class=\"building\"\n      d=\"M8.75 5.75v2m0 2v-2m0 0h4v-2 4\"\n    />\n    <path\n      class=\"building\"\n      d=\"M1.75 3.75v16c0 .943 0 1.414.293 1.707s.764.293 1.707.293h14c.943 0 1.414 0 1.707-.293s.293-.764.293-1.707v-16\"\n    />\n  </svg>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate('.building', { scaleY: [1, 1.2, 1], y: [0, -2, 0] }, { duration: 0.4, ease: 'easeInOut' })\n}\n\nconst stop = () => {\n  animate('.building', { scaleY: 1, y: 0 }, { duration: 0.3, ease: 'easeIn' })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path\n      class=\"building\"\n      d=\"M4.75 6.75h1m-1 4h1m-1 4h1m10-8h1m-1 4h1m-1 4h1M12.75 20.75v-4a2 2 0 0 0-4 0v4M.75 2.75h6c.64-1.173 2.19-2 4-2s3.36.827 4 2h6\"\n    />\n    <path class=\"building\" d=\"M8.75 5.75v2m0 2v-2m0 0h4v-2 4\" />\n    <path\n      class=\"building\"\n      d=\"M1.75 3.75v16c0 .943 0 1.414.293 1.707s.764.293 1.707.293h14c.943 0 1.414 0 1.707-.293s.293-.764.293-1.707v-16\"\n    />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]

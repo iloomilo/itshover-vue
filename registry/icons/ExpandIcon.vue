@@ -1,54 +1,38 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.arrows-tr',
-    { x: 2, y: -2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
-  animate(
-    '.arrows-tl',
-    { x: -2, y: -2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
-  animate(
-    '.arrows-br',
-    { x: 2, y: 2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
-  animate(
-    '.arrows-bl',
-    { x: -2, y: 2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
+  animate('.arrows-tr', { x: 2, y: -2 }, { duration: 0.25, ease: 'easeOut' })
+  animate('.arrows-tl', { x: -2, y: -2 }, { duration: 0.25, ease: 'easeOut' })
+  animate('.arrows-br', { x: 2, y: 2 }, { duration: 0.25, ease: 'easeOut' })
+  animate('.arrows-bl', { x: -2, y: 2 }, { duration: 0.25, ease: 'easeOut' })
 
-  animate('.corners', { scale: 1.08 }, { duration: 0.25, ease: 'easeOut' });
-};
+  animate('.corners', { scale: 1.08 }, { duration: 0.25, ease: 'easeOut' })
+}
 
 const stop = () => {
   animate(
     '.arrows-tr, .arrows-tl, .arrows-br, .arrows-bl',
     { x: 0, y: 0 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-  animate('.corners', { scale: 1 }, { duration: 0.2, ease: 'easeInOut' });
-};
+  )
+  animate('.corners', { scale: 1 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,65 +1,61 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await animate(
     '.truck',
     {
       x: [0, 30],
-      opacity: [1, 0],
+      opacity: [1, 0]
     },
     {
       duration: 0.5,
-      ease: 'easeIn',
+      ease: 'easeIn'
     }
-  );
+  )
 
   animate(
     '.truck',
     {
-      x: -30,
+      x: -30
     },
     {
-      duration: 0,
+      duration: 0
     }
-  );
+  )
 
   animate(
     '.truck',
     {
       x: [-30, 0],
-      opacity: [0, 1],
+      opacity: [0, 1]
     },
     {
       duration: 0.5,
       ease: 'easeOut',
-      delay: 0.1,
+      delay: 0.1
     }
-  );
-};
+  )
+}
 
 const stop = () => {
-  animate(
-    '.truck',
-    { x: 0, opacity: 1 },
-    { duration: 0.2, ease: 'easeOut' }
-  );
-};
+  animate('.truck', { x: 0, opacity: 1 }, { duration: 0.2, ease: 'easeOut' })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

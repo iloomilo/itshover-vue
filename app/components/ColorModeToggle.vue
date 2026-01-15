@@ -2,7 +2,6 @@
 import { useColorMode } from '@vueuse/core'
 const colorMode = useColorMode()
 
-
 const toggleTheme = () => {
   colorMode.value = colorMode.value === 'dark' ? 'light' : 'dark'
 }
@@ -16,11 +15,11 @@ const toggleTheme = () => {
     <BrightnessDownIcon
       class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 text-neutral-500 transition-all dark:scale-0 dark:-rotate-90 dark:text-neutral-500"
     />
-    
+
     <MoonIcon
       class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 text-neutral-500 transition-all dark:scale-100 dark:rotate-0 dark:text-neutral-500"
     />
-    
+
     <span class="sr-only">Toggle theme</span>
   </button>
 </template>

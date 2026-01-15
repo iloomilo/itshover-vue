@@ -1,69 +1,69 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await animate(
     '.youtube-play',
     {
-      pathLength: [0, 1],
+      pathLength: [0, 1]
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.youtube-play',
     {
-      scale: [1, 0.8, 1],
+      scale: [1, 0.8, 1]
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.youtube-play',
     {
       scale: 1,
-      x: 0,
+      x: 0
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
 
   animate(
     '.youtube-frame',
     {
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -90,10 +90,6 @@ defineExpose({
       :style="{ transformOrigin: '50% 50%' }"
     />
 
-    <path
-      d="M10 9l5 3l-5 3z"
-      class="youtube-play"
-      :style="{ transformOrigin: '50% 50%' }"
-    />
+    <path d="M10 9l5 3l-5 3z" class="youtube-play" :style="{ transformOrigin: '50% 50%' }" />
   </svg>
 </template>

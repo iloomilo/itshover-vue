@@ -1,46 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
-  animate(
-    '.sticks',
-    { y: [0, 3, 0, 3, 0] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.drum-body',
-    { scaleY: [1, 0.98, 1, 0.98, 1] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-  animate(
-    '.drum-top',
-    { scaleX: [1, 1.05, 1, 1.05, 1] },
-    { duration: 0.6, ease: 'easeInOut' }
-  );
-};
+  animate('.sticks', { y: [0, 3, 0, 3, 0] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.drum-body', { scaleY: [1, 0.98, 1, 0.98, 1] }, { duration: 0.6, ease: 'easeInOut' })
+  animate('.drum-top', { scaleX: [1, 1.05, 1, 1.05, 1] }, { duration: 0.6, ease: 'easeInOut' })
+}
 
 const stop = () => {
   animate(
     '.sticks, .drum-body, .drum-top',
     { x: 0, y: 0, scaleX: 1, scaleY: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 40,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   // Wiggle the legs
@@ -17,32 +17,24 @@ const start = async () => {
     '.leg-left',
     { x: [-1, 1, -1], rotate: [-5, 5, -5] },
     { duration: 0.2, repeat: 2, ease: 'easeInOut' }
-  );
+  )
   animate(
     '.leg-right',
     { x: [1, -1, 1], rotate: [5, -5, 5] },
     { duration: 0.2, repeat: 2, ease: 'easeInOut' }
-  );
+  )
   // Subtle body shake
-  animate(
-    '.body',
-    { x: [-0.5, 0.5, -0.5] },
-    { duration: 0.1, repeat: 2, ease: 'easeInOut' }
-  );
-};
+  animate('.body', { x: [-0.5, 0.5, -0.5] }, { duration: 0.1, repeat: 2, ease: 'easeInOut' })
+}
 
 const stop = async () => {
-  animate(
-    '.leg-left, .leg-right, .body',
-    { x: 0, rotate: 0 },
-    { duration: 0.2 }
-  );
-};
+  animate('.leg-left, .leg-right, .body', { x: 0, rotate: 0 }, { duration: 0.2 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -64,10 +56,7 @@ defineExpose({
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M9 9v-1a3 3 0 0 1 6 0v1" />
-    <path
-      class="body"
-      d="M8 9h8a6 6 0 0 1 1 3v3a5 5 0 0 1 -10 0v-3a6 6 0 0 1 1 -3"
-    />
+    <path class="body" d="M8 9h8a6 6 0 0 1 1 3v3a5 5 0 0 1 -10 0v-3a6 6 0 0 1 1 -3" />
     <!-- Left legs -->
     <path class="leg-left" d="M3 13l4 0" />
     <path class="leg-left" d="M4 19l3.35 -2" />

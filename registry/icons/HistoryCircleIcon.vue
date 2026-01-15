@@ -1,59 +1,59 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = () => {
   animate(
     '.history-circle',
     {
       rotate: -45,
-      pathLength: [1, 0.75],
+      pathLength: [1, 0.75]
     },
     {
       duration: 0.35,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
 
   animate(
     '.clock-hand',
     {
-      rotate: -30,
+      rotate: -30
     },
     {
       duration: 0.25,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     '.history-circle, .clock-hand',
     {
       rotate: 0,
-      pathLength: 1,
+      pathLength: 1
     },
     {
       duration: 0.25,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -74,11 +74,7 @@ defineExpose({
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 
-    <path
-      d="M12 8l0 4l2 2"
-      class="clock-hand"
-      :style="{ transformOrigin: '50% 50%' }"
-    />
+    <path d="M12 8l0 4l2 2" class="clock-hand" :style="{ transformOrigin: '50% 50%' }" />
 
     <path
       d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5"

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await animate(
@@ -19,13 +19,13 @@ const start = async () => {
       x: [0, 4, 8],
       rotate: [0, -8, -16],
       scale: [1, 1.05, 1.1],
-      opacity: [1, 1, 0],
+      opacity: [1, 1, 0]
     },
     {
       duration: 0.8,
-      ease: 'easeIn',
+      ease: 'easeIn'
     }
-  );
+  )
 
   animate(
     '.bird',
@@ -34,14 +34,14 @@ const start = async () => {
       x: 0,
       rotate: 0,
       scale: 1,
-      opacity: 1,
+      opacity: 1
     },
     {
       duration: 0.6,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
@@ -51,19 +51,19 @@ const stop = () => {
       x: 0,
       rotate: 0,
       scale: 1,
-      opacity: 1,
+      opacity: 1
     },
     {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

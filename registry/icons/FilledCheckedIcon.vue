@@ -1,93 +1,93 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   await animate(
     'svg',
     {
-      scale: 1.1,
+      scale: 1.1
     },
     {
       duration: 0.1,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   animate(
     '.filled-circle',
     {
       scale: 1.15,
-      opacity: 0.8,
+      opacity: 0.8
     },
     {
       duration: 0.15,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }
-  );
+  )
   await animate(
     '.check-icon',
     {
-      pathLength: 0,
+      pathLength: 0
     },
     {
       duration: 0.1,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   animate(
     '.filled-circle',
     {
       scale: 1,
-      opacity: 1,
+      opacity: 1
     },
     {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     '.check-icon',
     {
-      pathLength: 1,
+      pathLength: 1
     },
     {
       duration: 0.4,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
+  )
   await animate(
     'svg',
     {
-      scale: 1,
+      scale: 1
     },
     {
       duration: 0.2,
-      ease: 'easeInOut',
+      ease: 'easeInOut'
     }
-  );
-};
+  )
+}
 
 const stop = () => {
   animate(
     'svg, .filled-circle, .check-icon',
     { scale: 1, opacity: 1, pathLength: 1 },
     { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  )
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>

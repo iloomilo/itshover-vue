@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import { useAnimate, motion } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate, motion } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const start = async () => {
   // Subtle vibration for the plane
-  animate(
-    '.airplane',
-    { x: [0, 0.5, 0], y: [0, -0.5, 0] },
-    { duration: 0.3 }
-  );
+  animate('.airplane', { x: [0, 0.5, 0], y: [0, -0.5, 0] }, { duration: 0.3 })
 
   // Streak 1: Upper Wing (Top-right streak)
   animate(
@@ -25,10 +21,10 @@ const start = async () => {
     {
       x: -12,
       y: 24,
-      opacity: 1,
+      opacity: 1
     },
     { duration: 0.8, ease: 'easeOut' }
-  );
+  )
 
   // Streak 2: Lower Wing (Middle-left streak)
   animate(
@@ -36,22 +32,22 @@ const start = async () => {
     {
       x: 0,
       y: 26,
-      opacity: 1,
+      opacity: 1
     },
     { duration: 0.8, ease: 'easeOut', delay: 0.2 }
-  );
-};
+  )
+}
 
 const stop = async () => {
-  animate('.airplane', { x: 0, y: 0 }, { duration: 0.3 });
-  animate('.wind1', { opacity: 0, x: 12, y: -4 }, { duration: 0.3 });
-  animate('.wind2', { opacity: 0, x: 26, y: 8 }, { duration: 0.3 });
-};
+  animate('.airplane', { x: 0, y: 0 }, { duration: 0.3 })
+  animate('.wind1', { opacity: 0, x: 12, y: -4 }, { duration: 0.3 })
+  animate('.wind2', { opacity: 0, x: 26, y: 8 }, { duration: 0.3 })
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -79,10 +75,6 @@ defineExpose({
       :initial="{ opacity: 0, x: 10, y: -6 }"
       d="m.5 3.5 3-3"
     ></motion.path>
-    <motion.path
-      class="wind2"
-      :initial="{ opacity: 0, x: 26, y: 8 }"
-      d="m.5 3.5 3-3"
-    ></motion.path>
+    <motion.path class="wind2" :initial="{ opacity: 0, x: 26, y: 8 }" d="m.5 3.5 3-3"></motion.path>
   </svg>
 </template>

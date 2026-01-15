@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "Stack3Icon",
   "description": "Stack3Icon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/Stack3Icon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.layer-1',\n    { y: -3, scale: 1.05 },\n    { duration: 0.3, ease: 'easeOut' }\n  );\n\n  animate(\n    '.layer-2',\n    { y: -1, opacity: 0.8 },\n    { duration: 0.3, delay: 0.05, ease: 'easeOut' }\n  );\n\n  animate(\n    '.layer-3',\n    { y: 1, opacity: 0.6 },\n    { duration: 0.3, delay: 0.1, ease: 'easeOut' }\n  );\n};\n\nconst stop = () => {\n  animate('.layer-1', { y: 0, scale: 1 }, { duration: 0.25 });\n  animate('.layer-2', { y: 0, opacity: 1 }, { duration: 0.25 });\n  animate('.layer-3', { y: 0, opacity: 1 }, { duration: 0.25 });\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path class=\"layer-1\" d=\"M12 2l-8 4l8 4l8 -4l-8 -4\" />\n\n    <path class=\"layer-2\" d=\"M4 10l8 4l8 -4\" />\n    <path class=\"layer-2\" d=\"M4 14l8 4l8 -4\" />\n\n    <path class=\"layer-3\" d=\"M4 18l8 4l8 -4\" />\n  </svg>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate('.layer-1', { y: -3, scale: 1.05 }, { duration: 0.3, ease: 'easeOut' })\n\n  animate('.layer-2', { y: -1, opacity: 0.8 }, { duration: 0.3, delay: 0.05, ease: 'easeOut' })\n\n  animate('.layer-3', { y: 1, opacity: 0.6 }, { duration: 0.3, delay: 0.1, ease: 'easeOut' })\n}\n\nconst stop = () => {\n  animate('.layer-1', { y: 0, scale: 1 }, { duration: 0.25 })\n  animate('.layer-2', { y: 0, opacity: 1 }, { duration: 0.25 })\n  animate('.layer-3', { y: 0, opacity: 1 }, { duration: 0.25 })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path class=\"layer-1\" d=\"M12 2l-8 4l8 4l8 -4l-8 -4\" />\n\n    <path class=\"layer-2\" d=\"M4 10l8 4l8 -4\" />\n    <path class=\"layer-2\" d=\"M4 14l8 4l8 -4\" />\n\n    <path class=\"layer-3\" d=\"M4 18l8 4l8 -4\" />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]

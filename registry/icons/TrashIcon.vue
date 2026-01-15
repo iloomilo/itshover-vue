@@ -1,54 +1,38 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v';
-import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';
+import { useAnimate } from 'motion-v'
+import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-const props = withDefaults(defineProps<AnimatedIconProps>(), {
+withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: '',
-});
+  className: ''
+})
 
-const [scope, animate] = useAnimate();
+const [scope, animate] = useAnimate()
 
 const openLid = () => {
-  animate(
-    '.trash-lid-lower',
-    { rotate: -25, y: -4 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
-  animate(
-    '.trash-lid-upper',
-    { rotate: -35, y: -6, x: -2 },
-    { duration: 0.25, ease: 'easeOut' }
-  );
-};
+  animate('.trash-lid-lower', { rotate: -25, y: -4 }, { duration: 0.25, ease: 'easeOut' })
+  animate('.trash-lid-upper', { rotate: -35, y: -6, x: -2 }, { duration: 0.25, ease: 'easeOut' })
+}
 
 const closeLid = () => {
-  animate(
-    '.trash-lid-lower',
-    { rotate: 0, y: 0 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-  animate(
-    '.trash-lid-upper',
-    { rotate: 0, y: 0, x: 0 },
-    { duration: 0.2, ease: 'easeInOut' }
-  );
-};
+  animate('.trash-lid-lower', { rotate: 0, y: 0 }, { duration: 0.2, ease: 'easeInOut' })
+  animate('.trash-lid-upper', { rotate: 0, y: 0, x: 0 }, { duration: 0.2, ease: 'easeInOut' })
+}
 
 const start = () => {
-  openLid();
-};
+  openLid()
+}
 
 const stop = () => {
-  closeLid();
-};
+  closeLid()
+}
 
 defineExpose({
   startAnimation: start,
-  stopAnimation: stop,
-} satisfies AnimatedIconHandle);
+  stopAnimation: stop
+} satisfies AnimatedIconHandle)
 </script>
 
 <template>
@@ -69,11 +53,7 @@ defineExpose({
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 
-    <path
-      d="M4 7l16 0"
-      class="trash-lid-lower"
-      :style="{ transformOrigin: '50% 100%' }"
-    />
+    <path d="M4 7l16 0" class="trash-lid-lower" :style="{ transformOrigin: '50% 100%' }" />
 
     <path d="M10 11l0 6" />
     <path d="M14 11l0 6" />

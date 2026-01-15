@@ -4,20 +4,18 @@
   "type": "registry:ui",
   "title": "MehIcon",
   "description": "MehIcon icon",
-  "dependencies": [
-    "motion"
-  ],
+  "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
     {
       "path": "itshover/icons/MehIcon.vue",
-      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v';\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types';\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: '',\n});\n\nconst [scope, animate] = useAnimate();\n\nconst start = () => {\n  animate(\n    '.eyes',\n    { scaleY: [1, 0.3, 1, 0.3, 1] },\n    { duration: 0.8, ease: 'easeInOut' }\n  );\n  animate(\n    '.mouth',\n    { scaleX: [1, 0.9, 1] },\n    { duration: 0.5, ease: 'easeInOut' }\n  );\n};\n\nconst stop = () => {\n  animate(\n    '.eyes, .mouth',\n    { scaleY: 1, scaleX: 1 },\n    { duration: 0.2, ease: 'easeInOut' }\n  );\n};\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop,\n} satisfies AnimatedIconHandle);\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <circle cx=\"12\" cy=\"12\" r=\"10\" />\n    <line\n      class=\"mouth\"\n      x1=\"8\"\n      x2=\"16\"\n      y1=\"15\"\n      y2=\"15\"\n      :style=\"{ transformOrigin: '12px 15px' }\"\n    />\n    <line\n      class=\"eyes\"\n      x1=\"9\"\n      x2=\"9.01\"\n      y1=\"9\"\n      y2=\"9\"\n      :style=\"{ transformOrigin: '9px 9px' }\"\n    />\n    <line\n      class=\"eyes\"\n      x1=\"15\"\n      x2=\"15.01\"\n      y1=\"9\"\n      y2=\"9\"\n      :style=\"{ transformOrigin: '15px 9px' }\"\n    />\n  </svg>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate('.eyes', { scaleY: [1, 0.3, 1, 0.3, 1] }, { duration: 0.8, ease: 'easeInOut' })\n  animate('.mouth', { scaleX: [1, 0.9, 1] }, { duration: 0.5, ease: 'easeInOut' })\n}\n\nconst stop = () => {\n  animate('.eyes, .mouth', { scaleY: 1, scaleX: 1 }, { duration: 0.2, ease: 'easeInOut' })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <circle cx=\"12\" cy=\"12\" r=\"10\" />\n    <line class=\"mouth\" x1=\"8\" x2=\"16\" y1=\"15\" y2=\"15\" :style=\"{ transformOrigin: '12px 15px' }\" />\n    <line class=\"eyes\" x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" :style=\"{ transformOrigin: '9px 9px' }\" />\n    <line class=\"eyes\" x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" :style=\"{ transformOrigin: '15px 9px' }\" />\n  </svg>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "itshover/types/types.ts",
-      "content": "export interface AnimatedIconProps {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  className?: string;\n  disableHover?: boolean;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
       "type": "registry:ui"
     }
   ]
