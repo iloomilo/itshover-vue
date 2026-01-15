@@ -12,7 +12,8 @@ const props = withDefaults(
   }>(),
   {
     placeholder: 'Search icons...',
-    autoFocus: false
+    autoFocus: false,
+    class: ''
   }
 )
 
