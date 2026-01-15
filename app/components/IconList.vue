@@ -1,39 +1,11 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, shallowRef} from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { motion, AnimatePresence } from 'motion-v'
-import { refDebounced } from '@vueuse/core'
-import Fuse from 'fuse.js'
-import { ICON_LIST } from '@/constants/icons'
 import { isMac } from '@/lib/utils'
 
 import IconSearchInput from './IconSearchInput.vue'
 const searchInputRef = ref<InstanceType<typeof IconSearchInput> | null>(null)
-const searchQuery = ref("")
-const debouncedSearchQuery = refDebounced(searchQuery, 500)
-
-const iconCount =  ICON_LIST.length;
-const fuse = new Fuse(ICON_LIST, {
-  keys: [
-    { name: "name", weight: 3 },
-    { name: "keywords", weight: 2 },
-  ],
-  threshold: 0.3,
-  ignoreLocation: true,
-  findAllMatches: true,
-  isCaseSensitive: false,
-  minMatchCharLength: 1,
-})
-
-const filteredIcons = computed(() => {
-  const query = debouncedSearchQuery.value.trim()
-  
-  if (query === "") {
-    return ICON_LIST
-  }
-  
-  const result = fuse.search(query)
-  return result.map((r) => r.item)
-})
+const { searchQuery, iconCount, filteredIcons } = useIcon();
 
 const handleKeyDown = (e: KeyboardEvent) => {
   if (e.key === "f" && (e.metaKey || e.ctrlKey)) {

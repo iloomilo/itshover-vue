@@ -12,12 +12,12 @@ export default defineNuxtConfig({
 
   components: [
     {
-      path: '../registry/icons',
-      pathPrefix: false, 
-      extensions: ['.vue'],
+      path: "../registry/icons",
+      pathPrefix: false,
+      extensions: [".vue"],
       global: true,
     },
-    '~/components'
+    "~/components",
   ],
   modules: ["shadcn-nuxt", "motion-v/nuxt", "@nuxt/image"],
   shadcn: {

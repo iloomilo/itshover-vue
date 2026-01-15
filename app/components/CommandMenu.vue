@@ -4,13 +4,7 @@ import { LINKS } from "~/constants/links";
 
 const isOpen = defineModel<boolean>("open", { default: false });
 const router = useRouter();
-
-//replace with real icons
-const ICONS = [
-  { name: "Dashboard", path: "/dashboard" },
-  { name: "Settings", path: "/settings" },
-  { name: "Profile", path: "/profile" },
-];
+const { filteredIcons } = useIcon();
 
 const openExternalLink = (url: string) => {
   window.open(url, "_blank");
@@ -40,50 +34,72 @@ const navigateTo = (path: string) => {
 <template>
   <Dialog v-model:open="isOpen">
     <DialogContent
-      class="bg-popover text-popover-foreground w-full max-w-[450px] overflow-hidden rounded-xl border shadow-2xl">
+      class="bg-popover text-popover-foreground w-full max-w-[450px] overflow-hidden rounded-xl border shadow-2xl"
+    >
+      <DialogTitle class="hidden">
+        Search for beautiful components!
+      </DialogTitle>
       <Command class="w-full">
         <CommandInput placeholder="Type a command or search..." autofocus />
 
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
 
+          <CommandGroup heading="Icons">
+            <CommandItem
+              v-for="icon in filteredIcons"
+              :key="icon.name"
+              :value="icon.name"
+              class="gap-4"
+              @select="navigateTo(`/icons/${icon.name}`)"
+            >
+              <component :is="resolveComponent(icon.componentName)" size="20" />
+              {{ icon.name }}
+            </CommandItem>
+          </CommandGroup>
+
           <CommandGroup heading="Socials">
-            <CommandItem value="github" class="gap-4" @select="openExternalLink(LINKS.GITHUB)">
+            <CommandItem
+              value="github"
+              class="gap-4"
+              @select="openExternalLink(LINKS.GITHUB)"
+            >
               <ArrowNarrowRightIcon class="h-4 w-4" />
               GitHub
             </CommandItem>
 
-            <CommandItem value="twitter" class="gap-4" @select="openExternalLink(LINKS.TWITTER)">
+            <CommandItem
+              value="twitter"
+              class="gap-4"
+              @select="openExternalLink(LINKS.TWITTER)"
+            >
               <ArrowNarrowRightIcon class="h-4 w-4" />
               X formerly Twitter
             </CommandItem>
           </CommandGroup>
 
-          <CommandGroup heading="Icons">
-            <CommandItem v-for="icon in ICONS" :key="icon.name" :value="icon.name" class="gap-4"
-              @select="navigateTo(icon.path)">
-              <ArrowNarrowRightIcon class="h-4 w-4" />
-              {{ icon.name }}
-            </CommandItem>
-          </CommandGroup>
-
-          <CommandGroup heading="Support">
+          <CommandGroup
+            heading="Support"
+            @select="
+              openExternalLink(
+                'https://github.com/iloomilo/itshover-vue/issues/new',
+              )
+            "
+          >
             <CommandItem value="issue" class="gap-4">
               <ArrowNarrowRightIcon class="h-4 w-4" />
               Facing issue?
             </CommandItem>
 
-            <CommandItem value="feature" class="gap-4">
-              <ArrowNarrowRightIcon class="h-4 w-4" />
-              Request feature
-            </CommandItem>
-
-            <CommandItem value="bug" class="gap-4">
-              <ArrowNarrowRightIcon class="h-4 w-4" />
-              Report bug
-            </CommandItem>
-
-            <CommandItem value="contribute" class="gap-4">
+            <CommandItem
+              value="contribute"
+              class="gap-4"
+              @select="
+                openExternalLink(
+                  'https://github.com/iloomilo/itshover-vue/compare',
+                )
+              "
+            >
               <ArrowNarrowRightIcon class="h-4 w-4" />
               Contribute
             </CommandItem>

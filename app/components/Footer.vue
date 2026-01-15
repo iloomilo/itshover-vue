@@ -83,6 +83,9 @@ const featuredIcons = [
           </p>
 
           <div class="flex items-center gap-4">
+             <NuxtLink to="/imprint" aria-label="GitHub" class="text-muted-foreground hover:text-foreground">
+             Imprint
+            </NuxtLink>           
             <NuxtLink :to="LINKS.GITHUB" target="_blank" aria-label="GitHub" class="text-muted-foreground hover:text-foreground">
               <GithubIcon :size="20" />
             </NuxtLink>

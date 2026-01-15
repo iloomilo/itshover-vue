@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen max-w-screen bg-background text-foreground">
+  <div class="min-h-screen max-w-screen bg-background flex flex-col text-foreground">
     <Navbar />
-      <main>
+      <main class="grow">
         <slot />
       </main>
     <Footer />
