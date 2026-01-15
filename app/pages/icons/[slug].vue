@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { code, loading, loadIcon, toPascalCase } = useIconCode()
+const { code, loadIcon, toPascalCase } = useIconCode()
 
 watchEffect(() => {
   loadIcon(toPascalCase(route.params.slug as string))
@@ -8,6 +8,5 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div v-if="loading">Loading ...</div>
-  <IconDetailContent v-else :slug="route.params.slug as string" :code="code" />
+  <IconDetailContent :slug="route.params.slug as string" :code="code" />
 </template>
