@@ -2,6 +2,7 @@
 import { motion } from 'motion-v'
 import { LINKS } from '~/constants/links'
 import { SPONSOR } from '~/constants/sponsor'
+import type { AnimatedIconHandle } from '~~/registry/types/types'
 
 const featuredIcons = [
   { name: 'HeartIcon' },
@@ -25,6 +26,12 @@ const featuredIcons = [
   { name: 'GithubIcon' },
   { name: 'TwitterXIcon' }
 ]
+
+const iconRefs: Map<string, AnimatedIconHandle> = new Map()
+
+function registerIcon(name: string, el: AnimatedIconHandle) {
+  iconRefs.set(name, el)
+}
 </script>
 
 <template>
@@ -80,8 +87,15 @@ const featuredIcons = [
               :key="item.name"
               :while-hover="{ scale: 1.1 }"
               class="hover:bg-accent flex items-center justify-center rounded-lg border p-2 transition-colors"
+              @mouseenter="iconRefs.get(item.name)?.startAnimation()"
+              @mouseleave="iconRefs.get(item.name)?.stopAnimation()"
             >
-              <component :is="resolveComponent(item.name)" :size="20" />
+              <component
+                :is="resolveComponent(item.name)"
+                :ref="(el: AnimatedIconHandle) => registerIcon(item.name, el)"
+                class="pointer-events-none"
+                :size="20"
+              />
             </motion.div>
           </div>
         </div>
