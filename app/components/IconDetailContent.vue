@@ -5,6 +5,7 @@ import { motion } from 'motion-v'
 import { ICON_LIST } from '@/constants/icons'
 import { LINKS } from '~/constants/links'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import typesRaw from '~~/registry/types/types.ts?raw'
 import type { AnimatedIconHandle } from '~~/registry/types/types'
 
 const props = defineProps<{
@@ -15,6 +16,7 @@ const props = defineProps<{
 const iconRef = ref<AnimatedIconHandle | null>(null)
 const { copy: copyCodeText, copied: codeCopied } = useClipboard({ copiedDuring: 2000 })
 const { copy: copyDepText, copied: depCopied } = useClipboard({ copiedDuring: 2000 })
+const { copy: copyTypesText, copied: typesCopied } = useClipboard({ copiedDuring: 2000 })
 
 const iconData = computed(() => ICON_LIST.find((icon) => icon.name === props.slug))
 
@@ -24,6 +26,10 @@ const copyCode = async () => {
 
 const copyDependency = async () => {
   await copyDepText('npm install motion-v')
+}
+
+const copyTypes = async () => {
+  await copyTypesText(typesRaw)
 }
 
 const playAnimation = () => {
@@ -205,38 +211,32 @@ const playAnimation = () => {
                   </div>
                 </div>
 
-                <div v-if="iconData.customProps && iconData.customProps.length > 0">
+                <div>
                   <div class="mb-4 flex items-center gap-3">
                     <span
                       class="bg-primary text-primary-foreground flex h-7 w-7 items-center justify-center rounded-full text-sm font-medium"
                     >
                       3
                     </span>
-                    <h2 class="text-lg font-semibold">Custom Props</h2>
+                    <h2 class="text-lg font-semibold">Install Types (if needed)</h2>
                   </div>
-                  <div class="bg-muted/30 overflow-hidden rounded-xl border">
-                    <table class="w-full text-sm">
-                      <thead class="bg-muted/50 border-b">
-                        <tr>
-                          <th class="px-4 py-3 text-left font-medium">Prop</th>
-                          <th class="px-4 py-3 text-left font-medium">Type</th>
-                          <th class="px-4 py-3 text-left font-medium">Default</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr
-                          v-for="prop in iconData.customProps"
-                          :key="prop.name"
-                          class="border-b last:border-0"
-                        >
-                          <td class="text-primary px-4 py-3 font-mono">{{ prop.name }}</td>
-                          <td class="text-muted-foreground px-4 py-3 font-mono">{{ prop.type }}</td>
-                          <td class="text-muted-foreground px-4 py-3 font-mono">
-                            {{ String(prop.defaultValue) }}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="bg-muted/30 relative overflow-hidden rounded-xl border">
+                    <div class="flex items-center justify-between border-b px-4 py-2">
+                      <span class="text-muted-foreground text-xs">types.ts</span>
+                      <button
+                        class="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs transition-colors"
+                        @click="copyTypes"
+                      >
+                        <SimpleCheckedIcon v-if="typesCopied" :size="14" class="text-green-500" />
+                        <CopyIcon v-else :size="14" />
+                        {{ typesCopied ? 'Copied' : 'Copy' }}
+                      </button>
+                    </div>
+                    <div class="max-h-[300px] overflow-auto">
+                      <pre
+                        class="p-4 text-sm"
+                      ><code class="text-foreground/90">{{ typesRaw }}</code></pre>
+                    </div>
                   </div>
                 </div>
               </TabsContent>
