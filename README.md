@@ -17,7 +17,7 @@ Licensed under the **Apache License, Version 2.0**.
 See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for details.  
 This project modifies the original React code to work with Vue.js.
 
-## 🚀 Installation
+## 🚀 Get Started
 
 You can install components directly using the `shadcn-vue` CLI. You don't need to copy-paste code manually.
 
