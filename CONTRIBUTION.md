@@ -51,14 +51,14 @@ Since this project is a port, most contributions will involve porting icons from
 1.  **Create the Vue Component**: Create a new `.vue` file in `registry/icons/`. Use the template below.
 2.  **Naming Convention**: Use `PascalCase` and suffix the name with `Icon` (e.g., `HeartIcon.vue`).
 3.  **Add to Icon Constants**: Add your new icon to `app/constants/icons.ts`, to make the search functional.
-    -   `name`: kebab-case name of the icon (e.g., `heart-icon`).
-    -   `componentName`: The PascalCase name (e.g., `HeartIcon`).
-    -   `keywords`: An array of keywords for search. You can often find these in the original [itshover](https://github.com/itshover/itshover) repository.
+    - `name`: kebab-case name of the icon (e.g., `heart-icon`).
+    - `componentName`: The PascalCase name (e.g., `HeartIcon`).
+    - `keywords`: An array of keywords for search. You can often find these in the original [itshover](https://github.com/itshover/itshover) repository.
 4.  **Build the Registry**: After adding or modifying an icon, you must rebuild the registry to generate the JSON files:
     ```bash
     pnpm registry:build
     ```
-4.  **Verify**: Check the local documentation site to ensure the icon renders and animates correctly
+5.  **Verify**: Check the local documentation site to ensure the icon renders and animates correctly
 
 ### General Icon Component Template:
 

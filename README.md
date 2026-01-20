@@ -36,4 +36,3 @@ npx shadcn-vue@latest add https://itshover-vue.com/r/AccessibilityIcon.json
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [CONTRIBUTION.md](./CONTRIBUTION.md) for guidelines on how to get started, project structure, and how to add new icons.
-
