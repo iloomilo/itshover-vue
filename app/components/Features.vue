@@ -11,7 +11,7 @@ const fadeInUp = {
 
 <template>
   <section class="mx-auto max-w-6xl px-6 py-24">
-    <motion.h2 v-bind="fadeInUp" class="mb-10 text-3xl font-medium"> features </motion.h2>
+    <motion.h2 v-bind="fadeInUp" class="mb-10 z-10 text-3xl font-medium"> features </motion.h2>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
       <motion.div
