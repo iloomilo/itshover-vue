@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "BrandLmstudioIcon",
+  "type": "registry:ui",
+  "title": "BrandLmstudioIcon",
+  "description": "BrandLmstudioIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/BrandLmstudioIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 1,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst lines = ['.lm-line-1', '.lm-line-2', '.lm-line-3', '.lm-line-4', '.lm-line-5', '.lm-line-6']\n\nconst start = () => {\n  lines.forEach((line, i) => {\n    const strength = 1 + i * 0.06\n    animate(\n      line,\n      { scaleX: [1, strength, 0.9, strength * 0.95, 1] },\n      { duration: 1.4, delay: i * 0.08, ease: 'easeInOut', repeat: Infinity }\n    )\n  })\n}\n\nconst stop = () => {\n  animate(lines.join(', '), { scaleX: 1 }, { duration: 0.2, ease: 'easeOut' })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    :fill=\"color\"\n    :stroke-width=\"strokeWidth\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <title>LM Studio</title>\n    <path\n      class=\"lm-line-1\"\n      :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\"\n      d=\"M2.84 2a1.273 1.273 0 100 2.547h10.287a1.274 1.274 0 000-2.547H2.84z\"\n    />\n    <path\n      class=\"lm-line-2\"\n      :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\"\n      d=\"M7.935 5.33a1.273 1.273 0 000 2.548H18.22a1.274 1.274 0 000-2.547H7.935z\"\n    />\n    <path\n      class=\"lm-line-3\"\n      :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\"\n      d=\"M3.624 9.935c0-.704.57-1.274 1.274-1.274h10.286a1.273 1.273 0 010 2.547H4.898c-.703 0-1.274-.57-1.274-1.273z\"\n    />\n    <path\n      class=\"lm-line-4\"\n      :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\"\n      d=\"M1.273 12.188a1.273 1.273 0 100 2.547H11.56a1.274 1.274 0 000-2.547H1.273z\"\n    />\n    <path\n      class=\"lm-line-5\"\n      :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\"\n      d=\"M3.624 16.792c0-.704.57-1.274 1.274-1.274h10.286a1.273 1.273 0 110 2.547H4.898c-.703 0-1.274-.57-1.274-1.273z\"\n    />\n    <path\n      class=\"lm-line-6\"\n      :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\"\n      d=\"M13.029 18.849a1.273 1.273 0 100 2.547h5.78a1.273 1.273 0 100-2.547h-5.78z\"\n    />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

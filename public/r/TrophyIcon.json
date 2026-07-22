@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "TrophyIcon",
+  "type": "registry:ui",
+  "title": "TrophyIcon",
+  "description": "TrophyIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/TrophyIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate(\n    '.trophy-group',\n    { y: [0, -4, -4, 0], rotate: [0, -10, 10, 0] },\n    { duration: 0.8, ease: 'easeOut', times: [0, 0.4, 0.7, 1] }\n  )\n\n  const confettiSequences = [\n    { selector: '.confetti-1', x: [0, -12], y: [0, -15], rotate: [0, 140] },\n    { selector: '.confetti-2', x: [0, -5], y: [0, -18], rotate: [0, -100] },\n    { selector: '.confetti-3', x: [0, 5], y: [0, -18], rotate: [0, 120] },\n    { selector: '.confetti-4', x: [0, 12], y: [0, -15], rotate: [0, -140] }\n  ]\n\n  confettiSequences.forEach((conf) => {\n    animate(\n      conf.selector,\n      { x: conf.x, y: conf.y, rotate: conf.rotate, opacity: [0, 1, 0], scale: [0, 1, 0.5] },\n      { duration: 0.8, ease: 'easeOut', delay: 0.1 }\n    )\n  })\n}\n\nconst stop = () => {\n  animate('.trophy-group', { y: 0, rotate: 0 }, { duration: 0.3 })\n  animate(\n    '.confetti-1, .confetti-2, .confetti-3, .confetti-4',\n    { opacity: 0, scale: 0 },\n    { duration: 0.2 }\n  )\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <g class=\"trophy-group\" :style=\"{ transformOrigin: 'center 20px' }\">\n      <path d=\"M6 9H4.5a1 1 0 0 1 0-5H6\" />\n      <path d=\"M18 9h1.5a1 1 0 0 0 0-5H18\" />\n      <path d=\"M4 22h16\" />\n      <path d=\"M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978\" />\n      <path d=\"M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978\" />\n      <path d=\"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z\" />\n      <rect\n        class=\"confetti-1\"\n        x=\"11\"\n        y=\"6\"\n        width=\"2\"\n        height=\"2\"\n        rx=\"0.5\"\n        fill=\"#FFD700\"\n        stroke=\"none\"\n        opacity=\"0\"\n        :style=\"{ transformOrigin: 'center' }\"\n      />\n      <rect\n        class=\"confetti-2\"\n        x=\"12\"\n        y=\"5\"\n        width=\"2\"\n        height=\"2\"\n        rx=\"0.5\"\n        fill=\"#FF4500\"\n        stroke=\"none\"\n        opacity=\"0\"\n        :style=\"{ transformOrigin: 'center' }\"\n      />\n      <rect\n        class=\"confetti-3\"\n        x=\"13\"\n        y=\"6\"\n        width=\"2\"\n        height=\"2\"\n        rx=\"0.5\"\n        fill=\"#00BFFF\"\n        stroke=\"none\"\n        opacity=\"0\"\n        :style=\"{ transformOrigin: 'center' }\"\n      />\n      <rect\n        class=\"confetti-4\"\n        x=\"12\"\n        y=\"7\"\n        width=\"2\"\n        height=\"2\"\n        rx=\"0.5\"\n        fill=\"#32CD32\"\n        stroke=\"none\"\n        opacity=\"0\"\n        :style=\"{ transformOrigin: 'center' }\"\n      />\n    </g>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

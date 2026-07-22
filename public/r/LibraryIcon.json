@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "LibraryIcon",
+  "type": "registry:ui",
+  "title": "LibraryIcon",
+  "description": "LibraryIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/LibraryIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate('.book-2', { y: -3, rotate: -8 }, { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] })\n  animate('.book-3', { rotate: -12 }, { duration: 0.4, ease: 'easeOut' })\n  animate('.book-4', { rotate: -5 }, { duration: 0.4, ease: 'easeOut' })\n  animate('.book-1', { rotate: 12 }, { duration: 0.4, ease: 'easeOut' })\n}\n\nconst stop = () => {\n  animate(\n    '.book-1, .book-2, .book-3, .book-4',\n    { rotate: 0, y: 0 },\n    { duration: 0.3, ease: 'easeInOut' }\n  )\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path class=\"book-1\" d=\"m16 6 4 14\" :style=\"{ transformOrigin: '18px 20px' }\" />\n    <path class=\"book-2\" d=\"M12 6v14\" :style=\"{ transformOrigin: '12px 20px' }\" />\n    <path class=\"book-3\" d=\"M8 8v12\" :style=\"{ transformOrigin: '8px 20px' }\" />\n    <path class=\"book-4\" d=\"M4 4v16\" :style=\"{ transformOrigin: '4px 20px' }\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "FilterIcon",
+  "type": "registry:ui",
+  "title": "FilterIcon",
+  "description": "FilterIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/FilterIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { ref } from 'vue'\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nconst props = withDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\nconst isAnimating = ref(false)\n\nconst start = async () => {\n  if (isAnimating.value) return\n  isAnimating.value = true\n\n  while (isAnimating.value) {\n    const inParticles = Array.from({ length: 8 }).map((_, i) => `.p-in-${i}`)\n    inParticles.forEach((selector, i) => {\n      animate(\n        selector,\n        { y: [-4, 8], opacity: [0, 1, 0], scale: [0.3, 0.8, 0.3] },\n        { duration: 0.8, delay: i * 0.1, ease: 'easeIn' }\n      )\n    })\n\n    await new Promise((resolve) => setTimeout(resolve, 600))\n    if (!isAnimating.value) break\n\n    const outParticles = ['.p-out-1', '.p-out-2']\n\n    animate(\n      '.funnel',\n      {\n        scale: [1, 1.1, 1],\n        strokeWidth: [props.strokeWidth, props.strokeWidth + 0.8, props.strokeWidth]\n      },\n      { duration: 0.4, ease: 'backOut' }\n    )\n\n    outParticles.forEach((selector, i) => {\n      animate(\n        selector,\n        { y: [14, 22], opacity: [0, 1, 0], scale: [0.5, 1, 0.5] },\n        { duration: 0.6, delay: i * 0.2, ease: 'easeOut' }\n      )\n    })\n\n    await new Promise((resolve) => setTimeout(resolve, 1000))\n    if (!isAnimating.value) break\n  }\n}\n\nconst stop = () => {\n  isAnimating.value = false\n  animate('.funnel', { rotate: 0, scale: 1, strokeWidth: props.strokeWidth }, { duration: 0.3 })\n  animate(\"[class^='p-in'], [class^='p-out']\", { opacity: 0 }, { duration: 0.3 })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path\n      class=\"funnel\"\n      d=\"M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z\"\n      :style=\"{ transformOrigin: '12px 14px' }\"\n    />\n    <circle class=\"p-in-0\" cx=\"12\" cy=\"0\" r=\"0.5\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-1\" cx=\"8\" cy=\"-1\" r=\"0.4\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-2\" cx=\"16\" cy=\"-2\" r=\"0.6\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-3\" cx=\"10\" cy=\"1\" r=\"0.4\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-4\" cx=\"14\" cy=\"0\" r=\"0.5\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-5\" cx=\"7\" cy=\"2\" r=\"0.3\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-6\" cx=\"17\" cy=\"1\" r=\"0.4\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-in-7\" cx=\"12\" cy=\"-3\" r=\"0.5\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-out-1\" cx=\"12\" cy=\"0\" r=\"1.2\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n    <circle class=\"p-out-2\" cx=\"12\" cy=\"0\" r=\"1\" :fill=\"color\" stroke=\"none\" opacity=\"0\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}
