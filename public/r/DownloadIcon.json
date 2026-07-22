@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "DownloadIcon",
+  "type": "registry:ui",
+  "title": "DownloadIcon",
+  "description": "DownloadIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/DownloadIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { ref } from 'vue'\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\nconst isAnimating = ref(false)\n\nconst start = async () => {\n  if (isAnimating.value) return\n  isAnimating.value = true\n\n  while (isAnimating.value) {\n    animate(\n      '.arrow-head',\n      { y: [0, 8, 8, -8, 0], opacity: [1, 0, 0, 0, 1] },\n      { duration: 1, times: [0, 0.4, 0.5, 0.6, 1], ease: 'easeInOut' }\n    )\n\n    await animate(\n      '.arrow-stem',\n      { y: [0, 8, 8, -8, 0], opacity: [1, 0, 0, 0, 1] },\n      { duration: 1, times: [0, 0.3, 0.4, 0.5, 1], ease: 'easeInOut' }\n    )\n\n    if (!isAnimating.value) break\n\n    await animate(\n      '.tray',\n      { y: [0, 2, 0], scale: [1, 1.05, 1] },\n      { duration: 0.3, ease: 'easeOut' }\n    )\n\n    if (!isAnimating.value) break\n\n    await new Promise((resolve) => setTimeout(resolve, 200))\n  }\n}\n\nconst stop = () => {\n  isAnimating.value = false\n  animate('.arrow-head, .arrow-stem, .tray', { y: 0, opacity: 1, scale: 1 }, { duration: 0.3 })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    :stroke=\"color\"\n    :stroke-width=\"strokeWidth\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    :class=\"['cursor-pointer', className]\"\n    :style=\"{ overflow: 'visible' }\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <path\n      class=\"tray\"\n      d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"\n      :style=\"{ transformOrigin: 'center bottom' }\"\n    />\n    <path class=\"arrow-stem\" d=\"M12 15V3\" :style=\"{ transformOrigin: 'center' }\" />\n    <path class=\"arrow-head\" d=\"m7 10 5 5 5-5\" :style=\"{ transformOrigin: 'center' }\" />\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

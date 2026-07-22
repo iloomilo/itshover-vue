@@ -1069,6 +1069,290 @@ const ICON_LIST: IconType[] = [
     name: 'wallet-icon',
     componentName: 'WalletIcon',
     keywords: ['wallet', 'money', 'payment', 'finance', 'cash', 'billfold']
+  },
+  {
+    name: 'brain-circuit-icon',
+    componentName: 'BrainCircuitIcon',
+    keywords: ['brain', 'ai', 'circuit', 'intelligence', 'neural', 'mind']
+  },
+  {
+    name: 'brand-aistudio-icon',
+    componentName: 'BrandAistudioIcon',
+    keywords: ['aistudio', 'ai', 'chatbot', 'conversation', 'brand']
+  },
+  {
+    name: 'brand-anthropic-icon',
+    componentName: 'BrandAnthropicIcon',
+    keywords: ['anthropic', 'ai', 'chatbot', 'conversation']
+  },
+  {
+    name: 'brand-chrome-icon',
+    componentName: 'BrandChromeIcon',
+    keywords: ['chrome', 'browser', 'google', 'web', 'internet', 'brand']
+  },
+  {
+    name: 'brand-lmstudio-icon',
+    componentName: 'BrandLmstudioIcon',
+    keywords: ['lmstudio', 'ai', 'chatbot', 'conversation', 'brand']
+  },
+  {
+    name: 'brand-midjourney-icon',
+    componentName: 'BrandMidjourneyIcon',
+    keywords: ['midjourney', 'ai', 'chatbot', 'conversation', 'brand']
+  },
+  {
+    name: 'brand-ollama-icon',
+    componentName: 'BrandOllamaIcon',
+    keywords: ['ollama', 'ai', 'chatbot', 'conversation', 'brand']
+  },
+  {
+    name: 'brand-twitch-icon',
+    componentName: 'BrandTwitchIcon',
+    keywords: ['twitch', 'brand', 'streaming', 'live', 'gaming']
+  },
+  {
+    name: 'brand-wordpress-icon',
+    componentName: 'BrandWordpressIcon',
+    keywords: ['wordpress', 'brand', 'logo', 'cms', 'blog', 'publishing']
+  },
+  {
+    name: 'brand-xai-icon',
+    componentName: 'BrandXaiIcon',
+    keywords: ['xai', 'ai', 'chatbot', 'conversation', 'brand']
+  },
+  {
+    name: 'cloud-1-icon',
+    componentName: 'Cloud1Icon',
+    keywords: ['cloud', 'storage', 'upload', 'platform', 'saas']
+  },
+  {
+    name: 'cloud-2-icon',
+    componentName: 'Cloud2Icon',
+    keywords: ['cloud', 'weather', 'rain', 'sky', 'atmosphere', 'storm']
+  },
+  {
+    name: 'cloud-3-icon',
+    componentName: 'Cloud3Icon',
+    keywords: ['cloud', 'hosting', 'server', 'data', 'computing', 'database']
+  },
+  {
+    name: 'copyright-icon',
+    componentName: 'CopyrightIcon',
+    keywords: ['copyright', 'legal', 'official', 'license', 'protection']
+  },
+  {
+    name: 'dino-icon',
+    componentName: 'DinoIcon',
+    keywords: ['dino', 'chrome', 'pixel', 'game', 'animal', 'offline']
+  },
+  {
+    name: 'download-icon',
+    componentName: 'DownloadIcon',
+    keywords: ['download', 'save', 'save-as', 'collect', 'store', 'receive']
+  },
+  {
+    name: 'filter-icon',
+    componentName: 'FilterIcon',
+    keywords: ['filter', 'funnel', 'sort', 'sifting', 'refine']
+  },
+  {
+    name: 'gamepad-icon',
+    componentName: 'GamepadIcon',
+    keywords: ['game', 'pad', 'gaming', 'controller', 'play', 'joystick']
+  },
+  {
+    name: 'letter-a-icon',
+    componentName: 'LetterAIcon',
+    keywords: ['letter', 'a', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-b-icon',
+    componentName: 'LetterBIcon',
+    keywords: ['letter', 'b', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-c-icon',
+    componentName: 'LetterCIcon',
+    keywords: ['letter', 'c', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-d-icon',
+    componentName: 'LetterDIcon',
+    keywords: ['letter', 'd', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-e-icon',
+    componentName: 'LetterEIcon',
+    keywords: ['letter', 'e', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-f-icon',
+    componentName: 'LetterFIcon',
+    keywords: ['letter', 'f', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-g-icon',
+    componentName: 'LetterGIcon',
+    keywords: ['letter', 'g', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-h-icon',
+    componentName: 'LetterHIcon',
+    keywords: ['letter', 'h', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-i-icon',
+    componentName: 'LetterIIcon',
+    keywords: ['letter', 'i', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-j-icon',
+    componentName: 'LetterJIcon',
+    keywords: ['letter', 'j', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-k-icon',
+    componentName: 'LetterKIcon',
+    keywords: ['letter', 'k', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-l-icon',
+    componentName: 'LetterLIcon',
+    keywords: ['letter', 'l', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-m-icon',
+    componentName: 'LetterMIcon',
+    keywords: ['letter', 'm', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-n-icon',
+    componentName: 'LetterNIcon',
+    keywords: ['letter', 'n', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-o-icon',
+    componentName: 'LetterOIcon',
+    keywords: ['letter', 'o', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-p-icon',
+    componentName: 'LetterPIcon',
+    keywords: ['letter', 'p', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-q-icon',
+    componentName: 'LetterQIcon',
+    keywords: ['letter', 'q', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-r-icon',
+    componentName: 'LetterRIcon',
+    keywords: ['letter', 'r', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-s-icon',
+    componentName: 'LetterSIcon',
+    keywords: ['letter', 's', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-t-icon',
+    componentName: 'LetterTIcon',
+    keywords: ['letter', 't', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-u-icon',
+    componentName: 'LetterUIcon',
+    keywords: ['letter', 'u', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-v-icon',
+    componentName: 'LetterVIcon',
+    keywords: ['letter', 'v', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-w-icon',
+    componentName: 'LetterWIcon',
+    keywords: ['letter', 'w', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-x-icon',
+    componentName: 'LetterXIcon',
+    keywords: ['letter', 'x', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-y-icon',
+    componentName: 'LetterYIcon',
+    keywords: ['letter', 'y', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'letter-z-icon',
+    componentName: 'LetterZIcon',
+    keywords: ['letter', 'z', 'alphabet', 'text', 'character', 'typography']
+  },
+  {
+    name: 'library-icon',
+    componentName: 'LibraryIcon',
+    keywords: [
+      'books',
+      'reading',
+      'written',
+      'authors',
+      'stories',
+      'fiction',
+      'novels',
+      'information',
+      'knowledge',
+      'education',
+      'high school',
+      'university',
+      'college',
+      'academy',
+      'learning',
+      'study',
+      'research',
+      'collection',
+      'vinyl',
+      'records',
+      'albums',
+      'music',
+      'package'
+    ]
+  },
+  {
+    name: 'locate-icon',
+    componentName: 'LocateIcon',
+    keywords: ['gps', 'location', 'map', 'position', 'target', 'track', 'navigation']
+  },
+  {
+    name: 'map-pin-icon',
+    componentName: 'MapPinIcon',
+    keywords: ['map', 'pin', 'location', 'marker', 'gps']
+  },
+  {
+    name: 'paw-print-icon',
+    componentName: 'PawPrintIcon',
+    keywords: ['paw', 'pet', 'animal', 'walk', 'track', 'dog', 'cat']
+  },
+  {
+    name: 'save-icon',
+    componentName: 'SaveIcon',
+    keywords: ['save', 'floppy', 'disk', 'store', 'memory', 'storage', 'record']
+  },
+  {
+    name: 'sliders-horizontal-icon',
+    componentName: 'SlidersHorizontalIcon',
+    keywords: ['sliders', 'settings', 'filter', 'equalizer', 'controls', 'adjust']
+  },
+  {
+    name: 'trophy-icon',
+    componentName: 'TrophyIcon',
+    keywords: ['trophy', 'cup', 'achievement', 'winner', 'reward', 'score', 'leaderboard']
+  },
+  {
+    name: 'upload-icon',
+    componentName: 'UploadIcon',
+    keywords: ['upload', 'submit', 'send', 'transfer', 'cloud']
   }
 ].sort((a, b) => a.name.localeCompare(b.name))
 export { ICON_LIST }

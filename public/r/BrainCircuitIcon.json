@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "BrainCircuitIcon",
+  "type": "registry:ui",
+  "title": "BrainCircuitIcon",
+  "description": "BrainCircuitIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/BrainCircuitIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate(\n    '.brain-outline',\n    { opacity: [1, 0.7, 1] },\n    { duration: 2, repeat: Infinity, ease: 'easeInOut' }\n  )\n  animate(\n    '.circuit-line',\n    { pathLength: [0, 1], opacity: [0, 1] },\n    { duration: 0.6, ease: 'easeOut' }\n  )\n\n  const terminals = ['.terminal-1', '.terminal-2', '.terminal-3', '.terminal-4']\n  terminals.forEach((selector, index) => {\n    animate(\n      selector,\n      { scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] },\n      {\n        duration: 0.8,\n        delay: 0.2 + index * 0.15,\n        repeat: Infinity,\n        repeatDelay: 1,\n        ease: 'easeInOut'\n      }\n    )\n  })\n}\n\nconst stop = () => {\n  animate('.brain-outline', { opacity: 1 }, { duration: 0.3 })\n  animate('.circuit-line', { pathLength: 1, opacity: 1 }, { duration: 0.3 })\n  animate('.terminal', { scale: 1, opacity: 1 }, { duration: 0.3 })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <div\n    ref=\"scope\"\n    :class=\"['relative', 'flex', 'items-center', 'justify-center', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      :stroke=\"color\"\n      :stroke-width=\"strokeWidth\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path\n        class=\"brain-outline\"\n        d=\"M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z\"\n      />\n      <path class=\"circuit-line\" d=\"M9 13a4.5 4.5 0 0 0 3-4\" />\n      <path class=\"brain-outline\" d=\"M6.003 5.125A3 3 0 0 0 6.401 6.5\" />\n      <path class=\"brain-outline\" d=\"M3.477 10.896a4 4 0 0 1 .585-.396\" />\n      <path class=\"brain-outline\" d=\"M6 18a4 4 0 0 1-1.967-.516\" />\n      <path class=\"circuit-line\" d=\"M12 13h4\" />\n      <path class=\"circuit-line\" d=\"M12 18h6a2 2 0 0 1 2 2v1\" />\n      <path class=\"circuit-line\" d=\"M12 8h8\" />\n      <path class=\"circuit-line\" d=\"M16 8V5a2 2 0 0 1 2-2\" />\n      <circle class=\"terminal terminal-1\" cx=\"16\" cy=\"13\" r=\".5\" />\n      <circle class=\"terminal terminal-2\" cx=\"18\" cy=\"3\" r=\".5\" />\n      <circle class=\"terminal terminal-3\" cx=\"20\" cy=\"21\" r=\".5\" />\n      <circle class=\"terminal terminal-4\" cx=\"20\" cy=\"8\" r=\".5\" />\n    </svg>\n  </div>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

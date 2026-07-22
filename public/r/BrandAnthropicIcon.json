@@ -1,0 +1,22 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "BrandAnthropicIcon",
+  "type": "registry:ui",
+  "title": "BrandAnthropicIcon",
+  "description": "BrandAnthropicIcon icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "itshover/icons/BrandAnthropicIcon.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useAnimate } from 'motion-v'\nimport type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'\n\nwithDefaults(defineProps<AnimatedIconProps>(), {\n  size: 24,\n  color: 'currentColor',\n  strokeWidth: 2,\n  className: ''\n})\n\nconst [scope, animate] = useAnimate()\n\nconst start = () => {\n  animate(\n    '.anthropic-i',\n    { rotateX: 22, skewX: -22, scaleY: 1.09 },\n    { duration: 0.2, ease: 'easeInOut' }\n  )\n}\n\nconst stop = () => {\n  animate('.anthropic-i', { rotateX: 0, skewX: 0, scaleY: 1 }, { duration: 0.2 })\n}\n\ndefineExpose({\n  startAnimation: start,\n  stopAnimation: stop\n} satisfies AnimatedIconHandle)\n</script>\n\n<template>\n  <svg\n    ref=\"scope\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    :width=\"size\"\n    :height=\"size\"\n    viewBox=\"0 0 24 24\"\n    :fill=\"color\"\n    :class=\"['cursor-pointer', className]\"\n    @mouseenter=\"start\"\n    @mouseleave=\"stop\"\n  >\n    <title>Anthropic</title>\n    <g class=\"anthropic-a\" :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\">\n      <path\n        d=\"M6.57 3.52h3.767L16.906 20h-3.674l-1.343-3.461H5.017L3.673 20H0L6.57 3.522zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z\"\n      />\n    </g>\n    <g class=\"anthropic-i\" :style=\"{ transformBox: 'fill-box', transformOrigin: 'center' }\">\n      <path d=\"M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48z\" />\n    </g>\n  </svg>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "itshover/types/types.ts",
+      "content": "export interface AnimatedIconProps {\n  size?: number | string\n  color?: string\n  strokeWidth?: number\n  className?: string\n  disableHover?: boolean\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void\n  stopAnimation: () => void\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}
