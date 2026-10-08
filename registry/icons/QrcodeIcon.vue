@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   animate('.qr-scan', { opacity: 0, y: 0 }, { duration: 0 })
   animate('.corner-rect', { pathLength: 0, opacity: 0 }, { duration: 0 })
   animate('.inner-element', { opacity: 0, scale: 0.8 }, { duration: 0 })
@@ -22,6 +39,7 @@ const start = async () => {
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.4, ease: 'easeOut', delay: (i: number) => i * 0.1 }
   )
+  if (!isCurrentRun(run)) return
 
   animate(
     '.qr-scan',
@@ -39,6 +57,7 @@ const start = async () => {
     { opacity: [0, 1], scale: [0.8, 1] },
     { duration: 0.3, ease: 'easeOut', delay: (i: number) => i * 0.05 }
   )
+  if (!isCurrentRun(run)) return
 
   animate(
     '.center-dot',
@@ -56,8 +75,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -72,8 +91,8 @@ defineExpose({
     viewBox="0 0 32 32"
     :class="['qr-code', className, 'cursor-pointer']"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <rect
       class="qr-scan"

@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 40,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const { scope, animate, startAnimation, stopAnimation, onMouseEnter, onMouseLeave } =
+  useAnimatedIcon(props, {
+    start: () => start(),
+    stop: () => stop()
+  })
 
 const start = () => {
   animate(scope.value, { y: [0, 4] }, { duration: 0.5 })
@@ -20,8 +27,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -38,8 +45,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path
       d="M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z"

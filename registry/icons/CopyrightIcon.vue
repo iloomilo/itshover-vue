@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const { scope, animate, startAnimation, stopAnimation, onMouseEnter, onMouseLeave } =
+  useAnimatedIcon(props, {
+    start: () => start(),
+    stop: () => stop()
+  })
 
 const start = () => {
   animate(
@@ -26,8 +33,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -45,8 +52,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <circle cx="12" cy="12" r="10" :style="{ transformOrigin: 'center' }" />
     <path d="M14.83 14.83a4 4 0 1 1 0-5.66" :style="{ transformOrigin: 'center' }" />

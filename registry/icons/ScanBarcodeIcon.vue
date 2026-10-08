@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await animate(
     '.scan-line',
     {
@@ -23,6 +40,7 @@ const start = async () => {
       ease: 'easeInOut'
     }
   )
+  if (!isCurrentRun(run)) return
 
   animate(
     '.corners',
@@ -45,8 +63,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -63,8 +81,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <g class="corners">
       <path d="M3 7V5a2 2 0 0 1 2-2h2" />

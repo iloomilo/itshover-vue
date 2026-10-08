@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   animate(
     '.flap',
     {
@@ -26,6 +43,7 @@ const start = async () => {
   )
 
   await animate('.globe', { pathLength: [0, 1] }, { duration: 0.8, ease: 'easeInOut' })
+  if (!isCurrentRun(run)) return
 }
 
 const stop = () => {
@@ -35,8 +53,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -53,8 +71,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path
       d="M2 9c0-3.3 0-4.95 1.025-5.975S5.7 2 9 2h3c3.3 0 4.95 0 5.975 1.025S19 5.7 19 9v6c0 3.3 0 4.95-1.025 5.975S15.3 22 12 22H9c-3.3 0-4.95 0-5.975-1.025S2 18.3 2 15z"

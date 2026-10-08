@@ -1,19 +1,36 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 const animationControls = ref<ReturnType<typeof animate>[]>([])
 
 const start = async () => {
+  const run = currentRun()
+
   // Clear any existing animations
   animationControls.value.forEach((control) => control.stop())
   animationControls.value = []
@@ -24,6 +41,7 @@ const start = async () => {
     { scale: [0.95, 1.02, 1] },
     { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }
   )
+  if (!isCurrentRun(run)) return
 
   // Center dot gentle pulse
   animationControls.value.push(
@@ -87,8 +105,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -105,8 +123,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="['cursor-pointer select-none', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <g class="orbit-system" :style="{ transformOrigin: '50% 50%' }">

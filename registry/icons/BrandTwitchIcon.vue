@@ -1,26 +1,46 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
 const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave,
+  delay
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 const isAnimating = ref(false)
 
 const start = async () => {
+  const run = currentRun()
+
   if (isAnimating.value) return
   isAnimating.value = true
 
   animate(scope.value, { color: '#9146FF', stroke: '#9146FF' }, { duration: 0.3 })
 
-  while (isAnimating.value) {
+  let iteration = 0
+  while (isAnimating.value && (!props.loop || iteration++ === 0)) {
     await animate('.twitch-eyes', { scaleY: [1, 0, 1] }, { duration: 0.1, ease: 'easeInOut' })
+    if (!isCurrentRun(run)) return
 
     if (!isAnimating.value) break
 
@@ -30,9 +50,11 @@ const start = async () => {
         { x: [0, -1, 1, 0], y: [0, 0.5, -0.5, 0] },
         { duration: 0.15, ease: 'linear' }
       )
+      if (!isCurrentRun(run)) return
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 800 + Math.random() * 2000))
+    await delay(800 + Math.random() * 2000)
+    if (!isCurrentRun(run)) return
   }
 }
 
@@ -44,8 +66,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -63,8 +85,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path
       class="twitch-path"

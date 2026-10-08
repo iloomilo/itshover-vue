@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await animate(
     '.toggle-knob',
     {
@@ -22,6 +39,7 @@ const start = async () => {
       ease: 'easeInOut'
     }
   )
+  if (!isCurrentRun(run)) return
   animate(
     '.toggle-track',
     {
@@ -40,8 +58,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -58,8 +76,8 @@ defineExpose({
     stroke-linecap="square"
     stroke-miterlimit="10"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path
       class="toggle-track"

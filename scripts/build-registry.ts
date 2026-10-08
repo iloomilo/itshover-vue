@@ -2,6 +2,7 @@ import { readdir, writeFile, rm, readFile } from 'node:fs/promises'
 import { join, extname, basename } from 'node:path'
 import { execSync } from 'node:child_process'
 import { existsSync } from 'node:fs'
+import { format } from 'prettier'
 
 const REGISTRY_DIR = 'registry'
 const ICONS_DIR = join(REGISTRY_DIR, 'icons')
@@ -57,7 +58,7 @@ function createRegistryItem(filename: string) {
     title: toTitle(name),
     description: `${toTitle(name)} icon`,
     registryDependencies: [],
-    dependencies: ['motion'],
+    dependencies: ['motion-v'],
     devDependencies: [],
     files: [
       {
@@ -66,6 +67,10 @@ function createRegistryItem(filename: string) {
       },
       {
         path: 'registry/types/types.ts',
+        type: 'registry:ui'
+      },
+      {
+        path: 'registry/animation/useAnimatedIcon.ts',
         type: 'registry:ui'
       }
     ]
@@ -100,7 +105,7 @@ async function generate() {
       items
     }
 
-    await writeFile(OUTPUT_FILE, JSON.stringify(registry, null, 2) + '\n', 'utf8')
+    await writeFile(OUTPUT_FILE, await format(JSON.stringify(registry), { parser: 'json' }), 'utf8')
     log.success(`Created registry.json with ${items.length} items`)
 
     // 3. build registry via shadcn cli, you'll need pnpm for that
@@ -134,10 +139,8 @@ async function generate() {
         })
       }
 
-      if (changed) {
-        await writeFile(filePath, JSON.stringify(json, null, 2), 'utf8')
-        patchedCount++
-      }
+      await writeFile(filePath, await format(JSON.stringify(json), { parser: 'json' }), 'utf8')
+      if (changed) patchedCount++
     }
 
     log.success(`Patched paths in ${patchedCount} JSON files`)

@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await Promise.all([
     animate(
       '.rocket-upper',
@@ -33,8 +50,10 @@ const start = async () => {
       { duration: 0.25, ease: 'easeOut', delay: 0.05 }
     )
   ])
+  if (!isCurrentRun(run)) return
 
   await animate('.rocket-upper', { x: -40, y: 40, opacity: 0 }, { duration: 0 })
+  if (!isCurrentRun(run)) return
 
   animate('.rocket-upper', { x: 0, y: 0, opacity: 1 }, { duration: 0.25, ease: 'easeOut' })
 
@@ -50,8 +69,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -68,8 +87,8 @@ defineExpose({
     stroke-miterlimit="10"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path
       class="rocket-fin-left rocket-upper"

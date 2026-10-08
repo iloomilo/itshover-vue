@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const { scope, animate, startAnimation, stopAnimation, onMouseEnter, onMouseLeave } =
+  useAnimatedIcon(props, {
+    start: () => start(),
+    stop: () => stop()
+  })
 
 const start = () => {
   animate('.cart-icon', { x: [0, 6, 0] }, { duration: 0.35, ease: 'easeInOut' })
@@ -25,8 +32,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -34,8 +41,8 @@ defineExpose({
   <div
     ref="scope"
     :class="['inline-flex', 'cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

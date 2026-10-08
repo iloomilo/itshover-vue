@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const { scope, animate, startAnimation, stopAnimation, onMouseEnter, onMouseLeave } =
+  useAnimatedIcon(props, {
+    start: () => start(),
+    stop: () => stop()
+  })
 
 const start = () => {
   animate('.r-body', { x: [0, 1, 0] }, { duration: 0.3, ease: 'easeOut' })
@@ -21,8 +28,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -40,8 +47,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path class="r-body" d="M7 20v-16h5.5a4 4 0 0 1 0 9h-5.5" />
     <path class="r-leg" d="M12 13l5 7" :style="{ transformOrigin: '12px 13px' }" />

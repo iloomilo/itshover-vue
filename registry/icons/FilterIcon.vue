@@ -1,23 +1,42 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
 const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave,
+  delay
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 const isAnimating = ref(false)
 
 const start = async () => {
+  const run = currentRun()
+
   if (isAnimating.value) return
   isAnimating.value = true
 
-  while (isAnimating.value) {
+  let iteration = 0
+  while (isAnimating.value && (!props.loop || iteration++ === 0)) {
     const inParticles = Array.from({ length: 8 }).map((_, i) => `.p-in-${i}`)
     inParticles.forEach((selector, i) => {
       animate(
@@ -27,7 +46,8 @@ const start = async () => {
       )
     })
 
-    await new Promise((resolve) => setTimeout(resolve, 600))
+    await delay(600)
+    if (!isCurrentRun(run)) return
     if (!isAnimating.value) break
 
     const outParticles = ['.p-out-1', '.p-out-2']
@@ -49,7 +69,8 @@ const start = async () => {
       )
     })
 
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    await delay(1000)
+    if (!isCurrentRun(run)) return
     if (!isAnimating.value) break
   }
 }
@@ -61,8 +82,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -80,8 +101,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path
       class="funnel"

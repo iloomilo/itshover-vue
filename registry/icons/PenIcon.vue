@@ -1,17 +1,35 @@
 <script setup lang="ts">
-import { useAnimate, motion } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
+import { motion } from 'motion-v'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await animate(
     '.pen-group',
     {
@@ -21,14 +39,17 @@ const start = async () => {
     },
     { duration: 0.8, ease: 'easeInOut' }
   )
+  if (!isCurrentRun(run)) return
 
   await animate(
     '.pen-slash',
     { pathLength: [0, 1], opacity: [0, 1] },
     { duration: 0.3, ease: 'easeOut' }
   )
+  if (!isCurrentRun(run)) return
 
   await animate('.pen-slash', { pathLength: 0, opacity: 0 }, { duration: 0.2, ease: 'easeInOut' })
+  if (!isCurrentRun(run)) return
 
   animate('.pen-group', { x: 0, y: 0, rotate: 0 }, { duration: 0.25, ease: 'easeInOut' })
 }
@@ -38,8 +59,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -56,8 +77,8 @@ defineExpose({
     stroke-miterlimit="10"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <g
       class="pen-group"

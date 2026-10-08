@@ -64,31 +64,37 @@ Since this project is a port, most contributions will involve porting icons from
 
 ```vue
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const { scope, animate, startAnimation, stopAnimation, onMouseEnter, onMouseLeave } =
+  useAnimatedIcon(props, {
+    start: () => start(),
+    stop: () => stop()
+  })
 
-const start = async () => {
-  // Add your animations here
+const start = () => {
+  // Keep awaited stages sequential and parallel calls parallel.
   // await animate('.target', { ... }, { ... })
 }
 
 const stop = () => {
-  // Reset animations
-  // animate('.target', { ... }, { ... })
+  // Reset the icon with animate(...) calls.
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -104,14 +110,24 @@ defineExpose({
     :stroke-width="strokeWidth"
     stroke-linecap="round"
     stroke-linejoin="round"
-    :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    :class="[className, 'cursor-pointer']"
+    :style="{ overflow: 'visible' }"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <!-- SVG Paths here -->
   </svg>
 </template>
 ```
+
+Use the shared helper for every icon. Keep all existing `await` order, parallel
+calls, and timing intact. Use its `delay` and `schedule` methods for timers. Icons
+with awaited stages should capture `const run = currentRun()` at the start and
+check `if (!isCurrentRun(run)) return` after each await. Obtain both methods from
+the helper; this prevents cancelled runs from continuing after a completed wait.
+Icons with an internal `while` loop should run one iteration when `props.loop` is true,
+while retaining their original loop when it is false. Test default hover playback,
+autoplay, complete-cycle looping, stop, and unmount before rebuilding the registry.
 
 ## 📜 Pull Request Guidelines
 

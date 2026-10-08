@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 1, // Note: React source used 1 here override default
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   // Stage 1: All windows explode outward (Windows key press!)
   await animate(
     'path:nth-of-type(2)', // Top-right
@@ -23,6 +40,7 @@ const start = async () => {
     },
     { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }
   )
+  if (!isCurrentRun(run)) return
 
   animate(
     'path:nth-of-type(3)', // Bottom-left
@@ -56,6 +74,7 @@ const start = async () => {
     },
     { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }
   )
+  if (!isCurrentRun(run)) return
 
   // Stage 2: 3D flip the entire icon
   await animate(
@@ -66,6 +85,7 @@ const start = async () => {
     },
     { duration: 0.6, ease: 'easeInOut' }
   )
+  if (!isCurrentRun(run)) return
 
   // Stage 3: Windows snap back together with bounce
   animate(
@@ -91,6 +111,7 @@ const start = async () => {
     { x: 0, y: 0, rotate: 0, scale: 1 },
     { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }
   )
+  if (!isCurrentRun(run)) return
 
   // Stage 4: Final pulse
   await animate(
@@ -100,6 +121,7 @@ const start = async () => {
     },
     { duration: 0.3, ease: 'easeOut' }
   )
+  if (!isCurrentRun(run)) return
 }
 
 const stop = () => {
@@ -111,8 +133,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -133,8 +155,8 @@ defineExpose({
       perspective: '1000px',
       transformStyle: 'preserve-3d'
     }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path

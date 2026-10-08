@@ -6,6 +6,7 @@ import { ICON_LIST } from '@/constants/icons'
 import { LINKS } from '~/constants/links'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import typesRaw from '~~/registry/types/types.ts?raw'
+import helperRaw from '~~/registry/animation/useAnimatedIcon.ts?raw'
 import type { AnimatedIconHandle } from '~~/registry/types/types'
 
 const props = defineProps<{
@@ -30,6 +31,10 @@ const copyDependency = async () => {
 
 const copyTypes = async () => {
   await copyTypesText(typesRaw)
+}
+
+const copyHelper = async (source: string) => {
+  await copyCodeText(source)
 }
 
 const playAnimation = () => {
@@ -218,7 +223,7 @@ const playAnimation = () => {
                     >
                       3
                     </span>
-                    <h2 class="text-lg font-semibold">Install Types (if needed)</h2>
+                    <h2 class="text-lg font-semibold">Copy Types and Animation Helpers</h2>
                   </div>
                   <div class="bg-muted/30 relative overflow-hidden rounded-xl border">
                     <div class="flex items-center justify-between border-b px-4 py-2">
@@ -239,8 +244,41 @@ const playAnimation = () => {
                     </div>
                   </div>
                 </div>
+                <div
+                  v-for="helper in [{ name: 'useAnimatedIcon.ts', source: helperRaw }]"
+                  :key="helper.name"
+                  class="overflow-hidden rounded-xl border"
+                >
+                  <div class="flex items-center justify-between border-b px-4 py-2">
+                    <span class="text-muted-foreground text-xs">animation/{{ helper.name }}</span>
+                    <button class="text-sm" @click="copyHelper(helper.source)">Copy</button>
+                  </div>
+                  <pre
+                    class="max-h-[300px] overflow-auto p-4 text-sm"
+                  ><code>{{ helper.source }}</code></pre>
+                </div>
+                <p class="text-muted-foreground text-sm">
+                  Keep icons, types, and animation helpers in sibling folders so the relative
+                  imports resolve.
+                </p>
               </TabsContent>
             </Tabs>
+            <div class="mt-8 space-y-3">
+              <h2 class="text-xl font-semibold">Animation controls</h2>
+              <p class="text-muted-foreground text-sm">
+                Icons animate on hover by default. Use autoplay to start after mounting and loop to
+                repeat the complete sequence. Automatic playback continues when the mouse leaves.
+              </p>
+              <pre
+                class="overflow-auto rounded-xl border p-4 text-sm"
+              ><code>{{ `<${iconData.componentName} autoplay loop disable-hover />` }}</code></pre>
+              <p class="text-muted-foreground text-sm">
+                disable-hover disables mouse controls. A component ref exposes startAnimation() and
+                stopAnimation(); an explicit stop also ends automatic playback. loop alone repeats
+                while hovering. Existing internal infinite repeats run one iteration per complete
+                cycle when loop is enabled; without loop their original behavior is preserved.
+              </p>
+            </div>
           </motion.div>
         </div>
       </motion.div>

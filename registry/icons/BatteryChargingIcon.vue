@@ -1,16 +1,31 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2.5,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 onMounted(() => {
   animate('.battery-bar-1', { opacity: 0 }, { duration: 0 })
@@ -20,13 +35,19 @@ onMounted(() => {
 })
 
 const start = async () => {
+  const run = currentRun()
+
   await animate('.battery-bar-1', { opacity: 1 }, { duration: 0.15, ease: 'easeOut' })
+  if (!isCurrentRun(run)) return
 
   await animate('.battery-bar-2', { opacity: 1 }, { duration: 0.15, ease: 'easeOut' })
+  if (!isCurrentRun(run)) return
 
   await animate('.battery-bar-3', { opacity: 1 }, { duration: 0.15, ease: 'easeOut' })
+  if (!isCurrentRun(run)) return
 
   await animate('.battery-bar-4', { opacity: 1 }, { duration: 0.15, ease: 'easeOut' })
+  if (!isCurrentRun(run)) return
 }
 
 const stop = () => {
@@ -38,8 +59,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -47,8 +68,8 @@ defineExpose({
   <div
     ref="scope"
     :class="['inline-flex', 'cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

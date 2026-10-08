@@ -4,6 +4,8 @@ export interface AnimatedIconProps {
   strokeWidth?: number
   className?: string
   disableHover?: boolean
+  autoplay?: boolean
+  loop?: boolean
 }
 
 export interface AnimatedIconHandle {

@@ -1,20 +1,37 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const animationControls = ref<ReturnType<typeof animate>[]>([])
 
 const start = async () => {
+  const run = currentRun()
+
   stop() // Ensure any running animations are stopped before starting new ones
 
   const clockAnimation = animate(
@@ -44,6 +61,7 @@ const start = async () => {
   animationControls.value.push(bellsAnimation)
 
   await animate('.plus', { scale: [1, 1.2, 1] }, { duration: 0.4, ease: 'easeOut' })
+  if (!isCurrentRun(run)) return
 }
 
 const stop = () => {
@@ -55,8 +73,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -74,8 +92,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <circle class="clock" cx="12" cy="13" r="8" />
     <path class="bells" :style="{ transformOrigin: '3.5px 4.5px' }" d="M5 3 2 6" />

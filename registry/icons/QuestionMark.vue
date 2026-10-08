@@ -1,18 +1,36 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await animate('.question-mark', { pathLength: [0, 1] }, { duration: 0.4, ease: 'easeInOut' })
+  if (!isCurrentRun(run)) return
 
   await animate(
     '.question-mark-dot',
@@ -22,6 +40,7 @@ const start = async () => {
     },
     { duration: 0.3, ease: 'easeOut' }
   )
+  if (!isCurrentRun(run)) return
 
   animate('.question-group', { scale: [1, 1.05, 1] }, { duration: 0.2, ease: 'easeOut' })
 }
@@ -35,13 +54,13 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
 <template>
-  <div ref="scope" @mouseenter="start" @mouseleave="stop">
+  <div ref="scope" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <svg
       :class="['question-group', 'cursor-pointer', className]"
       xmlns="http://www.w3.org/2000/svg"

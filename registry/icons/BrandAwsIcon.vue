@@ -1,17 +1,35 @@
 <script setup lang="ts">
-import { useAnimate, motion } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
+import { motion } from 'motion-v'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await animate(
     '.smile',
     {
@@ -24,21 +42,24 @@ const start = async () => {
       ease: 'easeInOut'
     }
   )
+  if (!isCurrentRun(run)) return
 
   await animate('.smile', { pathOffset: 0 }, { duration: 0.45, ease: 'easeInOut' })
+  if (!isCurrentRun(run)) return
 
   await animate(
     '.arrowhead',
     { scale: [0.8, 1.15, 1], opacity: [0, 1] },
     { duration: 0.4, ease: 'easeOut' }
   )
+  if (!isCurrentRun(run)) return
 }
 
 const stop = () => {}
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -55,8 +76,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="['cursor-pointer select-none', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 

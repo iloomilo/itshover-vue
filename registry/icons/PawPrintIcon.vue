@@ -1,28 +1,47 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   animate('.paw-inner', { opacity: 0, scale: 1.5, y: -20 }, { duration: 0 })
   await animate(
     '.paw-inner',
     { y: 0, opacity: 1, scale: 1 },
     { duration: 0.15, ease: [0.33, 1, 0.68, 1] }
   )
+  if (!isCurrentRun(run)) return
   await animate(
     '.paw-inner',
     { scale: [1, 0.75, 1.1, 1], y: [0, -1, 0] },
     { duration: 0.3, ease: 'easeInOut' }
   )
+  if (!isCurrentRun(run)) return
   animate('.paw-inner', { opacity: 0.6, scale: 1.03 }, { duration: 0.5, ease: 'easeOut' })
 }
 
@@ -31,8 +50,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -50,8 +69,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <g class="paw-inner" :style="{ transformOrigin: 'center' }">
       <circle cx="11" cy="4" r="2" :stroke="color" :stroke-width="strokeWidth" />

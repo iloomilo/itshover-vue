@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const { scope, animate, startAnimation, stopAnimation, onMouseEnter, onMouseLeave, schedule } =
+  useAnimatedIcon(props, {
+    start: () => start(),
+    stop: () => stop()
+  })
 
 const start = () => {
   animate('.xai-part-1', { x: -4, y: -2 }, { duration: 0.25, ease: 'easeOut' })
@@ -17,7 +24,7 @@ const start = () => {
   animate('.xai-part-3', { x: 4, y: -3 }, { duration: 0.25, ease: 'easeOut' })
   animate('.xai-part-4', { x: 3, y: 2 }, { duration: 0.25, ease: 'easeOut' })
 
-  setTimeout(() => {
+  schedule(() => {
     animate('.xai-part-1', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeInOut' })
     animate('.xai-part-2', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeInOut' })
     animate('.xai-part-3', { x: 0, y: 0 }, { duration: 0.3, ease: 'easeInOut' })
@@ -33,8 +40,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -47,8 +54,8 @@ defineExpose({
     viewBox="0 0 24 24"
     :fill="color"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <title>xAI</title>
     <path

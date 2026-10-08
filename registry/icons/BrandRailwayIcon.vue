@@ -1,19 +1,38 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   await animate('.railway-inner', { opacity: 0 }, { duration: 0.6, ease: 'linear' })
+  if (!isCurrentRun(run)) return
   await animate('.railway-lower', { x: [0, -3, 3, 0] }, { duration: 0.6, ease: 'easeInOut' })
+  if (!isCurrentRun(run)) return
 }
 
 const stop = async () => {
@@ -21,8 +40,8 @@ const stop = async () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -37,8 +56,8 @@ defineExpose({
     fill-rule="evenodd"
     :class="['cursor-pointer', className]"
     :style="{ flex: 'none', lineHeight: 1 }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <title>Railway</title>
 

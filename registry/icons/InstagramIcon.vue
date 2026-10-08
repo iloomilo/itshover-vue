@@ -1,19 +1,37 @@
 <script setup lang="ts">
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 
 const start = async () => {
+  const run = currentRun()
+
   animate('.ig-body', { scale: [1, 1.05, 1] }, { duration: 0.3, ease: 'easeOut' })
   await animate('.ig-lens', { scale: [1, 1.2, 1] }, { duration: 0.25, ease: 'easeOut' })
+  if (!isCurrentRun(run)) return
   animate('.ig-dot', { opacity: [1, 0, 1] }, { duration: 0.2, ease: 'easeInOut' })
 }
 
@@ -26,8 +44,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -35,8 +53,8 @@ defineExpose({
   <div
     ref="scope"
     :class="['inline-flex', 'cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

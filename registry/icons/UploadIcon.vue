@@ -1,34 +1,57 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAnimate } from 'motion-v'
+import { useAnimatedIcon } from '../animation/useAnimatedIcon'
 import type { AnimatedIconProps, AnimatedIconHandle } from '../types/types'
 
-withDefaults(defineProps<AnimatedIconProps>(), {
+const props = withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false,
+  autoplay: false,
+  loop: false
 })
 
-const [scope, animate] = useAnimate()
+const {
+  scope,
+  animate,
+  startAnimation,
+  stopAnimation,
+  currentRun,
+  isCurrentRun,
+  onMouseEnter,
+  onMouseLeave,
+  delay
+} = useAnimatedIcon(props, {
+  start: () => start(),
+  stop: () => stop()
+})
 const isAnimating = ref(false)
 
 const start = async () => {
+  const run = currentRun()
+
   if (isAnimating.value) return
   isAnimating.value = true
 
-  while (isAnimating.value) {
+  let iteration = 0
+  while (isAnimating.value && (!props.loop || iteration++ === 0)) {
     await animate('.arrow-group', { y: -12, opacity: 0 }, { duration: 0.4, ease: 'easeIn' })
+    if (!isCurrentRun(run)) return
 
     if (!isAnimating.value) break
 
     await animate('.arrow-group', { y: 12, opacity: 0 }, { duration: 0 })
+    if (!isCurrentRun(run)) return
 
     await animate('.arrow-group', { y: 0, opacity: 1 }, { duration: 0.4, ease: 'easeOut' })
+    if (!isCurrentRun(run)) return
 
     if (!isAnimating.value) break
 
-    await new Promise((resolve) => setTimeout(resolve, 200))
+    await delay(200)
+    if (!isCurrentRun(run)) return
   }
 }
 
@@ -38,8 +61,8 @@ const stop = () => {
 }
 
 defineExpose({
-  startAnimation: start,
-  stopAnimation: stop
+  startAnimation,
+  stopAnimation
 } satisfies AnimatedIconHandle)
 </script>
 
@@ -57,8 +80,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
     <g class="arrow-group">
