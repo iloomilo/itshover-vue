@@ -4,16 +4,49 @@ import type { AnimatedIconProps } from '../types/types'
 
 type Animate = ReturnType<typeof useAnimate>[1]
 type Controls = ReturnType<Animate>
+type PropertyControls = Pick<Controls, 'finished' | 'stop'>
+type AnimationHandle = {
+  controls: Controls
+  finished: Promise<void>
+  stop: () => void
+  then: Promise<void>['then']
+}
 type Callback = () => void | Promise<void>
+type Callbacks = { start: Callback; stop: Callback }
+type ControllerOptions = {
+  onError?: (error: unknown) => void
+  onAnimationSettled?: (controls: Controls) => void
+}
 type Run = {
   cancelled: boolean
   looping: boolean
   pending: Set<Promise<unknown>>
-  cancel: Set<() => void>
+  cancellations: Set<() => void>
   error?: unknown
 }
 
 const cancelled = Symbol('animation cancelled')
+
+// Motion stops individual property animations when newer work replaces them,
+// but their finished promises stay pending. Settle only the stopped properties
+// so other properties in the same group still finish before the next cycle.
+function animationCompletion(controls: Controls): Promise<void> {
+  const animations = (controls as Controls & { animations?: PropertyControls[] }).animations
+  if (!animations) return Promise.resolve(controls).then(() => {})
+  return Promise.all(
+    animations.map(
+      (animation) =>
+        new Promise<void>((resolve, reject) => {
+          const stop = animation.stop.bind(animation)
+          animation.stop = () => {
+            stop()
+            resolve()
+          }
+          animation.finished.then(() => resolve(), reject)
+        })
+    )
+  ).then(() => {})
+}
 
 // Clone transitions only in loop mode. Property-specific transitions can also repeat.
 function finiteTransitions(value: unknown): unknown {
@@ -30,13 +63,14 @@ function finiteTransitions(value: unknown): unknown {
 export function createAnimationController(
   rawAnimate: Animate,
   props: () => AnimatedIconProps,
-  callbacks: { start: Callback; stop: Callback },
-  reportError: (error: unknown) => void = (error) => console.error(error)
+  callbacks: Callbacks,
+  { onError = console.error, onAnimationSettled }: ControllerOptions = {}
 ) {
   let active: Run | undefined
   let playing = false
   let disposed = false
-  const legacyTimers = new Set<ReturnType<typeof setTimeout>>()
+  let playbackRequested = false
+  const timers = new Set<ReturnType<typeof setTimeout>>()
 
   function track<T>(run: Run, work: PromiseLike<T>, cleanup?: () => void): Promise<T> {
     let cancel: () => void
@@ -45,85 +79,73 @@ export function createAnimationController(
         cleanup?.()
         reject(cancelled)
       }
-      run.cancel.add(cancel)
+      run.cancellations.add(cancel)
       Promise.resolve(work).then(resolve, reject)
     })
     run.pending.add(promise)
     // Attach a rejection handler even for animations the icon does not await.
-    void promise.then(
-      () => {
-        run.pending.delete(promise)
-        run.cancel.delete(cancel)
-      },
-      (error) => {
-        run.pending.delete(promise)
-        run.cancel.delete(cancel)
-        run.error = error
-      }
-    )
+    const release = () => {
+      run.pending.delete(promise)
+      run.cancellations.delete(cancel)
+    }
+    void promise.then(release, (error) => {
+      run.error = error
+      release()
+    })
     return promise
   }
 
   function cancelRun() {
     if (!active) return
     active.cancelled = true
-    active.cancel.forEach((cancel) => cancel())
-    active.cancel.clear()
+    active.cancellations.forEach((cancel) => cancel())
+    active.cancellations.clear()
     active = undefined
   }
 
-  const animate = ((...args: Parameters<Animate>) => {
+  function animate(...args: Parameters<Animate>): AnimationHandle {
     const run = active
     const forwarded = [...args] as Parameters<Animate>
     if (run?.looping && forwarded.length > 2) {
       forwarded[2] = finiteTransitions(forwarded[2]) as (typeof forwarded)[2]
     }
     const controls = rawAnimate(...forwarded)
-    if (!run) return controls
-    const completion = track(run, Promise.resolve(controls), () => controls.stop())
-    return new Proxy(controls, {
-      get(target, key) {
-        if (key === 'then') return completion.then.bind(completion)
-        const value = Reflect.get(target, key, target)
-        return typeof value === 'function' ? value.bind(target) : value
-      }
-    }) as Controls
-  }) as Animate
-
-  function schedule(callback: () => void, duration: number) {
-    const run = active
-    if (!run) {
-      const timer = setTimeout(() => {
-        legacyTimers.delete(timer)
-        if (!disposed) callback()
-      }, duration)
-      legacyTimers.add(timer)
-      return
+    const finished = animationCompletion(controls)
+    const completion = run ? track(run, finished, () => controls.stop()) : finished
+    const release = () => onAnimationSettled?.(controls)
+    void completion.then(release, release)
+    return {
+      controls,
+      finished: completion,
+      stop: () => controls.stop(),
+      then: completion.then.bind(completion)
     }
+  }
+
+  function wait(duration: number, callback?: () => void) {
+    const run = active
     let timer: ReturnType<typeof setTimeout>
     const work = new Promise<void>((resolve, reject) => {
       timer = setTimeout(() => {
-        if (run.cancelled) return
+        timers.delete(timer)
+        if (disposed || run?.cancelled) return
         try {
-          callback()
+          callback?.()
           resolve()
         } catch (error) {
           reject(error)
         }
       }, duration)
     })
-    void track(run, work, () => clearTimeout(timer))
-  }
-
-  function delay(duration: number) {
-    const run = active
-    let timer: ReturnType<typeof setTimeout>
-    const work = new Promise<void>((resolve) => {
-      timer = setTimeout(resolve, duration)
+    timers.add(timer!)
+    if (!run) {
+      void work.catch(onError)
+      return work
+    }
+    return track(run, work, () => {
+      clearTimeout(timer)
+      timers.delete(timer)
     })
-    if (run) return track(run, work, () => clearTimeout(timer))
-    legacyTimers.add(timer!)
-    return work.finally(() => legacyTimers.delete(timer))
   }
 
   async function drain(run: Run) {
@@ -139,7 +161,7 @@ export function createAnimationController(
       cancelled: false,
       looping,
       pending: new Set<Promise<unknown>>(),
-      cancel: new Set<() => void>()
+      cancellations: new Set<() => void>()
     }
     active = run
     return run
@@ -148,7 +170,7 @@ export function createAnimationController(
   async function execute(run: Run, callback: Callback) {
     await callback()
     await drain(run)
-    run.cancel.clear()
+    run.cancellations.clear()
   }
 
   function handleError(error: unknown, run: Run) {
@@ -158,14 +180,14 @@ export function createAnimationController(
       playing = false
       callbacks.stop()
     }
-    reportError(error)
+    onError(error)
   }
 
   function startAnimation() {
+    playbackRequested = true
     if (disposed) return
     const restarting = playing || !!active
     playing = true
-    if (!props().autoplay && !props().loop && !active) return callbacks.start()
     cancelRun()
     const run = newRun(!!props().loop)
     const playback = async () => {
@@ -184,11 +206,10 @@ export function createAnimationController(
   }
 
   function stopAnimation() {
+    playbackRequested = true
     if (disposed) return
     playing = false
-    const managed = !!active || !!props().autoplay || !!props().loop
     cancelRun()
-    if (!managed) return callbacks.stop()
     const run = newRun(false)
     return execute(run, callbacks.stop)
       .then(() => {
@@ -198,19 +219,25 @@ export function createAnimationController(
   }
 
   function dispose() {
+    playbackRequested = true
     disposed = true
     playing = false
     cancelRun()
-    legacyTimers.forEach(clearTimeout)
-    legacyTimers.clear()
+    timers.forEach(clearTimeout)
+    timers.clear()
   }
 
   return {
     animate,
-    delay,
-    schedule,
+    delay: (duration: number) => wait(duration),
+    schedule: (callback: () => void, duration: number) => {
+      void wait(duration, callback)
+    },
     startAnimation,
     stopAnimation,
+    startAutoplay: () => {
+      if (!playbackRequested && props().autoplay) return startAnimation()
+    },
     dispose,
     isPlaying: () => playing,
     currentRun: () => active,
@@ -224,38 +251,21 @@ export function createAnimationController(
   }
 }
 
-export function useAnimatedIcon(
-  props: AnimatedIconProps,
-  callbacks: { start: () => void | Promise<void>; stop: () => void | Promise<void> }
-) {
+export function useAnimatedIcon(props: AnimatedIconProps, callbacks: Callbacks) {
   const [scope, rawAnimate] = useAnimate()
   // motion-v retains scoped controls for unmount cleanup. Remove completed and
   // stopped controls so continuous playback does not grow that list indefinitely.
-  const scopedAnimate = ((...args: Parameters<typeof rawAnimate>) => {
-    const controls = rawAnimate(...args)
-    const remove = () => {
+  const controller = createAnimationController(rawAnimate, () => props, callbacks, {
+    onAnimationSettled(controls) {
       const index = scope.animations.indexOf(controls)
       if (index !== -1) scope.animations.splice(index, 1)
     }
-    void Promise.resolve(controls).then(remove, remove)
-    return new Proxy(controls, {
-      get(target, key) {
-        if (key === 'stop')
-          return () => {
-            target.stop()
-            remove()
-          }
-        const value = Reflect.get(target, key, target)
-        return typeof value === 'function' ? value.bind(target) : value
-      }
-    })
-  }) as typeof rawAnimate
-  const controller = createAnimationController(scopedAnimate, () => props, callbacks)
+  })
 
   // Existing icon mount hooks initialize their DOM before autoplay starts.
   onMounted(async () => {
     await nextTick()
-    if (props.autoplay) controller.startAnimation()
+    controller.startAutoplay()
   })
   watch(
     () => [props.autoplay, props.loop] as const,
