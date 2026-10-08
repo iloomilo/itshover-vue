@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -56,8 +57,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="[className, 'cursor-pointer']"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" class="clock-body" />

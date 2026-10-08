@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -45,8 +46,8 @@ defineExpose({
     stroke-miterlimit="10"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <g
       class="gear-rotator"

@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -76,8 +77,8 @@ defineExpose({
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path class="dish" d="M4 10a7.31 7.31 0 0 0 10 10Z" :style="{ transformOrigin: '9px 15px' }" />
 

@@ -33,6 +33,28 @@ Run the following command in your terminal to add an icon (e.g., `AccessibiltyIc
 npx shadcn-vue@latest add https://itshover-vue.com/r/AccessibilityIcon.json
 ```
 
+### 3. Controlling the Animation
+
+By default an icon animates on hover. You can turn hover off and drive it yourself with the component's exposed `startAnimation` / `stopAnimation` methods:
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+import AccessibilityIcon from '@/itshover/icons/AccessibilityIcon.vue'
+import type { AnimatedIconHandle } from '@/itshover/types/types'
+
+const icon = ref<AnimatedIconHandle | null>(null)
+</script>
+
+<template>
+  <AccessibilityIcon ref="icon" disable-hover />
+  <button @click="icon?.startAnimation()">Play</button>
+  <button @click="icon?.stopAnimation()">Stop</button>
+</template>
+```
+
+> Adjust the import paths to where the CLI installed the files.
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [CONTRIBUTION.md](./CONTRIBUTION.md) for guidelines on how to get started, project structure, and how to add new icons.

@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 1, // Note: React source used 1 here override default
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -133,8 +134,8 @@ defineExpose({
       perspective: '1000px',
       transformStyle: 'preserve-3d'
     }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path

@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -51,8 +52,8 @@ defineExpose({
       'cursor-pointer',
       className
     ]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path class="circle" d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993" />

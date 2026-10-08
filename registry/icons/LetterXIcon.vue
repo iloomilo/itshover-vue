@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -48,8 +49,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path class="x-stroke-1" d="M7 4l10 16" :style="{ transformOrigin: '12px 12px' }" />
     <path class="x-stroke-2" d="M17 4l-10 16" :style="{ transformOrigin: '12px 12px' }" />

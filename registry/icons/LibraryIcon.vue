@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -46,8 +47,8 @@ defineExpose({
     stroke-linejoin="round"
     :class="['cursor-pointer', className]"
     :style="{ overflow: 'visible' }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path class="book-1" d="m16 6 4 14" :style="{ transformOrigin: '18px 20px' }" />
     <path class="book-2" d="M12 6v14" :style="{ transformOrigin: '12px 20px' }" />

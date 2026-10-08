@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 40,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -66,8 +67,8 @@ defineExpose({
     viewBox="0 0 48 48"
     fill="currentColor"
     :class="['cursor-pointer', className]"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <path class="text-line" d="M35.5 3.5V43H32.5V3.5H35.5Z" />
 

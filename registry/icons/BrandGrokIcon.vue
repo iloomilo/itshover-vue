@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -46,8 +47,8 @@ defineExpose({
     :fill="color"
     :class="['grok-icon cursor-pointer', className]"
     :style="{ flex: 'none', lineHeight: 1 }"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <title>Grok</title>
     <!-- Upper shard -->

@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2, // Default to 2, though React used color/fill primary
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -44,8 +45,8 @@ defineExpose({
     :stroke="color"
     :class="['cursor-pointer', className]"
     style="flex: none; line-height: 1"
-    @mouseenter="start"
-    @mouseleave="stop"
+    @mouseenter="!disableHover && start()"
+    @mouseleave="!disableHover && stop()"
   >
     <title>Cursor</title>
     <path

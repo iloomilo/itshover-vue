@@ -3,6 +3,7 @@ export interface AnimatedIconProps {
   color?: string
   strokeWidth?: number
   className?: string
+  /** Disable hover-triggered animation. Use the exposed `startAnimation`/`stopAnimation` handle instead. */
   disableHover?: boolean
 }
 

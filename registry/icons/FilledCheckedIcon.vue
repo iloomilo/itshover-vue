@@ -6,7 +6,8 @@ withDefaults(defineProps<AnimatedIconProps>(), {
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
-  className: ''
+  className: '',
+  disableHover: false
 })
 
 const [scope, animate] = useAnimate()
@@ -91,7 +92,7 @@ defineExpose({
 </script>
 
 <template>
-  <div ref="scope" @mouseenter="start" @mouseleave="stop">
+  <div ref="scope" @mouseenter="!disableHover && start()" @mouseleave="!disableHover && stop()">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       :width="size"
