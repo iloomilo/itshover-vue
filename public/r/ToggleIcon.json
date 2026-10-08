@@ -3,7 +3,7 @@
   "name": "ToggleIcon",
   "title": "ToggleIcon",
   "description": "ToggleIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

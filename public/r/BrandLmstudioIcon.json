@@ -3,7 +3,7 @@
   "name": "BrandLmstudioIcon",
   "title": "BrandLmstudioIcon",
   "description": "BrandLmstudioIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

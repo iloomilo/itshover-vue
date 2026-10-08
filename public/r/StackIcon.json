@@ -3,7 +3,7 @@
   "name": "StackIcon",
   "title": "StackIcon",
   "description": "StackIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

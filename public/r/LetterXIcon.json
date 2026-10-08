@@ -3,7 +3,7 @@
   "name": "LetterXIcon",
   "title": "LetterXIcon",
   "description": "LetterXIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "NodejsIcon",
   "title": "NodejsIcon",
   "description": "NodejsIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

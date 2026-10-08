@@ -3,7 +3,7 @@
   "name": "UsersGroupIcon",
   "title": "UsersGroupIcon",
   "description": "UsersGroupIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

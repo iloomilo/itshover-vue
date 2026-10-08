@@ -3,7 +3,7 @@
   "name": "BrandReactIcon",
   "title": "BrandReactIcon",
   "description": "BrandReactIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

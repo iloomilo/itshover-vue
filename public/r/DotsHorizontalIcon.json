@@ -3,7 +3,7 @@
   "name": "DotsHorizontalIcon",
   "title": "DotsHorizontalIcon",
   "description": "DotsHorizontalIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

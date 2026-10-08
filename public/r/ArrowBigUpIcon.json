@@ -3,7 +3,7 @@
   "name": "ArrowBigUpIcon",
   "title": "ArrowBigUpIcon",
   "description": "ArrowBigUpIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

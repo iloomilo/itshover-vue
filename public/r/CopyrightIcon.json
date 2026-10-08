@@ -3,7 +3,7 @@
   "name": "CopyrightIcon",
   "title": "CopyrightIcon",
   "description": "CopyrightIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

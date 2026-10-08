@@ -3,7 +3,7 @@
   "name": "LetterZIcon",
   "title": "LetterZIcon",
   "description": "LetterZIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "BrandOpenaiIcon",
   "title": "BrandOpenaiIcon",
   "description": "BrandOpenaiIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

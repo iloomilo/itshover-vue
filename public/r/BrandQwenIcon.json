@@ -3,7 +3,7 @@
   "name": "BrandQwenIcon",
   "title": "BrandQwenIcon",
   "description": "BrandQwenIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

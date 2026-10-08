@@ -3,7 +3,7 @@
   "name": "MehIcon",
   "title": "MehIcon",
   "description": "MehIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

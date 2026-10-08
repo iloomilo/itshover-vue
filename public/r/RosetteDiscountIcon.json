@@ -3,7 +3,7 @@
   "name": "RosetteDiscountIcon",
   "title": "RosetteDiscountIcon",
   "description": "RosetteDiscountIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

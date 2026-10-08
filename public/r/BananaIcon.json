@@ -3,7 +3,7 @@
   "name": "BananaIcon",
   "title": "BananaIcon",
   "description": "BananaIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

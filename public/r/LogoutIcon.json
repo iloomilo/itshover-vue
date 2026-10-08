@@ -3,7 +3,7 @@
   "name": "LogoutIcon",
   "title": "LogoutIcon",
   "description": "LogoutIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

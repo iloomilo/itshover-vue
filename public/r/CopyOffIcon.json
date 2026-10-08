@@ -3,7 +3,7 @@
   "name": "CopyOffIcon",
   "title": "CopyOffIcon",
   "description": "CopyOffIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

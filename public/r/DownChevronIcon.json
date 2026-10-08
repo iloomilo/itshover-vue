@@ -3,7 +3,7 @@
   "name": "DownChevronIcon",
   "title": "DownChevronIcon",
   "description": "DownChevronIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

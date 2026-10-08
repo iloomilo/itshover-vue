@@ -3,7 +3,7 @@
   "name": "ChartCovariateIcon",
   "title": "ChartCovariateIcon",
   "description": "ChartCovariateIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

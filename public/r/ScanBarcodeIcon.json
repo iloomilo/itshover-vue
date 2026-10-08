@@ -3,7 +3,7 @@
   "name": "ScanBarcodeIcon",
   "title": "ScanBarcodeIcon",
   "description": "ScanBarcodeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

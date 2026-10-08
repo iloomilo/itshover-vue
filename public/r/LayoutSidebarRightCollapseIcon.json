@@ -3,7 +3,7 @@
   "name": "LayoutSidebarRightCollapseIcon",
   "title": "LayoutSidebarRightCollapseIcon",
   "description": "LayoutSidebarRightCollapseIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

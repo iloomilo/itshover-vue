@@ -3,7 +3,7 @@
   "name": "HeartIcon",
   "title": "HeartIcon",
   "description": "HeartIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

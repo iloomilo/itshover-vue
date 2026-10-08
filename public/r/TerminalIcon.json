@@ -3,7 +3,7 @@
   "name": "TerminalIcon",
   "title": "TerminalIcon",
   "description": "TerminalIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

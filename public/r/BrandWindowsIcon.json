@@ -3,7 +3,7 @@
   "name": "BrandWindowsIcon",
   "title": "BrandWindowsIcon",
   "description": "BrandWindowsIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

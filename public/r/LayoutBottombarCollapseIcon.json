@@ -3,7 +3,7 @@
   "name": "LayoutBottombarCollapseIcon",
   "title": "LayoutBottombarCollapseIcon",
   "description": "LayoutBottombarCollapseIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

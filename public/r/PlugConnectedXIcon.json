@@ -3,7 +3,7 @@
   "name": "PlugConnectedXIcon",
   "title": "PlugConnectedXIcon",
   "description": "PlugConnectedXIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "FileDescriptionIcon",
   "title": "FileDescriptionIcon",
   "description": "FileDescriptionIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

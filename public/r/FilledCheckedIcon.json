@@ -3,7 +3,7 @@
   "name": "FilledCheckedIcon",
   "title": "FilledCheckedIcon",
   "description": "FilledCheckedIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "PhoneVolume",
   "title": "PhoneVolume",
   "description": "PhoneVolume icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

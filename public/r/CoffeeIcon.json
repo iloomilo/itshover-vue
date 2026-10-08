@@ -3,7 +3,7 @@
   "name": "CoffeeIcon",
   "title": "CoffeeIcon",
   "description": "CoffeeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

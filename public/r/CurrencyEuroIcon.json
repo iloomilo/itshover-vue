@@ -3,7 +3,7 @@
   "name": "CurrencyEuroIcon",
   "title": "CurrencyEuroIcon",
   "description": "CurrencyEuroIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

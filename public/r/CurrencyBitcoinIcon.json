@@ -3,7 +3,7 @@
   "name": "CurrencyBitcoinIcon",
   "title": "CurrencyBitcoinIcon",
   "description": "CurrencyBitcoinIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

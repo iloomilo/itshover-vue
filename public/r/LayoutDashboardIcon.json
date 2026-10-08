@@ -3,7 +3,7 @@
   "name": "LayoutDashboardIcon",
   "title": "LayoutDashboardIcon",
   "description": "LayoutDashboardIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

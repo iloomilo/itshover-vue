@@ -3,7 +3,7 @@
   "name": "CreditCard",
   "title": "CreditCard",
   "description": "CreditCard icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

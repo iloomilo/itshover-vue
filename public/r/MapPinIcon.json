@@ -3,7 +3,7 @@
   "name": "MapPinIcon",
   "title": "MapPinIcon",
   "description": "MapPinIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

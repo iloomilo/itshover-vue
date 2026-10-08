@@ -3,7 +3,7 @@
   "name": "AppleBrandLogo",
   "title": "AppleBrandLogo",
   "description": "AppleBrandLogo icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

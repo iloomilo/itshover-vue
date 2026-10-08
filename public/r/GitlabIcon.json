@@ -3,7 +3,7 @@
   "name": "GitlabIcon",
   "title": "GitlabIcon",
   "description": "GitlabIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

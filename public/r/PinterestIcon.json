@@ -3,7 +3,7 @@
   "name": "PinterestIcon",
   "title": "PinterestIcon",
   "description": "PinterestIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

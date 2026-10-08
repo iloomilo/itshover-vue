@@ -3,7 +3,7 @@
   "name": "XIcon",
   "title": "XIcon",
   "description": "XIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

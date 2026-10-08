@@ -3,7 +3,7 @@
   "name": "BrandReactNativeIcon",
   "title": "BrandReactNativeIcon",
   "description": "BrandReactNativeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

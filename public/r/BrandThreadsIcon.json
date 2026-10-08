@@ -3,7 +3,7 @@
   "name": "BrandThreadsIcon",
   "title": "BrandThreadsIcon",
   "description": "BrandThreadsIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

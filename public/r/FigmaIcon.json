@@ -3,7 +3,7 @@
   "name": "FigmaIcon",
   "title": "FigmaIcon",
   "description": "FigmaIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

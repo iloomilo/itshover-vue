@@ -3,7 +3,7 @@
   "name": "TelephoneIcon",
   "title": "TelephoneIcon",
   "description": "TelephoneIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "SendHorizontalIcon",
   "title": "SendHorizontalIcon",
   "description": "SendHorizontalIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

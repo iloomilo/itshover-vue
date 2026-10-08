@@ -3,7 +3,7 @@
   "name": "TypescriptIcon",
   "title": "TypescriptIcon",
   "description": "TypescriptIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

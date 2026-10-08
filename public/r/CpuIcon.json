@@ -3,7 +3,7 @@
   "name": "CpuIcon",
   "title": "CpuIcon",
   "description": "CpuIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "HashtagIcon",
   "title": "HashtagIcon",
   "description": "HashtagIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

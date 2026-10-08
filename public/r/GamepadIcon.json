@@ -3,7 +3,7 @@
   "name": "GamepadIcon",
   "title": "GamepadIcon",
   "description": "GamepadIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

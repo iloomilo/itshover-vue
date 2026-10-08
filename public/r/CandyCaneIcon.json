@@ -3,7 +3,7 @@
   "name": "CandyCaneIcon",
   "title": "CandyCaneIcon",
   "description": "CandyCaneIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

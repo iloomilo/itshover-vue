@@ -3,7 +3,7 @@
   "name": "ArrowBackIcon",
   "title": "ArrowBackIcon",
   "description": "ArrowBackIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

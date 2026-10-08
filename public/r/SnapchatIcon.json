@@ -3,7 +3,7 @@
   "name": "SnapchatIcon",
   "title": "SnapchatIcon",
   "description": "SnapchatIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "BrandNotionIcon",
   "title": "BrandNotionIcon",
   "description": "BrandNotionIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

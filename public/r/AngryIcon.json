@@ -3,7 +3,7 @@
   "name": "AngryIcon",
   "title": "AngryIcon",
   "description": "AngryIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

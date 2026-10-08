@@ -3,7 +3,7 @@
   "name": "SubscriptIcon",
   "title": "SubscriptIcon",
   "description": "SubscriptIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

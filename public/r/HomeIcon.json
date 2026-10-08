@@ -3,7 +3,7 @@
   "name": "HomeIcon",
   "title": "HomeIcon",
   "description": "HomeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

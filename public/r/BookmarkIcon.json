@@ -3,7 +3,7 @@
   "name": "BookmarkIcon",
   "title": "BookmarkIcon",
   "description": "BookmarkIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

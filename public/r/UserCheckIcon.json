@@ -3,7 +3,7 @@
   "name": "UserCheckIcon",
   "title": "UserCheckIcon",
   "description": "UserCheckIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

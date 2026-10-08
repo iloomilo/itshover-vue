@@ -3,7 +3,7 @@
   "name": "BulbSvg",
   "title": "BulbSvg",
   "description": "BulbSvg icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

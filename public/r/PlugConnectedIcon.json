@@ -3,7 +3,7 @@
   "name": "PlugConnectedIcon",
   "title": "PlugConnectedIcon",
   "description": "PlugConnectedIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

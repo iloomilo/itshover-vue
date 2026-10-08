@@ -3,7 +3,7 @@
   "name": "WhatsappIcon",
   "title": "WhatsappIcon",
   "description": "WhatsappIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

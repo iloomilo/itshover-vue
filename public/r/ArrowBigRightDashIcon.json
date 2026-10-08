@@ -3,7 +3,7 @@
   "name": "ArrowBigRightDashIcon",
   "title": "ArrowBigRightDashIcon",
   "description": "ArrowBigRightDashIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

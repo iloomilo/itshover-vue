@@ -3,7 +3,7 @@
   "name": "AlarmClockPlusIcon",
   "title": "AlarmClockPlusIcon",
   "description": "AlarmClockPlusIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "FocusIcon",
   "title": "FocusIcon",
   "description": "FocusIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

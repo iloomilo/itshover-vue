@@ -3,7 +3,7 @@
   "name": "SendIcon",
   "title": "SendIcon",
   "description": "SendIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

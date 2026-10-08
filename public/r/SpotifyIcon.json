@@ -3,7 +3,7 @@
   "name": "SpotifyIcon",
   "title": "SpotifyIcon",
   "description": "SpotifyIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "DoubleCheckIcon",
   "title": "DoubleCheckIcon",
   "description": "DoubleCheckIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

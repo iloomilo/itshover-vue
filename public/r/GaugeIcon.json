@@ -3,7 +3,7 @@
   "name": "GaugeIcon",
   "title": "GaugeIcon",
   "description": "GaugeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "PawPrintIcon",
   "title": "PawPrintIcon",
   "description": "PawPrintIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

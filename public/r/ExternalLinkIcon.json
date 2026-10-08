@@ -3,7 +3,7 @@
   "name": "ExternalLinkIcon",
   "title": "ExternalLinkIcon",
   "description": "ExternalLinkIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

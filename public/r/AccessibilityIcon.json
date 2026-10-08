@@ -3,7 +3,7 @@
   "name": "AccessibilityIcon",
   "title": "AccessibilityIcon",
   "description": "AccessibilityIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "RocketIcon",
   "title": "RocketIcon",
   "description": "RocketIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

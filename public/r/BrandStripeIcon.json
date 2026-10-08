@@ -3,7 +3,7 @@
   "name": "BrandStripeIcon",
   "title": "BrandStripeIcon",
   "description": "BrandStripeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

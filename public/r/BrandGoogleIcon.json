@@ -3,7 +3,7 @@
   "name": "BrandGoogleIcon",
   "title": "BrandGoogleIcon",
   "description": "BrandGoogleIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

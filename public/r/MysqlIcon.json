@@ -3,7 +3,7 @@
   "name": "MysqlIcon",
   "title": "MysqlIcon",
   "description": "MysqlIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

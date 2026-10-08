@@ -3,7 +3,7 @@
   "name": "BugIcon",
   "title": "BugIcon",
   "description": "BugIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

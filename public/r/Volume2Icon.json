@@ -3,7 +3,7 @@
   "name": "Volume2Icon",
   "title": "Volume2Icon",
   "description": "Volume2Icon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

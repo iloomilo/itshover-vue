@@ -3,7 +3,7 @@
   "name": "VinylIcon",
   "title": "VinylIcon",
   "description": "VinylIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

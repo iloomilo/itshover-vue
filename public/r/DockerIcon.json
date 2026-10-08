@@ -3,7 +3,7 @@
   "name": "DockerIcon",
   "title": "DockerIcon",
   "description": "DockerIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

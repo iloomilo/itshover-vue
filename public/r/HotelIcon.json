@@ -3,7 +3,7 @@
   "name": "HotelIcon",
   "title": "HotelIcon",
   "description": "HotelIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "BrandWordpressIcon",
   "title": "BrandWordpressIcon",
   "description": "BrandWordpressIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "FilterIcon",
   "title": "FilterIcon",
   "description": "FilterIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

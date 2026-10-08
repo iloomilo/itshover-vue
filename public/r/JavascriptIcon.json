@@ -3,7 +3,7 @@
   "name": "JavascriptIcon",
   "title": "JavascriptIcon",
   "description": "JavascriptIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

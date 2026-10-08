@@ -3,7 +3,7 @@
   "name": "MoonIcon",
   "title": "MoonIcon",
   "description": "MoonIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "GhostIcon",
   "title": "GhostIcon",
   "description": "GhostIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "InstagramIcon",
   "title": "InstagramIcon",
   "description": "InstagramIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

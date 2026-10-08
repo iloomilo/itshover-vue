@@ -3,7 +3,7 @@
   "name": "LikeIcon",
   "title": "LikeIcon",
   "description": "LikeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

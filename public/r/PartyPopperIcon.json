@@ -3,7 +3,7 @@
   "name": "PartyPopperIcon",
   "title": "PartyPopperIcon",
   "description": "PartyPopperIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

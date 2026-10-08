@@ -3,7 +3,7 @@
   "name": "SlidersHorizontalIcon",
   "title": "SlidersHorizontalIcon",
   "description": "SlidersHorizontalIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

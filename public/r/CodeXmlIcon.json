@@ -3,7 +3,7 @@
   "name": "CodeXmlIcon",
   "title": "CodeXmlIcon",
   "description": "CodeXmlIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

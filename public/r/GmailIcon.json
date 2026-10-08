@@ -3,7 +3,7 @@
   "name": "GmailIcon",
   "title": "GmailIcon",
   "description": "GmailIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

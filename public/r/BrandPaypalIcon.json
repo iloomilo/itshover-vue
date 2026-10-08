@@ -3,7 +3,7 @@
   "name": "BrandPaypalIcon",
   "title": "BrandPaypalIcon",
   "description": "BrandPaypalIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "AmpersandIcon",
   "title": "AmpersandIcon",
   "description": "AmpersandIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

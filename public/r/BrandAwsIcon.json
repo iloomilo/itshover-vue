@@ -3,7 +3,7 @@
   "name": "BrandAwsIcon",
   "title": "BrandAwsIcon",
   "description": "BrandAwsIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

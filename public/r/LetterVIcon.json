@@ -3,7 +3,7 @@
   "name": "LetterVIcon",
   "title": "LetterVIcon",
   "description": "LetterVIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

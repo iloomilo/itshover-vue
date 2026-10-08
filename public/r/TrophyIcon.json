@@ -3,7 +3,7 @@
   "name": "TrophyIcon",
   "title": "TrophyIcon",
   "description": "TrophyIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

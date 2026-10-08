@@ -3,7 +3,7 @@
   "name": "WifiIcon",
   "title": "WifiIcon",
   "description": "WifiIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

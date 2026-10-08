@@ -3,7 +3,7 @@
   "name": "PassportIcon",
   "title": "PassportIcon",
   "description": "PassportIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

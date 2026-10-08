@@ -3,7 +3,7 @@
   "name": "QrcodeIcon",
   "title": "QrcodeIcon",
   "description": "QrcodeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

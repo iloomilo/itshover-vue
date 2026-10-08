@@ -3,7 +3,7 @@
   "name": "UsersIcon",
   "title": "UsersIcon",
   "description": "UsersIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

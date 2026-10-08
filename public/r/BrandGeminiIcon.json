@@ -3,7 +3,7 @@
   "name": "BrandGeminiIcon",
   "title": "BrandGeminiIcon",
   "description": "BrandGeminiIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

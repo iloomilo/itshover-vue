@@ -3,7 +3,7 @@
   "name": "SimpleCheckedIcon",
   "title": "SimpleCheckedIcon",
   "description": "SimpleCheckedIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

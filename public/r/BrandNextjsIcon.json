@@ -3,7 +3,7 @@
   "name": "BrandNextjsIcon",
   "title": "BrandNextjsIcon",
   "description": "BrandNextjsIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

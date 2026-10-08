@@ -3,7 +3,7 @@
   "name": "BrandChromeIcon",
   "title": "BrandChromeIcon",
   "description": "BrandChromeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

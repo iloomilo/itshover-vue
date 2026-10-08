@@ -3,7 +3,7 @@
   "name": "StarIcon",
   "title": "StarIcon",
   "description": "StarIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

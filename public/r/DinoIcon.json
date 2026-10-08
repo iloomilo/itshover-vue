@@ -3,7 +3,7 @@
   "name": "DinoIcon",
   "title": "DinoIcon",
   "description": "DinoIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

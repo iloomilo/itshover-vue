@@ -3,7 +3,7 @@
   "name": "LetterJIcon",
   "title": "LetterJIcon",
   "description": "LetterJIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

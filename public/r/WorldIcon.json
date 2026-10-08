@@ -3,7 +3,7 @@
   "name": "WorldIcon",
   "title": "WorldIcon",
   "description": "WorldIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

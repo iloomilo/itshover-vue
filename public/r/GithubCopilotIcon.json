@@ -3,7 +3,7 @@
   "name": "GithubCopilotIcon",
   "title": "GithubCopilotIcon",
   "description": "GithubCopilotIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

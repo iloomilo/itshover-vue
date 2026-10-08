@@ -3,7 +3,7 @@
   "name": "SatelliteDishIcon",
   "title": "SatelliteDishIcon",
   "description": "SatelliteDishIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

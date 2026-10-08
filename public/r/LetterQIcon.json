@@ -3,7 +3,7 @@
   "name": "LetterQIcon",
   "title": "LetterQIcon",
   "description": "LetterQIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

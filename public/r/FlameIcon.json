@@ -3,7 +3,7 @@
   "name": "FlameIcon",
   "title": "FlameIcon",
   "description": "FlameIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "CurrencyDollarIcon",
   "title": "CurrencyDollarIcon",
   "description": "CurrencyDollarIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

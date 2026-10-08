@@ -3,7 +3,7 @@
   "name": "LockIcon",
   "title": "LockIcon",
   "description": "LockIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "UnlinkIcon",
   "title": "UnlinkIcon",
   "description": "UnlinkIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

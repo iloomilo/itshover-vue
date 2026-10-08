@@ -3,7 +3,7 @@
   "name": "LinkIcon",
   "title": "LinkIcon",
   "description": "LinkIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

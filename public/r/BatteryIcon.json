@@ -3,7 +3,7 @@
   "name": "BatteryIcon",
   "title": "BatteryIcon",
   "description": "BatteryIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "BrandBagsFmIcon",
   "title": "BrandBagsFmIcon",
   "description": "BrandBagsFmIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

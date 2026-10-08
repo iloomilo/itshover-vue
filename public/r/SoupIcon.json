@@ -3,7 +3,7 @@
   "name": "SoupIcon",
   "title": "SoupIcon",
   "description": "SoupIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

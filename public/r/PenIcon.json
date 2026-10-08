@@ -3,7 +3,7 @@
   "name": "PenIcon",
   "title": "PenIcon",
   "description": "PenIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

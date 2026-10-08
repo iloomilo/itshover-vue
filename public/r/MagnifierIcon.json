@@ -3,7 +3,7 @@
   "name": "MagnifierIcon",
   "title": "MagnifierIcon",
   "description": "MagnifierIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

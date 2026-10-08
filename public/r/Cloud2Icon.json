@@ -3,7 +3,7 @@
   "name": "Cloud2Icon",
   "title": "Cloud2Icon",
   "description": "Cloud2Icon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

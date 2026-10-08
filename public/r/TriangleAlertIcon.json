@@ -3,7 +3,7 @@
   "name": "TriangleAlertIcon",
   "title": "TriangleAlertIcon",
   "description": "TriangleAlertIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

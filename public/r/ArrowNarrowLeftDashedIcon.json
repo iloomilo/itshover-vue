@@ -3,7 +3,7 @@
   "name": "ArrowNarrowLeftDashedIcon",
   "title": "ArrowNarrowLeftDashedIcon",
   "description": "ArrowNarrowLeftDashedIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

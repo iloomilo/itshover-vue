@@ -3,7 +3,7 @@
   "name": "MailFilledIcon",
   "title": "MailFilledIcon",
   "description": "MailFilledIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

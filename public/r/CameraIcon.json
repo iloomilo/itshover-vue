@@ -3,7 +3,7 @@
   "name": "CameraIcon",
   "title": "CameraIcon",
   "description": "CameraIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

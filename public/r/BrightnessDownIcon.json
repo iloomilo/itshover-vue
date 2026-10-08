@@ -3,7 +3,7 @@
   "name": "BrightnessDownIcon",
   "title": "BrightnessDownIcon",
   "description": "BrightnessDownIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

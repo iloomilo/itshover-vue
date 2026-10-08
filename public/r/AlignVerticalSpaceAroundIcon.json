@@ -3,7 +3,7 @@
   "name": "AlignVerticalSpaceAroundIcon",
   "title": "AlignVerticalSpaceAroundIcon",
   "description": "AlignVerticalSpaceAroundIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

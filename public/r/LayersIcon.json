@@ -3,7 +3,7 @@
   "name": "LayersIcon",
   "title": "LayersIcon",
   "description": "LayersIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "BrandMidjourneyIcon",
   "title": "BrandMidjourneyIcon",
   "description": "BrandMidjourneyIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

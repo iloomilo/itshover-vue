@@ -3,7 +3,7 @@
   "name": "BrandZoomIcon",
   "title": "BrandZoomIcon",
   "description": "BrandZoomIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

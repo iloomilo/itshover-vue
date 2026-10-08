@@ -3,7 +3,7 @@
   "name": "BrandGrokIcon",
   "title": "BrandGrokIcon",
   "description": "BrandGrokIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

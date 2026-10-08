@@ -3,7 +3,7 @@
   "name": "DownloadIcon",
   "title": "DownloadIcon",
   "description": "DownloadIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

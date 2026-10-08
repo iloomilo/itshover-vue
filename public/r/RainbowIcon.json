@@ -3,7 +3,7 @@
   "name": "RainbowIcon",
   "title": "RainbowIcon",
   "description": "RainbowIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

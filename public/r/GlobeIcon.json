@@ -3,7 +3,7 @@
   "name": "GlobeIcon",
   "title": "GlobeIcon",
   "description": "GlobeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

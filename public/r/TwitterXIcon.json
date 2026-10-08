@@ -3,7 +3,7 @@
   "name": "TwitterXIcon",
   "title": "TwitterXIcon",
   "description": "TwitterXIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

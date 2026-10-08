@@ -3,7 +3,7 @@
   "name": "BrandTelegramIcon",
   "title": "BrandTelegramIcon",
   "description": "BrandTelegramIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

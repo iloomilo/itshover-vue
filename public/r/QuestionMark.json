@@ -3,7 +3,7 @@
   "name": "QuestionMark",
   "title": "QuestionMark",
   "description": "QuestionMark icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

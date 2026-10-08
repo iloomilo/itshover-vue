@@ -3,7 +3,7 @@
   "name": "BrandOllamaIcon",
   "title": "BrandOllamaIcon",
   "description": "BrandOllamaIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

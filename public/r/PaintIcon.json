@@ -3,7 +3,7 @@
   "name": "PaintIcon",
   "title": "PaintIcon",
   "description": "PaintIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

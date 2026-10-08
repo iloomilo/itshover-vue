@@ -3,7 +3,7 @@
   "name": "CurrencyRupeeIcon",
   "title": "CurrencyRupeeIcon",
   "description": "CurrencyRupeeIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

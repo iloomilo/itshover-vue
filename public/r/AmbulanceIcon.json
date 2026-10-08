@@ -3,7 +3,7 @@
   "name": "AmbulanceIcon",
   "title": "AmbulanceIcon",
   "description": "AmbulanceIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "KeyframesIcon",
   "title": "KeyframesIcon",
   "description": "KeyframesIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

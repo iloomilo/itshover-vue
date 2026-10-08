@@ -3,7 +3,7 @@
   "name": "BrandVercelIcon",
   "title": "BrandVercelIcon",
   "description": "BrandVercelIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

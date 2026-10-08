@@ -3,7 +3,7 @@
   "name": "ChartHistogramIcon",
   "title": "ChartHistogramIcon",
   "description": "ChartHistogramIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

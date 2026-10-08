@@ -3,7 +3,7 @@
   "name": "ChartLineIcon",
   "title": "ChartLineIcon",
   "description": "ChartLineIcon icon",
-  "dependencies": ["motion"],
+  "dependencies": ["motion-v"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
