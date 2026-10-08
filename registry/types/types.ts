@@ -3,7 +3,6 @@ export interface AnimatedIconProps {
   color?: string
   strokeWidth?: number
   className?: string
-  disableHover?: boolean
 }
 
 export interface AnimatedIconHandle {

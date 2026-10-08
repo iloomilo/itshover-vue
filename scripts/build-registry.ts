@@ -57,7 +57,7 @@ function createRegistryItem(filename: string) {
     title: toTitle(name),
     description: `${toTitle(name)} icon`,
     registryDependencies: [],
-    dependencies: ['motion'],
+    dependencies: ['motion-v'],
     devDependencies: [],
     files: [
       {

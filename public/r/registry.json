@@ -9,7 +9,7 @@
       "title": "AccessibilityIcon",
       "description": "AccessibilityIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -28,7 +28,7 @@
       "title": "AirplaneIcon",
       "description": "AirplaneIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -47,7 +47,7 @@
       "title": "AlarmClockPlusIcon",
       "description": "AlarmClockPlusIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -66,7 +66,7 @@
       "title": "AlignCenterIcon",
       "description": "AlignCenterIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -85,7 +85,7 @@
       "title": "AlignVerticalSpaceAroundIcon",
       "description": "AlignVerticalSpaceAroundIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -104,7 +104,7 @@
       "title": "AmbulanceIcon",
       "description": "AmbulanceIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -123,7 +123,7 @@
       "title": "AmpersandIcon",
       "description": "AmpersandIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -142,7 +142,7 @@
       "title": "AngryIcon",
       "description": "AngryIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -161,7 +161,7 @@
       "title": "AnnoyedIcon",
       "description": "AnnoyedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -180,7 +180,7 @@
       "title": "AppleBrandLogo",
       "description": "AppleBrandLogo icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -199,7 +199,7 @@
       "title": "ArrowBackIcon",
       "description": "ArrowBackIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -218,7 +218,7 @@
       "title": "ArrowBackUpIcon",
       "description": "ArrowBackUpIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -237,7 +237,7 @@
       "title": "ArrowBigDownDashIcon",
       "description": "ArrowBigDownDashIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -256,7 +256,7 @@
       "title": "ArrowBigDownIcon",
       "description": "ArrowBigDownIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -275,7 +275,7 @@
       "title": "ArrowBigLeftDashIcon",
       "description": "ArrowBigLeftDashIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -294,7 +294,7 @@
       "title": "ArrowBigLeftIcon",
       "description": "ArrowBigLeftIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -313,7 +313,7 @@
       "title": "ArrowBigRightDashIcon",
       "description": "ArrowBigRightDashIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -332,7 +332,7 @@
       "title": "ArrowBigRightIcon",
       "description": "ArrowBigRightIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -351,7 +351,7 @@
       "title": "ArrowBigUpDashIcon",
       "description": "ArrowBigUpDashIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -370,7 +370,7 @@
       "title": "ArrowBigUpIcon",
       "description": "ArrowBigUpIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -389,7 +389,7 @@
       "title": "ArrowDown01Icon",
       "description": "ArrowDown01Icon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -408,7 +408,7 @@
       "title": "ArrowDown10Icon",
       "description": "ArrowDown10Icon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -427,7 +427,7 @@
       "title": "ArrowDownAZIcon",
       "description": "ArrowDownAZIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -446,7 +446,7 @@
       "title": "ArrowNarrowDownDashedIcon",
       "description": "ArrowNarrowDownDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -465,7 +465,7 @@
       "title": "ArrowNarrowDownIcon",
       "description": "ArrowNarrowDownIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -484,7 +484,7 @@
       "title": "ArrowNarrowLeftDashedIcon",
       "description": "ArrowNarrowLeftDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -503,7 +503,7 @@
       "title": "ArrowNarrowLeftIcon",
       "description": "ArrowNarrowLeftIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -522,7 +522,7 @@
       "title": "ArrowNarrowRightDashedIcon",
       "description": "ArrowNarrowRightDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -541,7 +541,7 @@
       "title": "ArrowNarrowRightIcon",
       "description": "ArrowNarrowRightIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -560,7 +560,7 @@
       "title": "ArrowNarrowUpDashedIcon",
       "description": "ArrowNarrowUpDashedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -579,7 +579,7 @@
       "title": "ArrowNarrowUpIcon",
       "description": "ArrowNarrowUpIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -598,7 +598,7 @@
       "title": "AtSignIcon",
       "description": "AtSignIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -617,7 +617,7 @@
       "title": "BananaIcon",
       "description": "BananaIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -636,7 +636,7 @@
       "title": "BatteryChargingIcon",
       "description": "BatteryChargingIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -655,7 +655,7 @@
       "title": "BatteryIcon",
       "description": "BatteryIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -674,7 +674,7 @@
       "title": "BatteryPauseIcon",
       "description": "BatteryPauseIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -693,7 +693,7 @@
       "title": "BellOffIcon",
       "description": "BellOffIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -712,7 +712,7 @@
       "title": "BluetoothConnectedIcon",
       "description": "BluetoothConnectedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -731,7 +731,7 @@
       "title": "BookIcon",
       "description": "BookIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -750,11 +750,68 @@
       "title": "BookmarkIcon",
       "description": "BookmarkIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/BookmarkIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrainCircuitIcon",
+      "type": "registry:ui",
+      "title": "BrainCircuitIcon",
+      "description": "BrainCircuitIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrainCircuitIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandAistudioIcon",
+      "type": "registry:ui",
+      "title": "BrandAistudioIcon",
+      "description": "BrandAistudioIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandAistudioIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandAnthropicIcon",
+      "type": "registry:ui",
+      "title": "BrandAnthropicIcon",
+      "description": "BrandAnthropicIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandAnthropicIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -769,7 +826,7 @@
       "title": "BrandAwsIcon",
       "description": "BrandAwsIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -788,11 +845,30 @@
       "title": "BrandBagsFmIcon",
       "description": "BrandBagsFmIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/BrandBagsFmIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandChromeIcon",
+      "type": "registry:ui",
+      "title": "BrandChromeIcon",
+      "description": "BrandChromeIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandChromeIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -807,7 +883,7 @@
       "title": "BrandCursorIcon",
       "description": "BrandCursorIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -826,7 +902,7 @@
       "title": "BrandGeminiIcon",
       "description": "BrandGeminiIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -845,7 +921,7 @@
       "title": "BrandGoogleIcon",
       "description": "BrandGoogleIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -864,11 +940,49 @@
       "title": "BrandGrokIcon",
       "description": "BrandGrokIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/BrandGrokIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandLmstudioIcon",
+      "type": "registry:ui",
+      "title": "BrandLmstudioIcon",
+      "description": "BrandLmstudioIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandLmstudioIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandMidjourneyIcon",
+      "type": "registry:ui",
+      "title": "BrandMidjourneyIcon",
+      "description": "BrandMidjourneyIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandMidjourneyIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -883,7 +997,7 @@
       "title": "BrandNextjsIcon",
       "description": "BrandNextjsIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -902,11 +1016,30 @@
       "title": "BrandNotionIcon",
       "description": "BrandNotionIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/BrandNotionIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandOllamaIcon",
+      "type": "registry:ui",
+      "title": "BrandOllamaIcon",
+      "description": "BrandOllamaIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandOllamaIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -921,7 +1054,7 @@
       "title": "BrandOpenaiIcon",
       "description": "BrandOpenaiIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -940,7 +1073,7 @@
       "title": "BrandPaypalIcon",
       "description": "BrandPaypalIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -959,7 +1092,7 @@
       "title": "BrandQwenIcon",
       "description": "BrandQwenIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -978,7 +1111,7 @@
       "title": "BrandRailwayIcon",
       "description": "BrandRailwayIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -997,7 +1130,7 @@
       "title": "BrandReactIcon",
       "description": "BrandReactIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1016,7 +1149,7 @@
       "title": "BrandReactNativeIcon",
       "description": "BrandReactNativeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1035,7 +1168,7 @@
       "title": "BrandStripeIcon",
       "description": "BrandStripeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1054,7 +1187,7 @@
       "title": "BrandTelegramIcon",
       "description": "BrandTelegramIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1073,11 +1206,30 @@
       "title": "BrandThreadsIcon",
       "description": "BrandThreadsIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/BrandThreadsIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandTwitchIcon",
+      "type": "registry:ui",
+      "title": "BrandTwitchIcon",
+      "description": "BrandTwitchIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandTwitchIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -1092,7 +1244,7 @@
       "title": "BrandVercelIcon",
       "description": "BrandVercelIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1111,11 +1263,49 @@
       "title": "BrandWindowsIcon",
       "description": "BrandWindowsIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/BrandWindowsIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandWordpressIcon",
+      "type": "registry:ui",
+      "title": "BrandWordpressIcon",
+      "description": "BrandWordpressIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandWordpressIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BrandXaiIcon",
+      "type": "registry:ui",
+      "title": "BrandXaiIcon",
+      "description": "BrandXaiIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/BrandXaiIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -1130,7 +1320,7 @@
       "title": "BrandZoomIcon",
       "description": "BrandZoomIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1149,7 +1339,7 @@
       "title": "BrightnessDownIcon",
       "description": "BrightnessDownIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1168,7 +1358,7 @@
       "title": "BugIcon",
       "description": "BugIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1187,7 +1377,7 @@
       "title": "BulbSvg",
       "description": "BulbSvg icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1206,7 +1396,7 @@
       "title": "CameraIcon",
       "description": "CameraIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1225,7 +1415,7 @@
       "title": "CameraOffIcon",
       "description": "CameraOffIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1244,7 +1434,7 @@
       "title": "CandyCaneIcon",
       "description": "CandyCaneIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1263,7 +1453,7 @@
       "title": "CartIcon",
       "description": "CartIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1282,7 +1472,7 @@
       "title": "ChartBarIcon",
       "description": "ChartBarIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1301,7 +1491,7 @@
       "title": "ChartCovariateIcon",
       "description": "ChartCovariateIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1320,7 +1510,7 @@
       "title": "ChartHistogramIcon",
       "description": "ChartHistogramIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1339,7 +1529,7 @@
       "title": "ChartLineIcon",
       "description": "ChartLineIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1358,7 +1548,7 @@
       "title": "ChartPieIcon",
       "description": "ChartPieIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1377,7 +1567,7 @@
       "title": "CheckedIcon",
       "description": "CheckedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1396,11 +1586,68 @@
       "title": "ClockIcon",
       "description": "ClockIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/ClockIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cloud1Icon",
+      "type": "registry:ui",
+      "title": "Cloud1Icon",
+      "description": "Cloud1Icon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/Cloud1Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cloud2Icon",
+      "type": "registry:ui",
+      "title": "Cloud2Icon",
+      "description": "Cloud2Icon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/Cloud2Icon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cloud3Icon",
+      "type": "registry:ui",
+      "title": "Cloud3Icon",
+      "description": "Cloud3Icon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/Cloud3Icon.vue",
           "type": "registry:ui"
         },
         {
@@ -1415,7 +1662,7 @@
       "title": "CodeIcon",
       "description": "CodeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1434,7 +1681,7 @@
       "title": "CodeXmlIcon",
       "description": "CodeXmlIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1453,7 +1700,7 @@
       "title": "CoffeeIcon",
       "description": "CoffeeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1472,7 +1719,7 @@
       "title": "CoinBitcoinIcon",
       "description": "CoinBitcoinIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1491,7 +1738,7 @@
       "title": "CopyIcon",
       "description": "CopyIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1510,11 +1757,30 @@
       "title": "CopyOffIcon",
       "description": "CopyOffIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/CopyOffIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CopyrightIcon",
+      "type": "registry:ui",
+      "title": "CopyrightIcon",
+      "description": "CopyrightIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/CopyrightIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -1529,7 +1795,7 @@
       "title": "CpuIcon",
       "description": "CpuIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1548,7 +1814,7 @@
       "title": "CreditCard",
       "description": "CreditCard icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1567,7 +1833,7 @@
       "title": "CurrencyBitcoinIcon",
       "description": "CurrencyBitcoinIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1586,7 +1852,7 @@
       "title": "CurrencyDollarIcon",
       "description": "CurrencyDollarIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1605,7 +1871,7 @@
       "title": "CurrencyEthereumIcon",
       "description": "CurrencyEthereumIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1624,7 +1890,7 @@
       "title": "CurrencyEuroIcon",
       "description": "CurrencyEuroIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1643,7 +1909,7 @@
       "title": "CurrencyRupeeIcon",
       "description": "CurrencyRupeeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1662,7 +1928,7 @@
       "title": "DeviceAirpodsIcon",
       "description": "DeviceAirpodsIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1681,11 +1947,30 @@
       "title": "DialpadIcon",
       "description": "DialpadIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/DialpadIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DinoIcon",
+      "type": "registry:ui",
+      "title": "DinoIcon",
+      "description": "DinoIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DinoIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -1700,7 +1985,7 @@
       "title": "DiscordIcon",
       "description": "DiscordIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1719,7 +2004,7 @@
       "title": "DockerIcon",
       "description": "DockerIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1738,7 +2023,7 @@
       "title": "DotsHorizontalIcon",
       "description": "DotsHorizontalIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1757,7 +2042,7 @@
       "title": "DotsVerticalIcon",
       "description": "DotsVerticalIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1776,7 +2061,7 @@
       "title": "DoubleCheckIcon",
       "description": "DoubleCheckIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1795,11 +2080,30 @@
       "title": "DownChevronIcon",
       "description": "DownChevronIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/DownChevronIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DownloadIcon",
+      "type": "registry:ui",
+      "title": "DownloadIcon",
+      "description": "DownloadIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/DownloadIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -1814,7 +2118,7 @@
       "title": "DrumIcon",
       "description": "DrumIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1833,7 +2137,7 @@
       "title": "ExpandIcon",
       "description": "ExpandIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1852,7 +2156,7 @@
       "title": "ExternalLinkIcon",
       "description": "ExternalLinkIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1871,7 +2175,7 @@
       "title": "EyeIcon",
       "description": "EyeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1890,7 +2194,7 @@
       "title": "EyeOffIcon",
       "description": "EyeOffIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1909,7 +2213,7 @@
       "title": "FacebookIcon",
       "description": "FacebookIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1928,7 +2232,7 @@
       "title": "FigmaIcon",
       "description": "FigmaIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1947,7 +2251,7 @@
       "title": "FileDescriptionIcon",
       "description": "FileDescriptionIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1966,7 +2270,7 @@
       "title": "FilledBellIcon",
       "description": "FilledBellIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -1985,11 +2289,30 @@
       "title": "FilledCheckedIcon",
       "description": "FilledCheckedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/FilledCheckedIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "FilterIcon",
+      "type": "registry:ui",
+      "title": "FilterIcon",
+      "description": "FilterIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/FilterIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -2004,7 +2327,7 @@
       "title": "FlameIcon",
       "description": "FlameIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2023,11 +2346,30 @@
       "title": "FocusIcon",
       "description": "FocusIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/FocusIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "GamepadIcon",
+      "type": "registry:ui",
+      "title": "GamepadIcon",
+      "description": "GamepadIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/GamepadIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -2042,7 +2384,7 @@
       "title": "GaugeIcon",
       "description": "GaugeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2061,7 +2403,7 @@
       "title": "GearIcon",
       "description": "GearIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2080,7 +2422,7 @@
       "title": "GhostIcon",
       "description": "GhostIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2099,7 +2441,7 @@
       "title": "GithubCopilotIcon",
       "description": "GithubCopilotIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2118,7 +2460,7 @@
       "title": "GithubIcon",
       "description": "GithubIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2137,7 +2479,7 @@
       "title": "GitlabIcon",
       "description": "GitlabIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2156,7 +2498,7 @@
       "title": "GlobeIcon",
       "description": "GlobeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2175,7 +2517,7 @@
       "title": "GmailIcon",
       "description": "GmailIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2194,7 +2536,7 @@
       "title": "GolangIcon",
       "description": "GolangIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2213,7 +2555,7 @@
       "title": "HandHeartIcon",
       "description": "HandHeartIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2232,7 +2574,7 @@
       "title": "HashtagIcon",
       "description": "HashtagIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2251,7 +2593,7 @@
       "title": "HeartIcon",
       "description": "HeartIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2270,7 +2612,7 @@
       "title": "HistoryCircleIcon",
       "description": "HistoryCircleIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2289,7 +2631,7 @@
       "title": "HomeIcon",
       "description": "HomeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2308,7 +2650,7 @@
       "title": "HotelIcon",
       "description": "HotelIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2327,7 +2669,7 @@
       "title": "InfoCircleIcon",
       "description": "InfoCircleIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2346,7 +2688,7 @@
       "title": "InstagramIcon",
       "description": "InstagramIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2365,7 +2707,7 @@
       "title": "JavascriptIcon",
       "description": "JavascriptIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2384,7 +2726,7 @@
       "title": "KeyframesIcon",
       "description": "KeyframesIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2403,7 +2745,7 @@
       "title": "LayersIcon",
       "description": "LayersIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2422,7 +2764,7 @@
       "title": "LayoutBottombarCollapseIcon",
       "description": "LayoutBottombarCollapseIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2441,7 +2783,7 @@
       "title": "LayoutDashboardIcon",
       "description": "LayoutDashboardIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2460,7 +2802,7 @@
       "title": "LayoutSidebarRightCollapseIcon",
       "description": "LayoutSidebarRightCollapseIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2479,11 +2821,524 @@
       "title": "LayoutSidebarRightIcon",
       "description": "LayoutSidebarRightIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/LayoutSidebarRightIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterAIcon",
+      "type": "registry:ui",
+      "title": "LetterAIcon",
+      "description": "LetterAIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterAIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterBIcon",
+      "type": "registry:ui",
+      "title": "LetterBIcon",
+      "description": "LetterBIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterBIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterCIcon",
+      "type": "registry:ui",
+      "title": "LetterCIcon",
+      "description": "LetterCIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterCIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterDIcon",
+      "type": "registry:ui",
+      "title": "LetterDIcon",
+      "description": "LetterDIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterDIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterEIcon",
+      "type": "registry:ui",
+      "title": "LetterEIcon",
+      "description": "LetterEIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterEIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterFIcon",
+      "type": "registry:ui",
+      "title": "LetterFIcon",
+      "description": "LetterFIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterFIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterGIcon",
+      "type": "registry:ui",
+      "title": "LetterGIcon",
+      "description": "LetterGIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterGIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterHIcon",
+      "type": "registry:ui",
+      "title": "LetterHIcon",
+      "description": "LetterHIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterHIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterIIcon",
+      "type": "registry:ui",
+      "title": "LetterIIcon",
+      "description": "LetterIIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterIIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterJIcon",
+      "type": "registry:ui",
+      "title": "LetterJIcon",
+      "description": "LetterJIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterJIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterKIcon",
+      "type": "registry:ui",
+      "title": "LetterKIcon",
+      "description": "LetterKIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterKIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterLIcon",
+      "type": "registry:ui",
+      "title": "LetterLIcon",
+      "description": "LetterLIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterLIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterMIcon",
+      "type": "registry:ui",
+      "title": "LetterMIcon",
+      "description": "LetterMIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterMIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterNIcon",
+      "type": "registry:ui",
+      "title": "LetterNIcon",
+      "description": "LetterNIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterNIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterOIcon",
+      "type": "registry:ui",
+      "title": "LetterOIcon",
+      "description": "LetterOIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterOIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterPIcon",
+      "type": "registry:ui",
+      "title": "LetterPIcon",
+      "description": "LetterPIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterPIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterQIcon",
+      "type": "registry:ui",
+      "title": "LetterQIcon",
+      "description": "LetterQIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterQIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterRIcon",
+      "type": "registry:ui",
+      "title": "LetterRIcon",
+      "description": "LetterRIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterRIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterSIcon",
+      "type": "registry:ui",
+      "title": "LetterSIcon",
+      "description": "LetterSIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterSIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterTIcon",
+      "type": "registry:ui",
+      "title": "LetterTIcon",
+      "description": "LetterTIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterTIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterUIcon",
+      "type": "registry:ui",
+      "title": "LetterUIcon",
+      "description": "LetterUIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterUIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterVIcon",
+      "type": "registry:ui",
+      "title": "LetterVIcon",
+      "description": "LetterVIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterVIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterWIcon",
+      "type": "registry:ui",
+      "title": "LetterWIcon",
+      "description": "LetterWIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterWIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterXIcon",
+      "type": "registry:ui",
+      "title": "LetterXIcon",
+      "description": "LetterXIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterXIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterYIcon",
+      "type": "registry:ui",
+      "title": "LetterYIcon",
+      "description": "LetterYIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterYIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LetterZIcon",
+      "type": "registry:ui",
+      "title": "LetterZIcon",
+      "description": "LetterZIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LetterZIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LibraryIcon",
+      "type": "registry:ui",
+      "title": "LibraryIcon",
+      "description": "LibraryIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LibraryIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -2498,7 +3353,7 @@
       "title": "LikeIcon",
       "description": "LikeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2517,7 +3372,7 @@
       "title": "LinkIcon",
       "description": "LinkIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2536,11 +3391,30 @@
       "title": "LinkedinIcon",
       "description": "LinkedinIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/LinkedinIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LocateIcon",
+      "type": "registry:ui",
+      "title": "LocateIcon",
+      "description": "LocateIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/LocateIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -2555,7 +3429,7 @@
       "title": "LockIcon",
       "description": "LockIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2574,7 +3448,7 @@
       "title": "LogoutIcon",
       "description": "LogoutIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2593,7 +3467,7 @@
       "title": "MagnifierIcon",
       "description": "MagnifierIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2612,11 +3486,30 @@
       "title": "MailFilledIcon",
       "description": "MailFilledIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/MailFilledIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MapPinIcon",
+      "type": "registry:ui",
+      "title": "MapPinIcon",
+      "description": "MapPinIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/MapPinIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -2631,7 +3524,7 @@
       "title": "MehIcon",
       "description": "MehIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2650,7 +3543,7 @@
       "title": "MessageCircleIcon",
       "description": "MessageCircleIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2669,7 +3562,7 @@
       "title": "MoonIcon",
       "description": "MoonIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2688,7 +3581,7 @@
       "title": "MousePointer2Icon",
       "description": "MousePointer2Icon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2707,7 +3600,7 @@
       "title": "MysqlIcon",
       "description": "MysqlIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2726,7 +3619,7 @@
       "title": "NodejsIcon",
       "description": "NodejsIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2745,7 +3638,7 @@
       "title": "PaintIcon",
       "description": "PaintIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2764,7 +3657,7 @@
       "title": "PartyPopperIcon",
       "description": "PartyPopperIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2783,11 +3676,30 @@
       "title": "PassportIcon",
       "description": "PassportIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/PassportIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PawPrintIcon",
+      "type": "registry:ui",
+      "title": "PawPrintIcon",
+      "description": "PawPrintIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/PawPrintIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -2802,7 +3714,7 @@
       "title": "PenIcon",
       "description": "PenIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2821,7 +3733,7 @@
       "title": "PhoneVolume",
       "description": "PhoneVolume icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2840,7 +3752,7 @@
       "title": "PinterestIcon",
       "description": "PinterestIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2859,7 +3771,7 @@
       "title": "PlayerIcon",
       "description": "PlayerIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2878,7 +3790,7 @@
       "title": "PlugConnectedIcon",
       "description": "PlugConnectedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2897,7 +3809,7 @@
       "title": "PlugConnectedXIcon",
       "description": "PlugConnectedXIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2916,7 +3828,7 @@
       "title": "PythonIcon",
       "description": "PythonIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2935,7 +3847,7 @@
       "title": "QrcodeIcon",
       "description": "QrcodeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2954,7 +3866,7 @@
       "title": "QuestionMark",
       "description": "QuestionMark icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2973,7 +3885,7 @@
       "title": "RadioIcon",
       "description": "RadioIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -2992,7 +3904,7 @@
       "title": "RainbowIcon",
       "description": "RainbowIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3011,7 +3923,7 @@
       "title": "RefreshIcon",
       "description": "RefreshIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3030,7 +3942,7 @@
       "title": "RightChevronIcon",
       "description": "RightChevronIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3049,7 +3961,7 @@
       "title": "RocketIcon",
       "description": "RocketIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3068,7 +3980,7 @@
       "title": "RosetteDiscountCheckIcon",
       "description": "RosetteDiscountCheckIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3087,7 +3999,7 @@
       "title": "RosetteDiscountIcon",
       "description": "RosetteDiscountIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3106,7 +4018,7 @@
       "title": "RouterIcon",
       "description": "RouterIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3125,11 +4037,30 @@
       "title": "SatelliteDishIcon",
       "description": "SatelliteDishIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/SatelliteDishIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SaveIcon",
+      "type": "registry:ui",
+      "title": "SaveIcon",
+      "description": "SaveIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SaveIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -3144,7 +4075,7 @@
       "title": "ScanBarcodeIcon",
       "description": "ScanBarcodeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3163,7 +4094,7 @@
       "title": "ScanHeartIcon",
       "description": "ScanHeartIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3182,7 +4113,7 @@
       "title": "SendHorizontalIcon",
       "description": "SendHorizontalIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3201,7 +4132,7 @@
       "title": "SendIcon",
       "description": "SendIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3220,7 +4151,7 @@
       "title": "ShieldCheck",
       "description": "ShieldCheck icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3239,7 +4170,7 @@
       "title": "ShoppingCartIcon",
       "description": "ShoppingCartIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3258,7 +4189,7 @@
       "title": "SimpleCheckedIcon",
       "description": "SimpleCheckedIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3277,7 +4208,7 @@
       "title": "SkullEmoji",
       "description": "SkullEmoji icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3296,11 +4227,30 @@
       "title": "SlackIcon",
       "description": "SlackIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/SlackIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SlidersHorizontalIcon",
+      "type": "registry:ui",
+      "title": "SlidersHorizontalIcon",
+      "description": "SlidersHorizontalIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/SlidersHorizontalIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -3315,7 +4265,7 @@
       "title": "SnapchatIcon",
       "description": "SnapchatIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3334,7 +4284,7 @@
       "title": "SoupIcon",
       "description": "SoupIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3353,7 +4303,7 @@
       "title": "SparklesIcon",
       "description": "SparklesIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3372,7 +4322,7 @@
       "title": "SpotifyIcon",
       "description": "SpotifyIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3391,7 +4341,7 @@
       "title": "Stack3Icon",
       "description": "Stack3Icon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3410,7 +4360,7 @@
       "title": "StackIcon",
       "description": "StackIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3429,7 +4379,7 @@
       "title": "StarIcon",
       "description": "StarIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3448,7 +4398,7 @@
       "title": "SubscriptIcon",
       "description": "SubscriptIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3467,7 +4417,7 @@
       "title": "TargetIcon",
       "description": "TargetIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3486,7 +4436,7 @@
       "title": "TelephoneIcon",
       "description": "TelephoneIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3505,7 +4455,7 @@
       "title": "TerminalIcon",
       "description": "TerminalIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3524,7 +4474,7 @@
       "title": "ToggleIcon",
       "description": "ToggleIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3543,7 +4493,7 @@
       "title": "TrashIcon",
       "description": "TrashIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3562,7 +4512,7 @@
       "title": "TravelBag",
       "description": "TravelBag icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3581,11 +4531,30 @@
       "title": "TriangleAlertIcon",
       "description": "TriangleAlertIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/TriangleAlertIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TrophyIcon",
+      "type": "registry:ui",
+      "title": "TrophyIcon",
+      "description": "TrophyIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/TrophyIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -3600,7 +4569,7 @@
       "title": "TruckElectricIcon",
       "description": "TruckElectricIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3619,7 +4588,7 @@
       "title": "TwitterIcon",
       "description": "TwitterIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3638,7 +4607,7 @@
       "title": "TwitterXIcon",
       "description": "TwitterXIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3657,7 +4626,7 @@
       "title": "TypescriptIcon",
       "description": "TypescriptIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3676,7 +4645,7 @@
       "title": "UnlinkIcon",
       "description": "UnlinkIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3695,11 +4664,30 @@
       "title": "UnorderedListIcon",
       "description": "UnorderedListIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
           "path": "registry/icons/UnorderedListIcon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/types/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UploadIcon",
+      "type": "registry:ui",
+      "title": "UploadIcon",
+      "description": "UploadIcon icon",
+      "registryDependencies": [],
+      "dependencies": ["motion-v"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "registry/icons/UploadIcon.vue",
           "type": "registry:ui"
         },
         {
@@ -3714,7 +4702,7 @@
       "title": "UserCheckIcon",
       "description": "UserCheckIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3733,7 +4721,7 @@
       "title": "UserIcon",
       "description": "UserIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3752,7 +4740,7 @@
       "title": "UserPlusIcon",
       "description": "UserPlusIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3771,7 +4759,7 @@
       "title": "UsersGroupIcon",
       "description": "UsersGroupIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3790,7 +4778,7 @@
       "title": "UsersIcon",
       "description": "UsersIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3809,7 +4797,7 @@
       "title": "VinylIcon",
       "description": "VinylIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3828,7 +4816,7 @@
       "title": "Volume2Icon",
       "description": "Volume2Icon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3847,7 +4835,7 @@
       "title": "VolumeXIcon",
       "description": "VolumeXIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3866,7 +4854,7 @@
       "title": "WalletIcon",
       "description": "WalletIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3885,7 +4873,7 @@
       "title": "WashingMachineIcon",
       "description": "WashingMachineIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3904,7 +4892,7 @@
       "title": "WhatsappIcon",
       "description": "WhatsappIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3923,7 +4911,7 @@
       "title": "WifiIcon",
       "description": "WifiIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3942,7 +4930,7 @@
       "title": "WifiOffIcon",
       "description": "WifiOffIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3961,7 +4949,7 @@
       "title": "WorldIcon",
       "description": "WorldIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3980,7 +4968,7 @@
       "title": "XIcon",
       "description": "XIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
@@ -3999,7 +4987,7 @@
       "title": "YoutubeIcon",
       "description": "YoutubeIcon icon",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": ["motion-v"],
       "devDependencies": [],
       "files": [
         {
