@@ -25,7 +25,7 @@ const copyCode = async () => {
 }
 
 const copyDependency = async () => {
-  await copyDepText('npm install motion-v')
+  await copyDepText('npm install motion-v@1.7.6 motion-dom@12.24.3')
 }
 
 const copyTypes = async () => {
@@ -171,7 +171,7 @@ const playAnimation = () => {
                     </div>
                     <pre
                       class="p-4 text-sm"
-                    ><code><span class="text-primary">$</span> npm install motion-v</code></pre>
+                    ><code><span class="text-primary">$</span> npm install motion-v@1.7.6 motion-dom@12.24.3</code></pre>
                   </div>
                 </div>
 

@@ -3,7 +3,7 @@
   "name": "DialpadIcon",
   "title": "DialpadIcon",
   "description": "DialpadIcon icon",
-  "dependencies": ["motion-v"],
+  "dependencies": ["motion-v@1.7.6", "motion-dom@12.24.3"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

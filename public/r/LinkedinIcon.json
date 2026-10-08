@@ -3,7 +3,7 @@
   "name": "LinkedinIcon",
   "title": "LinkedinIcon",
   "description": "LinkedinIcon icon",
-  "dependencies": ["motion-v"],
+  "dependencies": ["motion-v@1.7.6", "motion-dom@12.24.3"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [

@@ -3,7 +3,7 @@
   "name": "MousePointer2Icon",
   "title": "MousePointer2Icon",
   "description": "MousePointer2Icon icon",
-  "dependencies": ["motion-v"],
+  "dependencies": ["motion-v@1.7.6", "motion-dom@12.24.3"],
   "devDependencies": [],
   "registryDependencies": [],
   "files": [
